@@ -1,0 +1,7 @@
+{
+  "#PresentParticiple 1": {"batchOrder": "1", "order": "1", "term": "#ProgressiveVerbal", "pattern": "^!#Verb+ #Comma #ProgressiveVerbal * #Comma #Adverb?+ #Verb *", "tag": "#PresentParticiple", "untag": ["#Verb", "#ProgressiveVerbal"]},
+  "#PresentParticiple 2": {"batchOrder": "1", "order": "1", "term": "#ProgressiveVerbal", "pattern": "^#ProgressiveVerbal * #Comma * [#Noun|#Pronoun] * #Verb *", "tag": "#PresentParticiple", "untag": ["#Verb", "#ProgressiveVerbal"]},
+  "#Gerund 1": {"batchOrder": "1", "order": "3", "term": "#ProgressiveVerbal", "pattern": "#Preposition #ProgressiveVerbal", "tag": "#Gerund", "untag": ["#Verb", "#ProgressiveVerbal"]},
+  "#Gerund 2": {"batchOrder": "1", "order": "4", "term": "#ProgressiveVerbal", "pattern": "#Determiner #ProgressiveVerbal", "tag": "#Gerund", "untag": ["#Verb", "#ProgressiveVerbal"]},
+  "#Gerund 3": {"batchOrder": "1", "order": "5", "term": "#ProgressiveVerbal", "pattern": "#ProgressiveVerbal !#Verb+ #Copula", "tag": "#Gerund", "untag": ["#Verb", "#ProgressiveVerbal"]}
+}

@@ -1,0 +1,13 @@
+{
+    "a is a Determiner, period": {"batchOrder": "3", "term": "a", "pattern": "a", "tag": "Determiner"},
+
+    "all As Determiner": {"batchOrder": "3", "term": "all", "pattern": "all #Adjective?+ #Noun", "tag": "Determiner"},
+
+    "as if Is Expression": {"batchOrder": "3", "term": "as if", "pattern": "^as if$", "tag": "Expression"},
+
+    "before Is Preposition": {"batchOrder": "3", "term": "before", "pattern": "before (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "untag": "Conjunction", "tag": "Preposition"},
+
+    "to Is Preposition 1": {"batchOrder": "3", "term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
+
+    "to Is Preposition 2": {"batchOrder": "3", "term": "to", "pattern": "to$", "tag": "Preposition", "untag": "Conjunction"}
+}

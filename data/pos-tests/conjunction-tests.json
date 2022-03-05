@@ -1,0 +1,16 @@
+{
+  "conjunction negative 1": {"pos": "conjunction", "type": "negative", "pattern": "#Noun %word% #Adverb?+ #Verb"},
+  "conjunction negative 2": {"pos": "conjunction", "type": "negative", "pattern": "%word%$"},
+
+  "conjunction probable 1": {"pos": "conjunction", "type": "probable", "pattern": "#Comma %word%"},
+
+  "conjunction positive 1": {"pos": "conjunction", "type": "positive", "pattern": "#Determiner #Adjective?+ #Singular %word% #Determiner #Adjective?+ #Singular"},
+  "conjunction positive 2": {"pos": "conjunction", "type": "positive", "pattern": "!#Determiner #Adjective?+ #Plural %word% !#Determiner #Adjective?+ #Plural"},
+  "conjunction positive 3": {"pos": "conjunction", "type": "positive", "pattern": "#Verb %word% #Adverb?+ #Verb"},
+  "conjunction positive 4": {"pos": "conjunction", "type": "positive", "pattern": "#Adjective %word% #Adjective"},
+  "conjunction positive 5": {"pos": "conjunction", "type": "positive", "pattern": "#Adverb %word% #Adverb"},
+  "conjunction positive 6": {"pos": "conjunction", "type": "positive", "pattern": "#PresentParticiple %word% #PresentParticiple"},
+  "conjunction positive 7": {"pos": "conjunction", "type": "positive", "pattern": "#PastParticiple %word% #PastParticiple"},
+  "conjunction positive 8": {"pos": "conjunction", "type": "positive", "pattern": "#Gerund %word% #Gerund"},
+  "conjunction positive 8": {"pos": "conjunction", "type": "positive", "pattern": "#Infinitive %word% #Infinitive"}
+}

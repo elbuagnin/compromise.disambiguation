@@ -1,0 +1,5 @@
+{
+  "infinitive negative 1": {"pos": "infinitive", "type": "negative", "pattern": "!to %word%"},
+  "infinitive probable 1": {"pos": "infinitive", "type": "probable", "pattern": "to %word%"},
+  "infinitive positive 1": {"pos": "infinitive", "type": "positive", "pattern": "!to (%word% && #Infinitive)"}
+}

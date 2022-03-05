@@ -1,0 +1,21 @@
+{
+  "Unset #Gerunds": {"batchOrder": "1", "term": "#Gerund", "pattern": "#Gerund", "untag": ["#Gerund", "#Noun"], "tag": "#ProgressiveVerbal"},
+
+  "Activity Is Verbal": {"batchOrder": "1", "term": "#Activity", "pattern": "(#Activity && /ing$/)", "tag": "#ProgressiveVerbal", "untag": ["#Activity", "#Noun"]},
+
+  "#Auxiliary #Adverb": {"batchOrder": "1", "term": "#Adverb", "pattern": "(#Auxiliary && #Adverb)", "untag": "#Auxiliary"},
+
+  "Adjectives that are Infinitives": {"batchOrder": "1", "term": "to #Adjective", "pattern": "to #Adjective #Determiner", "untag": "#Adjective", "tag": "Infinitive"},
+
+  "to #Verb Infinitives": {"batchOrder": "1", "term": "to #Verb", "pattern": "to #Verb", "untag": ["#Conjunction", "#Verb"], "tag": "Infinitive"},
+
+  "#Cardinal as Determiner": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
+
+  "#Cardinal as Pronoun 1": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Cardinal #Verb", "tag": "Pronoun"},
+
+  "#Cardinal as Pronoun 2": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Determiner #Adjective? (#Cardinal && #TextValue)", "tag": "Pronoun"},
+
+  "#Ordinal #Noun": {"batchOrder": "1", "term": "#Ordinal", "pattern": "#Ordinal #Noun", "tag": "#Adjective"},
+
+  "#Verb #Date": {"batchOrder": "1", "term": "#Date", "pattern": "#Verb #Date", "tag": "#av"}
+}

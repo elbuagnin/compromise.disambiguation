@@ -1,0 +1,43 @@
+{
+  "CoordinatingConjunction": {
+      "isA": "Conjunction",
+      "notA": ["SubordinatingConjunction", "CorrelativeConjunction", "Determiner"]
+  },
+  "SubordinatingConjunction": {
+      "isA": "Conjunction",
+      "notA": ["CoordinatingConjunction", "CorrelativeConjunction", "Determiner"]
+  },
+  "CorrelativeConjunction": {
+      "isA": "Conjunction",
+      "notA": ["CoordinatingConjunction", "SubordinatingConjunction", "Determiner"]
+  },
+  "CompoundConjunction": {
+      "isA": "CoordinatingConjunction",
+      "notA": ""
+  },
+  "RelativePronoun": {
+    "isA": "SubordinatingConjunction",
+    "notA": ["Preposition", "Determiner"],
+    "color": ""
+  },
+  "Where": {
+    "isA": "",
+    "notA": "",
+    "color": "cyan"
+  },
+  "When": {
+    "isA": "",
+    "notA": "",
+    "color": "cyan"
+  },
+  "What": {
+    "isA": "",
+    "notA": "",
+    "color": "cyan"
+  },
+  "Whom": {
+    "isA": "",
+    "notA": "",
+    "color": "cyan"
+  }
+}

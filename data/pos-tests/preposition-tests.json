@@ -1,0 +1,7 @@
+{
+  "preposition negative 1": {"pos": "preposition", "type": "negative", "pattern": "%word% #Verb"},
+  "preposition negative 2": {"pos": "preposition", "type": "negative", "pattern": "%word% #Adverb"},
+  "preposition negative 3": {"pos": "preposition", "type": "negative", "pattern": "%word% #Conjunction"},
+
+  "preposition probable 1": {"pos": "preposition", "type": "probable", "pattern": "%word% #Determiner? #Adjective?+ #Noun"}
+}

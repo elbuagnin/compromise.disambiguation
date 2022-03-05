@@ -1,0 +1,17 @@
+{
+  "noun negative 1": {"pos": "noun", "type": "negative", "pattern": "#Modal %word%"},
+  "noun negative 2": {"pos": "noun", "type": "negative", "pattern": "#Auxiliary %word%"},
+  "noun negative 3": {"pos": "noun", "type": "negative", "pattern": "#Adverb %word%"},
+  "noun negative 4": {"pos": "noun", "type": "negative", "pattern": "%word% #Pronoun"},
+  "noun negative 5": {"pos": "noun", "type": "negative", "pattern": "%word% #Possessive"},
+  "noun negative 6": {"pos": "noun", "type": "negative", "pattern": "(#Pronoun && !#Possessive) %word%"},
+  "noun negative 7": {"pos": "noun", "type": "negative", "pattern": "!#Noun #Conjunction %word%"},
+  "noun negative 8": {"pos": "noun", "type": "negative", "pattern": "%word% #Conjunction !#Noun"},
+
+  "noun probable 1": {"pos": "noun", "type": "probable", "pattern": "%word% #Adverb?+ #Verb"},
+  "noun probable 2": {"pos": "noun", "type": "probable", "pattern": "[#PastTense|#PresentTense|#FuturePerfect|#PerfectTense] %word%"},
+
+  "noun positive 1": {"pos": "noun", "type": "positive", "pattern": "%word% #Conjunction #Noun"},
+  "noun positive 2": {"pos": "noun", "type": "positive", "pattern": "#Noun #Conjunction %word%"},
+  "noun positive 3": {"pos": "noun", "type": "positive", "pattern": "#Determiner #Adverb?+ #Adjective?+ %word% #Adverb?+ #Verb"}
+}

@@ -1,0 +1,14 @@
+{
+    "I": ["Pronoun", "Subjective", "FirstPerson"],
+    "we": ["Pronoun", "Subjective", "FirstPerson"],
+    "you": ["Pronoun", "SecondPerson"],
+    "She": ["Pronoun", "Subjective", "FirstPerson"],
+    "He": ["Pronoun", "Subjective", "FirstPerson"],
+    "it": "Pronoun",
+    "they": "Pronoun",
+    "me": ["Pronoun", "Objective", "FirstPerson"],
+    "us": ["Pronoun", "Objective", "FirstPerson"],
+    "her": ["Pronoun", "Objective", "FirstPerson", "Possessive"],
+    "him": ["Pronoun", "Objective", "FirstPerson"],
+    "them": ["Pronoun", "Objective"]
+}

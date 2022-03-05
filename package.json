@@ -1,0 +1,30 @@
+{
+  "name": "compromise.disambiguation",
+  "version": "1.0.0",
+  "description": "Disambiguates and assigns the Part of Speach in Compromise for  words with multiple pos.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "compromise",
+    "pos",
+    "part",
+    "of",
+    "speech",
+    "disambiguation"
+  ],
+  "author": "Charles Fewlass",
+  "license": "MIT",
+  "dependencies": {
+    "airbnb": "^0.0.2",
+    "compromise": "^13.11.4",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}

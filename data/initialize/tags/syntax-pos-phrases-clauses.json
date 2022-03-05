@@ -1,0 +1,32 @@
+{
+    "ParenthesesGroup": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
+    },
+    "QuotationGroup": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
+    },
+    "DashGroup": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
+    },
+    "List": {
+        "isA": "",
+        "notA": "",
+        "color": "blue"
+    },
+    "CoordinatingAdjectives": {
+        "isA": "",
+        "notA": "CumulativeAdjectives",
+        "color": "magenta"
+    },
+    "CumulativeAdjectives": {
+        "isA": "",
+        "notA": "CoordinatingAdjectives",
+        "color": "magenta"
+    }
+}

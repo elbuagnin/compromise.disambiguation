@@ -1,0 +1,14 @@
+{
+  "although": "SubordinatingConjunction",
+  "because": "SubordinatingConjunction",
+  "if": ["Condition", "SubordinatingConjunction"],
+  "lest": ["Condition", "SubordinatingConjunction"],
+  "supposing": "SubordinatingConjunction",
+  "till": "SubordinatingConjunction",
+  "though": "SubordinatingConjunction",
+  "unless": "SubordinatingConjunction",
+  "whenever": "SubordinatingConjunction",
+  "whereas": "SubordinatingConjunction",
+  "wherever": "SubordinatingConjunction",
+  "while": "SubordinatingConjunction"
+}
