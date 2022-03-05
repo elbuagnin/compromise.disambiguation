@@ -1,6 +1,6 @@
 {
   "name": "compromise.disambiguation",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Disambiguates and assigns the Part of Speach in Compromise for  words with multiple pos.",
   "main": "index.js",
   "type": "module",
