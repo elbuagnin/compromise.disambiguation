@@ -270,6 +270,7 @@ export default function parser(doc) {
   const posTestsFilePath = './data/pos-tests/';
   let posTests = []; // file scope
   const posTestSets = mfs.loadJSONDir(posTestsFilePath, true);
+  
   Object.values(posTestSets).forEach((testSet) => {
     Object.values(testSet).forEach((test) => {
       posTests.push(test);
