@@ -1,4 +1,8 @@
 {
+  "Conjunction": {
+      "isA": "",
+      "notA": "Preposition"
+  },
   "CoordinatingConjunction": {
       "isA": "Conjunction",
       "notA": ["SubordinatingConjunction", "CorrelativeConjunction", "Determiner"]
@@ -19,6 +23,10 @@
     "isA": "SubordinatingConjunction",
     "notA": ["Preposition", "Determiner"],
     "color": ""
+  },
+  "Preposition": {
+      "isA": "",
+      "notA": "Conjunction"
   },
   "Where": {
     "isA": "",
