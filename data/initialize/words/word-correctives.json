@@ -8,5 +8,6 @@
     "impromptu": "Adjective",
     "living room": ["Noun", "Singular"],
     "neither": ["Determiner", "Negative"],
-    "sitting room": ["Noun", "Singular"]
+    "sitting room": ["Noun", "Singular"],
+    "to": "Preposition"
 }

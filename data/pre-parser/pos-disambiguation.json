@@ -7,7 +7,9 @@
 
   "Adjectives that are Infinitives": {"batchOrder": "1", "term": "to #Adjective", "pattern": "to #Adjective #Determiner", "untag": "#Adjective", "tag": "Infinitive"},
 
-  "to #Verb Infinitives": {"batchOrder": "1", "term": "to #Verb", "pattern": "to #Verb", "untag": ["#Conjunction", "#Verb"], "tag": "Infinitive"},
+  "to #Verb Infinitives": {"batchOrder": "1", "term": "to #Verb", "pattern": "to #Verb", "untag": ["#Conjunction", "#Preposition", "#Verb"], "tag": "Infinitive"},
+
+  "to #Infinitive Infinitives": {"batchOrder": "1", "term": "to", "pattern": "to #Infinitive", "untag": ["#Conjunction", "#Preposition", "#Verb"], "tag": "Infinitive"},
 
   "#Cardinal as Determiner": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
 
