@@ -32,6 +32,34 @@ export default function preParser(document) {
     });
   }
 
+  function tagProgressiveVerbals() {
+     function isINGVerbal(word) {
+       if (word.text().substring(word.text().length - 3) === 'ing') {
+          const testWord = word.clone();
+          testWord.tag('#Verb');
+          let stemmed = testWord.verbs().toInfinitive();
+          if (stemmed.has('#Verb')) {
+             if (stemmed.text() === word.text()) {
+                return false;
+             } else {
+              return true;
+             }
+          } else {
+              return false;
+          }
+        } else {
+          return false;
+        }
+      }
+
+      const INGs = document.match('/ing$/');
+      INGs.forEach((word) => {
+         if (isINGVerbal(word) === true) {
+           word.tag('#ProgressiveVerbal');
+         }
+      });
+  }
+
   function tagHyphenatedTerms() {
     const hyphenatedTerms = document.hyphenated();
     hyphenatedTerms.tag(['#Noun', 'Singular', 'Hyphenated']);
@@ -122,6 +150,7 @@ export default function preParser(document) {
   //document.contractions().expand().fix();
   tagHyphenatedTerms();
   //compromiseInfinitivesToSyntaxBaseVerbs();
+  tagProgressiveVerbals();
   assignValues(orderedRules);
   tagParentheses();
   tagQuotations();
