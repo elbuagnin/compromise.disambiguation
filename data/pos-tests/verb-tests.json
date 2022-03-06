@@ -4,11 +4,12 @@
   "verb negative 3": {"pos": "verb", "type": "negative", "pattern": "#Possesive %word%"},
   "verb negative 4": {"pos": "verb", "type": "negative", "pattern": "#Copula (%word% && /ing$/]"},
 
-  "verb probable 1": {"pos": "verb", "type": "probable", "pattern": "#Noun %word%"},
-  "verb probable 2": {"pos": "verb", "type": "probable", "pattern": "%word% #Determiner"},
-  "verb probable 3": {"pos": "verb", "type": "probable", "pattern": "%word% #Pronoun"},
-  "verb probable 4": {"pos": "verb", "type": "probable", "pattern": "%word% #Adverb"},
-  "verb probable 5": {"pos": "verb", "type": "probable", "pattern": "#Adverb %word%"},
+  "verb probable 1": {"pos": "verb", "type": "probable", "pattern": "#Noun #Adverb?+ %word%"},
+  "verb probable 2": {"pos": "verb", "type": "probable", "pattern": "#Pronoun #Adverb?+ %word%"},
+  "verb probable 3": {"pos": "verb", "type": "probable", "pattern": "%word% #Determiner"},
+  "verb probable 4": {"pos": "verb", "type": "probable", "pattern": "%word% #Pronoun"},
+  "verb probable 5": {"pos": "verb", "type": "probable", "pattern": "%word% #Adverb"},
+  "verb probable 6": {"pos": "verb", "type": "probable", "pattern": "#Adverb %word%"},
 
   "verb positive 2": {"pos": "verb", "type": "positive", "pattern": "#Auxiliary?+ #Negative? #Auxiliary #Adverb? %word%"},
   "verb positive 3": {"pos": "verb", "type": "positive", "pattern": "#Verb #Conjunction %word%"},

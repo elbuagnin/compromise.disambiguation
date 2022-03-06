@@ -13,5 +13,6 @@
 
   "noun positive 1": {"pos": "noun", "type": "positive", "pattern": "%word% #Conjunction #Noun"},
   "noun positive 2": {"pos": "noun", "type": "positive", "pattern": "#Noun #Conjunction %word%"},
+  "noun positive 2": {"pos": "noun", "type": "positive", "pattern": "#Possessive #Adjective?+ %word%"},
   "noun positive 3": {"pos": "noun", "type": "positive", "pattern": "#Determiner #Adverb?+ #Adjective?+ %word% #Adverb?+ #Verb"}
 }
