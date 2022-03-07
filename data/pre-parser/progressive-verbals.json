@@ -1,0 +1,19 @@
+{
+  "Verbal Noun 1": {"batchOrder": "6", "order": "1", "term": "#ProgressiveVerbal", "pattern": "#Determiner #ProgressiveVerbal", "tag": ["#VerbalNoun", "#Noun"], "untag": "#ProgressiveVerbal"},
+
+  "Verbal Noun 1": {"batchOrder": "6", "order": "2", "term": "#ProgressiveVerbal", "pattern": "#Possessive #ProgressiveVerbal", "tag": ["#VerbalNoun", "#Noun"], "untag": "#ProgressiveVerbal"},
+
+  "Verbal Noun 2": {"batchOrder": "6", "order": "3", "term": "#ProgressiveVerbal", "pattern": "#Adjective #ProgressiveVerbal", "tag": ["#VerbalNoun", "#Noun"], "untag": "#ProgressiveVerbal"},
+
+  "Verbal Noun 3": {"batchOrder": "6", "order": "4", "term": "#ProgressiveVerbal", "pattern": "#ProgressiveVerbal #Preposition", "tag": ["#VerbalNoun", "#Noun"], "untag": "#ProgressiveVerbal"},
+
+  "ProgressiveVerblikeVerbal": {"batchOrder": "6", "order": "5", "term": "#ProgressiveVerbal", "pattern": "#Adverb+ #ProgressiveVerbal", "tag": "#ProgressiveVerblikeVerbal", "untag": "#ProgressiveVerbal"},
+
+  "ProgressiveVerblikeVerbal": {"batchOrder": "6", "order": "6", "term": "#ProgressiveVerbal", "pattern": "#ProgressiveVerbal #Verb", "tag": "#ProgressiveVerblikeVerbal", "untag": "#ProgressiveVerbal"},
+
+  "ProgressiveVerblikeVerbal": {"batchOrder": "6", "order": "6", "term": "#ProgressiveVerbal", "pattern": "#ProgressiveVerbal #Possessive", "tag": "#ProgressiveVerblikeVerbal", "untag": "#ProgressiveVerbal"},
+
+  "ProgressiveVerblikeVerbal": {"batchOrder": "6", "order": "7", "term": "#ProgressiveVerbal", "pattern": "#ProgressiveVerbal [#Determiner|#Preposition|#Noun|#Pronoun|#Possessive|#Adverb|#Verb]", "tag": "#ProgressiveVerblikeVerbal", "untag": "#ProgressiveVerbal"},
+
+  "Verb": {"batchOrder": "6", "order": "8", "term": "#ProgressiveVerbal", "pattern": "#Copula #ProgressiveVerbal", "tag": "#Verb", "untag": "#ProgressiveVerbal"}
+}

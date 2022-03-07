@@ -1,7 +1,7 @@
 {
-  "No Tense Verbs": {"batchOrder": "5", "order": "2", "term": ".", "pattern": "(#Verb && !#PresentTense && !#Infinitive && !#Gerund && !#PastTense && !#PerfectTense && !#FuturePerfect && !#Pluperfect && !#Copula && !#Modal && !#Participle && !#Particle && !#PhrasalVerb)", "tag": "#PresentTense"},
+  "No Tense Verbs": {"batchOrder": "1", "order": "2", "term": ".", "pattern": "(#Verb && !#PresentTense && !#Infinitive && !#Gerund && !#PastTense && !#PerfectTense && !#FuturePerfect && !#Pluperfect && !#Copula && !#Modal && !#Participle && !#Particle && !#PhrasalVerb)", "tag": "#PresentTense"},
 
-  "Mistagged Gerunds": {"batchOrder": "5", "order": "3", "term": ".", "pattern": "(#Auxiliary && #Verb && /ing$/)", "tag": "#ProgressiveVerbal"},
+  "Mistagged Gerunds": {"batchOrder": "1", "order": "3", "term": ".", "pattern": "(#Auxiliary && #Verb && /ing$/)", "tag": "#ProgressiveVerbal"},
 
-  "Mistagged Adjectives": {"batchOrder": "5", "order": "4", "term": ".", "pattern": "(#Pronoun && #Singular) was (#Adjective && /ing$/)", "tag": "#ProgressiveVerbal"}
+  "Mistagged Adjectives": {"batchOrder": "1", "order": "4", "term": ".", "pattern": "(#Pronoun && #Singular) was (#Adjective && /ing$/)", "tag": "#ProgressiveVerbal"}
 }
