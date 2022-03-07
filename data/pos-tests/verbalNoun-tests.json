@@ -1,0 +1,15 @@
+{
+  "verbal-noun negative 1": {"pos": "verbal-noun", "type": "negative", "pattern": "#Adverb (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "verbal-noun negative 2": {"pos": "verbal-noun", "type": "negative", "pattern": "(%word% && #ProgressiveVerbal) #Adverb", "parse": "intra-phrase"},
+  "verbal-noun negative 3": {"pos": "verbal-noun", "type": "negative", "pattern": "(%word% && #ProgressiveVerbal) #Noun", "parse": "intra-phrase"},
+  "verbal-noun negative 3": {"pos": "verbal-noun", "type": "negative", "pattern": "(%word% && #ProgressiveVerbal) #Pronoun", "parse": "intra-phrase"},
+  "verbal-noun negative 3": {"pos": "verbal-noun", "type": "negative", "pattern": "(%word% && #ProgressiveVerbal) #Possessive", "parse": "intra-phrase"},
+
+  "verbal-noun probable 1": {"pos": "verbal-noun", "type": "probable", "pattern": "#Verb (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "verbal-noun probable 2": {"pos": "verbal-noun", "type": "probable", "pattern": "(%word% && #ProgressiveVerbal) #Verb", "parse": "intra-phrase"},
+
+  "verbal-noun positive 1": {"pos": "verbal-noun", "type": "positive", "pattern": "#Determiner (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "verbal-noun positive 2": {"pos": "verbal-noun", "type": "positive", "pattern": "#Possessive (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "verbal-noun positive 3": {"pos": "verbal-noun", "type": "positive", "pattern": "#Adjective (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "verbal-noun positive 4": {"pos": "verbal-noun", "type": "positive", "pattern": "(%word% && #ProgressiveVerbal) #Preposition", "parse": "intra-phrase"}
+}
