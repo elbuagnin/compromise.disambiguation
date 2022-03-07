@@ -1,21 +1,21 @@
 {
-  "adjective negative 1": {"pos": "adjective", "type": "negative", "pattern": "#Noun %word%"},
-  "adjective negative 2": {"pos": "adjective", "type": "negative", "pattern": "%word% #Determiner"},
-  "adjective negative 3": {"pos": "adjective", "type": "negative", "pattern": "%word% #Pronoun"},
-  "adjective negative 4": {"pos": "adjective", "type": "negative", "pattern": "%word% #Preposition"},
-  "adjective negative 5": {"pos": "adjective", "type": "negative", "pattern": "%word% #Possessive"},
-  "adjective negative 6": {"pos": "adjective", "type": "negative", "pattern": "%word% #Verb"},
-  "adjective negative 7": {"pos": "adjective", "type": "negative", "pattern": "%word% #Adverb"},
-  "adjective negative 8": {"pos": "adjective", "type": "negative", "pattern": "%word% #PresentParticiple"},
-  "adjective negative 9": {"pos": "adjective", "type": "negative", "pattern": "%word% #Conjunction !#Adjective"},
-  "adjective negative 10": {"pos": "adjective", "type": "negative", "pattern": "!#Adjective #Conjunction %word%"},
+  "adjective negative 1": {"pos": "adjective", "type": "negative", "pattern": "#Noun %word%", "parse": "intra-phrase"},
+  "adjective negative 2": {"pos": "adjective", "type": "negative", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
+  "adjective negative 3": {"pos": "adjective", "type": "negative", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
+  "adjective negative 4": {"pos": "adjective", "type": "negative", "pattern": "%word% #Preposition", "parse": "intra-phrase"},
+  "adjective negative 5": {"pos": "adjective", "type": "negative", "pattern": "%word% #Possessive", "parse": "intra-phrase"},
+  "adjective negative 6": {"pos": "adjective", "type": "negative", "pattern": "%word% #Verb", "parse": "intra-phrase"},
+  "adjective negative 7": {"pos": "adjective", "type": "negative", "pattern": "%word% #Adverb", "parse": "intra-phrase"},
+  "adjective negative 8": {"pos": "adjective", "type": "negative", "pattern": "%word% #PresentParticiple", "parse": "intra-phrase"},
+  "adjective negative 9": {"pos": "adjective", "type": "negative", "pattern": "%word% #Conjunction !#Adjective", "parse": "intra-phrase"},
+  "adjective negative 10": {"pos": "adjective", "type": "negative", "pattern": "!#Adjective #Conjunction %word%", "parse": "intra-phrase"},
 
-  "adjective probable 1": {"pos": "adjective", "type": "probable", "pattern": "%word% #Noun"},
-  "adjective probable 2": {"pos": "adjective", "type": "probable", "pattern": "#Copula %word%"},
+  "adjective probable 1": {"pos": "adjective", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
+  "adjective probable 2": {"pos": "adjective", "type": "probable", "pattern": "#Copula %word%", "parse": "intra-phrase"},
 
-  "adjective positive 1": {"pos": "adjective", "type": "positive", "pattern": "#Adjective %word% #Adjective"},
-  "adjective positive 2": {"pos": "adjective", "type": "positive", "pattern": "#Adjective %word% #Noun"},
-  "adjective positive 3": {"pos": "adjective", "type": "positive", "pattern": "#Adverb %word% #Adjective"},
-  "adjective positive 4": {"pos": "adjective", "type": "positive", "pattern": "#Adjective #Conjunction %word%"},
-  "adjective positive 5": {"pos": "adjective", "type": "positive", "pattern": "%word% #Conjunction #Adjective"}
+  "adjective positive 1": {"pos": "adjective", "type": "positive", "pattern": "#Adjective %word% #Adjective", "parse": "intra-phrase"},
+  "adjective positive 2": {"pos": "adjective", "type": "positive", "pattern": "#Adjective %word% #Noun", "parse": "intra-phrase"},
+  "adjective positive 3": {"pos": "adjective", "type": "positive", "pattern": "#Adverb %word% #Adjective", "parse": "intra-phrase"},
+  "adjective positive 4": {"pos": "adjective", "type": "positive", "pattern": "#Adjective #Conjunction %word%", "parse": "intra-phrase"},
+  "adjective positive 5": {"pos": "adjective", "type": "positive", "pattern": "%word% #Conjunction #Adjective", "parse": "intra-phrase"}
 }
