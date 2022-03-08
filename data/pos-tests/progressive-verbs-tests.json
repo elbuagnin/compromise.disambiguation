@@ -1,0 +1,16 @@
+{
+  "progressive-verb negative 1": {"pos": "progressive-verb", "type": "negative", "pattern": "#Pronoun (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "progressive-verb negative 2": {"pos": "progressive-verb", "type": "negative", "pattern": "#Possessive (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "progressive-verb negative 3": {"pos": "progressive-verb", "type": "negative", "pattern": "#Noun (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "progressive-verb negative 3": {"pos": "progressive-verb", "type": "negative", "pattern": "#Preposition (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "progressive-verb negative 3": {"pos": "progressive-verb", "type": "negative", "pattern": "(%word% && #ProgressiveVerbal) #Verb", "parse": "intra-phrase"},
+
+  "past progressive": {"pos": "progressive-verb", "type": "positive", "pattern": "(was|were) #Negative? #Adverb?+ (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "past perfect progressive": {"pos": "progressive-verb", "type": "positive", "pattern": "had #Negative? been  #Adverb?+ (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "present progressive": {"pos": "progressive-verb", "type": "positive", "pattern": "(am|is|are) #Negative? #Adverb?+ (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "present perfect progressive": {"pos": "progressive-verb", "type": "positive", "pattern": "(has|have) #Negative? been  #Adverb?+ (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "future progressive": {"pos": "progressive-verb", "type": "positive", "pattern": "will #Negative? be #Adverb?+ (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "future perfect progressive 1": {"pos": "progressive-verb", "type": "positive", "pattern": "will #Negative? have #Adverb?+ been (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "future perfect progressive 2": {"pos": "progressive-verb", "type": "positive", "pattern": "will #Negative? have been #Adverb?+ (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
+  "future perfect progressive 3": {"pos": "progressive-verb", "type": "positive", "pattern": "will have #Negative? been #Adverb?+ (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"}
+}
