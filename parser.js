@@ -38,6 +38,7 @@ export default function parser(doc) {
         let positiveTests = [];
 
         let testSet = posTests.filter(test => (test.pos === pos));
+
         if (testSet.length > 0) {
           negativeTests = testSet.filter(test => (test.type === 'negative'));
           probableTests = testSet.filter(test => (test.type === 'probable'));
@@ -73,18 +74,15 @@ export default function parser(doc) {
         return result;
      }
 
-     let word = term.word;
-     let poses = term.pos;
+     const word = term.word;
+     const poses = term.pos;
 
-     const results = {
-        'adjective': 'untested',
-        'adverb': 'untested',
-        'noun': 'untested',
-        'verb': 'untested',
-        'infinitive': 'untested',
-        'preposition': 'untested',
-        'conjunction': 'untested'
-     }
+     const posTypes = Array.from(new Set(posTests.map(test => test.pos)));
+
+    const results = {};
+    Object.values(posTypes).forEach((pos) => {
+      results[pos] = 'untested';
+    });
 
      console.log('Possible POSes:' + poses);
 
