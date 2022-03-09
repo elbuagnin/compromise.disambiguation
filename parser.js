@@ -37,44 +37,11 @@ export default function parser(doc) {
         let probableTests = [];
         let positiveTests = [];
 
-        switch(pos) {
-           case 'adjective':
-             negativeTests = posTests.filter(test => (test.pos === 'adjective') && (test.type === 'negative'));
-             probableTests = posTests.filter(test => (test.pos === 'adjective') && (test.type === 'probable'));
-             positiveTests = posTests.filter(test => (test.pos === 'adjective') && (test.type === 'positive'));
-             break;
-           case 'adverb':
-             negativeTests = posTests.filter(test => (test.pos === 'adverb') && (test.type === 'negative'));
-             probableTests = posTests.filter(test => (test.pos === 'adverb') && (test.type === 'probable'));
-             positiveTests = posTests.filter(test => (test.pos === 'adverb') && (test.type === 'positive'));
-             break;
-           case 'noun':
-             negativeTests = posTests.filter(test => (test.pos === 'noun') && (test.type === 'negative'));
-             probableTests = posTests.filter(test => (test.pos === 'noun') && (test.type === 'probable'));
-             positiveTests = posTests.filter(test => (test.pos === 'noun') && (test.type === 'positive'));
-             break;
-           case 'verb':
-             negativeTests = posTests.filter(test => (test.pos === 'verb') && (test.type === 'negative'));
-             probableTests = posTests.filter(test => (test.pos === 'verb') && (test.type === 'probable'));
-             positiveTests = posTests.filter(test => (test.pos === 'verb') && (test.type === 'positive'));
-             break;
-           case 'infinitive':
-             negativeTests = posTests.filter(test => (test.pos === 'infinitive') && (test.type === 'negative'));
-             probableTests = posTests.filter(test => (test.pos === 'infinitive') && (test.type === 'probable'));
-             positiveTests = posTests.filter(test => (test.pos === 'infinitive') && (test.type === 'positive'));
-             break;
-           case 'preposition':
-             negativeTests = posTests.filter(test => (test.pos === 'preposition') && (test.type === 'negative'));
-             probableTests = posTests.filter(test => (test.pos === 'preposition') && (test.type === 'probable'));
-             positiveTests = posTests.filter(test => (test.pos === 'preposition') && (test.type === 'positive'));
-             break;
-           case 'conjunction':
-             negativeTests = posTests.filter(test => (test.pos === 'conjunction') && (test.type === 'negative'));
-             probableTests = posTests.filter(test => (test.pos === 'conjunction') && (test.type === 'probable'));
-             positiveTests = posTests.filter(test => (test.pos === 'conjunction') && (test.type === 'positive'));
-             break;
-           default:
-             result = 'invalid';
+        let testSet = posTests.filter(test => (test.pos === pos));
+        if (testSet.length > 0) {
+          negativeTests = testSet.filter(test => (test.type === 'negative'));
+          probableTests = testSet.filter(test => (test.type === 'probable'));
+          positiveTests = testSet.filter(test => (test.type === 'positive'));
         }
 
         negativeTests.forEach((test) => {
@@ -270,7 +237,7 @@ export default function parser(doc) {
   const posTestsFilePath = './data/pos-tests/';
   let posTests = []; // file scope
   const posTestSets = mfs.loadJSONDir(posTestsFilePath, true);
-  
+
   Object.values(posTestSets).forEach((testSet) => {
     Object.values(testSet).forEach((test) => {
       posTests.push(test);
