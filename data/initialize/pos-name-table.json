@@ -10,5 +10,6 @@
   "Present Participles": {"fullname": "present-participle", "abbreviation": "prpt"},
   "Prepositions": {"fullname": "preposition", "abbreviation": "prep"},
   "Verbs": {"fullname": "verb", "abbreviation": "vb"},
+  "Verbal Nouns": {"fullname": "verbal-noun", "abbreviation": "vn"},
   "Present-Progressive-Verbs": {"fullname": "present-progressive", "abbreviation": "prepro"}
 }
