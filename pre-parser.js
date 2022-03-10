@@ -135,13 +135,7 @@ export default function preParser(document) {
   // Rule order is critical for correct assignments.
   const rulePath = './data/pre-parser/';
   const list = true;
-  const ruleSets = mfs.loadJSONDir(rulePath, list);
-  const orderedRules = [];
-  Object.values(ruleSets).forEach((ruleSet) => {
-    Object.values(ruleSet).forEach((rule) => {
-      orderedRules.push(rule);
-    });
-  });
+  const orderedRules = mfs.loadJSONDir(rulePath, list);
 
   orderedRules.sort((a, b) => a.batchOrder - b.batchOrder);
 
