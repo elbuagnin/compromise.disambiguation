@@ -1,4 +1,5 @@
 import * as mfs from './lib/filesystem.js';
+import posabbreviationToName from './pos-name-table.js';
 import posTests from './pos-tests.js';
 
 export default function parser(doc) {
@@ -66,45 +67,19 @@ export default function parser(doc) {
      }
 
      const word = term.word;
-     const poses = term.pos;
-
-     const posTypes = Array.from(new Set(posTests.map(test => test.pos)));
+     const POSes = term.POSes.map(pos => (posabbreviationToName(pos)));
 
     const results = {};
-    Object.values(posTypes).forEach((pos) => {
+    Object.values(POSes).forEach((pos) => {
       results[pos] = 'untested';
     });
 
-     console.log('Possible POSes:' + poses);
+     console.log('Possible POSes:' + JSON.stringify(POSes));
 
-     Object.values(poses).forEach((pos) => {
+     Object.values(POSes).forEach((pos) => {
        console.log('Testing POS: [' + pos + ']');
-       switch (pos) {
-         case 'a':
-           results.adjective = isPOS(word, 'adjective');
-           break;
-         case 'b':
-           results.adverb = isPOS(word, 'adverb');
-           break;
-         case 'c':
-           results.conjunction = isPOS(word, 'conjunction');
-           break;
-         case 'i':
-           results.infinitive = isPOS(word, 'infinitive');
-           break;
-         case 'n':
-           results.noun = isPOS(word, 'noun');
-           break;
-         case 'p':
-           results.preposition = isPOS(word, 'preposition');
-           break;
-         case 'v':
-           results.verb = isPOS(word, 'verb');
-           results.infinitive = isPOS(word, 'infinitive');
-           break;
-         default:
-           break;
-       }
+
+       results[pos] = isPOS(word, pos);
      });
 
      let confirmed = [];
