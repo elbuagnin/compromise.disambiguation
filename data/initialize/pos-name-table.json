@@ -1,0 +1,14 @@
+{
+  "Adjectives": {"fullname": "adjective", "abbreviation": "jj"},
+  "Adverbs": {"fullname": "adverb", "abbreviation": "rb"},
+  "Conjunctions": {"fullname": "conjunction", "abbreviation": "cn"},
+  "Determiners": {"fullname": "determiner", "abbreviation": "dt"},
+  "Gerunds": {"fullname": "gerund", "abbreviation": "gd"},
+  "Infinitives": {"fullname": "infinitive", "abbreviation": "inf"},
+  "Nouns": {"fullname": "noun", "abbreviation": "nn"},
+  "Past Participles": {"fullname": "past-participle", "abbreviation": "papt"},
+  "Present Participles": {"fullname": "present-participle", "abbreviation": "prpt"},
+  "Prepositions": {"fullname": "preposition", "abbreviation": "prep"},
+  "Verbs": {"fullname": "verb", "abbreviation": "vb"},
+  "Present-Progressive-Verbs": {"fullname": "present-progressive", "abbreviation": "prepro"}
+}
