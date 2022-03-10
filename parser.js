@@ -1,5 +1,5 @@
-import * as mfs from './lib/filesystem.js';
-import posabbreviationToName from './pos-name-table.js';
+import disambiguationTerms from './disambiguationTerms.js';
+import posAbbreviationToName from './pos-name-table.js';
 import posTests from './pos-tests.js';
 
 export default function parser(doc) {
@@ -67,7 +67,7 @@ export default function parser(doc) {
      }
 
      const word = term.word;
-     const POSes = term.POSes.map(pos => (posabbreviationToName(pos)));
+     const POSes = term.POSes.map(pos => (posAbbreviationToName(pos)));
 
     const results = {};
     Object.values(POSes).forEach((pos) => {
@@ -196,22 +196,10 @@ export default function parser(doc) {
 
  }
 
-
- // Initialize all Data
-
-  const disambiguationFilePath = './data/disambiguation/';
-  const disambiguationFileType = '.json';
-  const disambiguationFiles = mfs.getFileNames(disambiguationFilePath, disambiguationFileType);
-  let disambiguationTerms = [];
-
   const sentences = doc.sentences();
 
   // Process by Disambiguation Term File first, then ...
   // Process the document by sentences and then by non-list commas
-
-  disambiguationFiles.forEach((file) => {
-    disambiguationTerms = mfs.loadJSONFile(file, 'array');
-
     sentences.forEach((sentence) => {
       let chunks = sentence;
       if (sentence.has('#Comma')) {
@@ -228,5 +216,5 @@ export default function parser(doc) {
        parseChunk(chunk);
      });
    });
-  });
+  // });
 }
