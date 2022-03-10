@@ -1,16 +1,7 @@
 import * as mfs from './lib/filesystem.js';
+import posTests from './pos-tests.js';
 
 export default function parser(doc) {
-  function loadData(file) {
-    const data = [];
-    const fileData = JSON.parse(mfs.loadJSONFile(file));
-
-    Object.values(fileData).forEach((term) => {
-      data.push(term);
-    });
-
-    return data;
-  }
 
   function parseChunk(chunk) {
      chunk.terms().forEach((entry) => {
@@ -214,7 +205,7 @@ export default function parser(doc) {
     }
   }
 
- if (foundPOS !== false) {
+  if (foundPOS !== false) {
     console.log('Updating POS');
 
     if (!(docWord.has(foundPOS))) {
@@ -223,7 +214,7 @@ export default function parser(doc) {
     } else {
        console.log('Already correct POS');
     }
- }
+  }
 
   console.log(results);
   return (foundPOS);
@@ -232,20 +223,11 @@ export default function parser(doc) {
 
 
  // Initialize all Data
-  const posTestsFilePath = './data/pos-tests/';
-  let posTests = []; // file scope
-  const posTestSets = mfs.loadJSONDir(posTestsFilePath, true);
-
-  Object.values(posTestSets).forEach((testSet) => {
-    Object.values(testSet).forEach((test) => {
-      posTests.push(test);
-    });
-  });
 
   const disambiguationFilePath = './data/disambiguation/';
   const disambiguationFileType = '.json';
   const disambiguationFiles = mfs.getFileNames(disambiguationFilePath, disambiguationFileType);
-  let disambiguationTerms = []; // file scope
+  let disambiguationTerms = [];
 
   const sentences = doc.sentences();
 
@@ -253,8 +235,7 @@ export default function parser(doc) {
   // Process the document by sentences and then by non-list commas
 
   disambiguationFiles.forEach((file) => {
-
-    disambiguationTerms = loadData(file);
+    disambiguationTerms = mfs.loadJSONFile(file, 'array');
 
     sentences.forEach((sentence) => {
       let chunks = sentence;
