@@ -2,12 +2,13 @@ import disambiguationTerms from './disambiguationTerms.js';
 import disambiguate from './disambiguate.js';
 
 export default function parser(document, parseMethod, parseData) {
-  console.log(parseMethod);
-console.log(parseData);
+  let filteredDisambiguationTerms = [];
+
   function parseByTermList(chunk) {
      chunk.terms().forEach((entry) => {
        console.log(entry.text());
-       disambiguationTerms.forEach((term) => {
+
+       filteredDisambiguationTerms.forEach((term) => {
           let disambiguatedPos = 'inconclusive';
           if (entry.text() === term.word) {
             console.log(term);
@@ -22,10 +23,13 @@ console.log(parseData);
     disambiguate(chunk, parseData);
   }
 
-  const sentences = document.sentences();
-
   // Process by Disambiguation Term File first, then ...
   // Process the document by sentences and then by non-list commas
+    if (parseMethod === 'termList') {
+      filteredDisambiguationTerms = disambiguationTerms.filter(term => (term.list === parseData.list));
+    }
+    
+    const sentences = document.sentences();
     sentences.forEach((sentence) => {
       let chunks = sentence;
       if (sentence.has('#Comma')) {
