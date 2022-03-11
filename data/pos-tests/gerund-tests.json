@@ -1,15 +1,15 @@
 {
-  "gerund negative 1": {"pos": "gerund", "type": "negative", "pattern": "#Adjective (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
-  "gerund negative 2": {"pos": "gerund", "type": "negative", "pattern": "#Determiner (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
-  "gerund negative 3": {"pos": "gerund", "type": "negative", "pattern": "#Possessive (%word% && #ProgressiveVerbal) !#Adverb", "parse": "intra-phrase"},
+  "gerund negative 1": {"pos": "gerund", "type": "negative", "pattern": "#Adjective %word%", "parse": "intra-phrase"},
+  "gerund negative 2": {"pos": "gerund", "type": "negative", "pattern": "#Determiner %word%", "parse": "intra-phrase"},
+  "gerund negative 3": {"pos": "gerund", "type": "negative", "pattern": "#Possessive %word% !#Adverb", "parse": "intra-phrase"},
 
-  "past progressive": {"pos": "gerund", "type": "probable", "pattern": "#Adverb (%word% && #ProgressiveVerbal)", "parse": "intra-phrase"},
-  "past perfect progressive": {"pos": "gerund", "type": "probable", "pattern": "(%word% && #ProgressiveVerbal) #Adverb", "parse": "intra-phrase"},
-  "present progressive": {"pos": "gerund", "type": "probable", "pattern": "(%word% && #ProgressiveVerbal) #Determiner", "parse": "intra-phrase"},
-  "present perfect progressive": {"pos": "gerund", "type": "probable", "pattern": "(%word% && #ProgressiveVerbal) #Pronoun", "parse": "intra-phrase"},
-  "future progressive": {"pos": "gerund", "type": "probable", "pattern": "(%word% && #ProgressiveVerbal) #Noun", "parse": "intra-phrase"},
-  
-  "future perfect progressive 1": {"pos": "gerund", "type": "positive", "pattern": "(%word% && #ProgressiveVerbal) (#Determiner|#Possessive)? #Noun #Verb", "parse": "intra-phrase"},
-  "future perfect progressive 2": {"pos": "gerund", "type": "positive", "pattern": "#Verb (%word% && #ProgressiveVerbal) (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"},
-  "future perfect progressive 3": {"pos": "gerund", "type": "positive", "pattern": "#Preposition (%word% && #ProgressiveVerbal) (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
+  "past progressive": {"pos": "gerund", "type": "probable", "pattern": "#Adverb %word%", "parse": "intra-phrase"},
+  "past perfect progressive": {"pos": "gerund", "type": "probable", "pattern": "%word% #Adverb", "parse": "intra-phrase"},
+  "present progressive": {"pos": "gerund", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
+  "present perfect progressive": {"pos": "gerund", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
+  "future progressive": {"pos": "gerund", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
+
+  "future perfect progressive 1": {"pos": "gerund", "type": "positive", "pattern": "%word% (#Determiner|#Possessive)? #Noun #Verb", "parse": "intra-phrase"},
+  "future perfect progressive 2": {"pos": "gerund", "type": "positive", "pattern": "#Verb %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"},
+  "future perfect progressive 3": {"pos": "gerund", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
 }

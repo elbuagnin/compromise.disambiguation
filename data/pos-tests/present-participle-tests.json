@@ -1,10 +1,10 @@
 {
-  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "(%word% && #ProgressiveVerbal) #Determiner", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "(%word% && #ProgressiveVerbal) #Pronoun", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "(%word% && #ProgressiveVerbal) #Noun", "parse": "intra-phrase"},
+  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
+  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
+  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
 
-  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Determiner #Adjective?+ (%word% && #ProgressiveVerbal) #Noun", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Possessive #Adjective?+ (%word% && #ProgressiveVerbal) #Noun", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Noun (%word% && #ProgressiveVerbal) (#Determiner|#Preposition)", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Preposition (%word% && #ProgressiveVerbal) (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
+  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Determiner #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
+  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Possessive #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
+  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Noun %word% (#Determiner|#Preposition)", "parse": "intra-phrase"},
+  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
 }
