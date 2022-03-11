@@ -1,9 +1,10 @@
 import disambiguationTerms from './disambiguationTerms.js';
 import disambiguate from './disambiguate.js';
 
-export default function parser(doc) {
-
-  function parseChunk(chunk) {
+export default function parser(document, parseMethod, parseData) {
+  console.log(parseMethod);
+console.log(parseData);
+  function parseByTermList(chunk) {
      chunk.terms().forEach((entry) => {
        console.log(entry.text());
        disambiguationTerms.forEach((term) => {
@@ -17,7 +18,11 @@ export default function parser(doc) {
      });
   }
 
-  const sentences = doc.sentences();
+  function parseByPattern(chunk) {
+    disambiguate(chunk, parseData);
+  }
+
+  const sentences = document.sentences();
 
   // Process by Disambiguation Term File first, then ...
   // Process the document by sentences and then by non-list commas
@@ -34,7 +39,11 @@ export default function parser(doc) {
 
      chunks.forEach((chunk) => {
        console.log(chunk.debug());
-       parseChunk(chunk);
+       if (parseMethod === 'termList') {
+         parseByTermList(chunk);
+       } else if (parseMethod === 'pattern') {
+         parseByPattern(chunk);
+       }
      });
    });
 }
