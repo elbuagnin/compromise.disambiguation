@@ -1,4 +1,4 @@
-import posAbbreviationToName from './pos-name-table.js';
+import posNameNormalize from './pos-name-table.js';
 import posTests from './pos-tests.js';
 
 export default function disambiguate(chunk, term) {
@@ -50,7 +50,7 @@ export default function disambiguate(chunk, term) {
    }
 
    const word = term.word;
-   const POSes = term.POSes.map(pos => (posAbbreviationToName(pos)));
+   const POSes = term.POSes.map(pos => (posNameNormalize(pos)));
 
   const results = {};
   Object.values(POSes).forEach((pos) => {
