@@ -1,4 +1,5 @@
 {
   "Tag Progressive Verbs & Verbals": {"order": "1", "action": "function", "name": "tagProgressiveVerbals"},
-  "Disambiguate Progressive Verbals": {"order": "2", "action": "disambiguate", "parseMethod": "pattern", "pattern": "#ProgressiveVerbal", "POSes": ["verbal-noun", "present-progressive", "present-participle", "gerund"]}
+  "Disambiguate Progressive Verbals": {"order": "2", "action": "disambiguate", "parseMethod": "pattern", "pattern": "#ProgressiveVerbal", "POSes": ["verbal-noun", "present-progressive", "present-participle", "gerund"]},
+  "Disambiguate Adverbs & Propositions": {"order": "3", "action": "disambiguate", "parseMethod": "termList", "list": "adverb-preposition"}
 }
