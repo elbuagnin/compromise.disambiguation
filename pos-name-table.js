@@ -3,13 +3,15 @@ import * as mfs from './lib/filesystem.js';
 const posNameTableFile = './data/initialize/pos-name-table.json';
 const posNameTable = mfs.loadJSONFile(posNameTableFile, 'array');
 
-export default function posabbreviationToName(abbreviation) {
-   let fullName = false;
+export default function posNameNormalize(posNameFromData) {
+   let normalizedName = false;
    Object.values(posNameTable).forEach(pos => {
-      if (pos.abbreviation === abbreviation) {
-         fullName = pos.fullname;
+      if (pos.abbreviation === posNameFromData) {
+        normalizedName = pos.fullname;
+      } else if (pos.fullname === posNameFromData) {
+        normalizedName = pos.fullname;
       }
    })
 
-   return fullName;
+   return normalizedName;
 }
