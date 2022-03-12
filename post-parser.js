@@ -5,8 +5,6 @@ export default function postParser(document) {
     Object.values(data).forEach((rule) => {
       const { term } = rule;
       const { pattern } = rule;
-      const { batchOrder } = rule;
-      const { order } = rule;
 
       let tag = '';
       if (rule.tag) { tag = rule.tag; }
@@ -16,17 +14,17 @@ export default function postParser(document) {
       if (term && pattern) {
         if (document.has(pattern)) {
           const matchedTerm = document.match(pattern).match(term);
-          console.log('\npostParser:');
-          console.log(`Batch: ${batchOrder}: #${order}`);
-          console.log(matchedTerm.text());
+
+
+
 
           if (untag) {
             matchedTerm.untag(untag);
-            console.log(`Removing tag: ${untag}`);
+
           }
           if (tag) {
             matchedTerm.tag(tag);
-            console.log(`Assigning tag: ${tag}`);
+
           }
         }
       }

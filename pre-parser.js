@@ -5,7 +5,6 @@ export default function preParser(document) {
     Object.values(data).forEach((rule) => {
       const { term } = rule;
       const { pattern } = rule;
-      const { batchOrder } = rule;
 
       let tag = '';
       if (rule.tag) { tag = rule.tag; }
@@ -15,17 +14,17 @@ export default function preParser(document) {
       if (term && pattern) {
         if (document.has(pattern)) {
           const matchedTerm = document.match(pattern).match(term);
-          console.log('\nPreparser:');
-          console.log(`Batch: ${batchOrder}`);
-          console.log(matchedTerm.text());
+
+
+
 
           if (untag) {
             matchedTerm.untag(untag);
-            console.log(`Removing tag: ${untag}`);
+
           }
           if (tag) {
             matchedTerm.tag(tag);
-            console.log(`Assigning tag: ${tag}`);
+
           }
         }
       }
@@ -63,8 +62,8 @@ export default function preParser(document) {
   function tagHyphenatedTerms() {
     const hyphenatedTerms = document.hyphenated();
     hyphenatedTerms.tag(['#Noun', 'Singular', 'Hyphenated']);
-    console.log('Hyphenated:');
-    console.log(hyphenatedTerms.debug());
+
+
   }
 
   function tagParentheses() {
@@ -73,8 +72,8 @@ export default function preParser(document) {
       parenthesesGroups.firstTerms().tag('BEGIN');
       parenthesesGroups.lastTerms().tag('END');
       parenthesesGroups.tag('parenthesesGroup');
-      console.log('Parentheses:');
-      console.log(parenthesesGroups.debug());
+
+
     }
   }
 
@@ -84,8 +83,8 @@ export default function preParser(document) {
       quotationGroups.firstTerms().tag('BEGIN');
       quotationGroups.lastTerms().tag('END');
       quotationGroups.tag('QuotationGroup');
-      console.log('Quotations:');
-      console.log(quotationGroups.debug());
+
+
     }
   }
 
@@ -111,8 +110,8 @@ export default function preParser(document) {
             segment.firstTerms().tag('BEGIN');
             segment.lastTerms().tag('END');
             segment.tag('DashGroup');
-            console.log('Dashes:');
-            console.log(word.debug());
+
+
           }
         });
       });
@@ -140,7 +139,7 @@ export default function preParser(document) {
   orderedRules.sort((a, b) => a.batchOrder - b.batchOrder);
 
   // Normalize the document for parsing.
-  console.log('Contractions:');
+
   //document.contractions().expand().fix();
   tagHyphenatedTerms();
   //compromiseInfinitivesToSyntaxBaseVerbs();
