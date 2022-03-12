@@ -50,13 +50,17 @@ export default function disambiguate(chunk, term) {
    }
 
    const word = term.word;
+   if (!(chunk.has(word))) {
+      return false;
+   }
+
    const POSes = term.POSes.map(pos => (posNameNormalize(pos)));
 
   const results = {};
   Object.values(POSes).forEach((pos) => {
     results[pos] = 'untested';
   });
-
+   console.log('Term: ' + word);
    console.log('Possible POSes:' + JSON.stringify(POSes));
 
    Object.values(POSes).forEach((pos) => {
@@ -167,14 +171,13 @@ if (foundPOS !== false) {
   console.log('Updating POS');
 
   if (!(docWord.has(foundPOS))) {
-     console.log('Changed to ' + foundPOS);
+     console.log(word + ' changed to ' + foundPOS);
      docWord.tag(foundPOS);
   } else {
-     console.log('Already correct POS');
+     console.log(word + ' already is correct POS');
   }
 }
 
 console.log(results);
-return (foundPOS);
 
 }
