@@ -1,7 +1,7 @@
 {
-  "Tag Progressive Verbs & Verbals": {"order": "1", "action": "function", "name": "tagProgressiveVerbals"},
-  "Disambiguate Progressive Verbals": {"order": "2", "action": "disambiguate", "parseBy": "pattern", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbal-noun", "present-progressive", "present-participle", "gerund"]}},
+  "Tag Progressive Verbs & Verbals": {"order": "1", "action": "test", "name": "ingVerbals"},
+  "Disambiguate Progressive Verbals": {"order": "2", "action": "disambiguate", "parseBy": "pattern", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbalNoun", "presentProgressive", "presentParticiple", "gerund"]}},
   "Disambiguate Adverbs & Propositions": {"order": "3", "action": "disambiguate", "parseBy": "termList", "payload": {"list": "adverb-preposition"}},
   "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {"order": "4", "action": "disambiguate", "parseBy": "termList", "payload": {"list": "wordnet"}},
-  "Untag disambiguated ProgressiveVerbals": {"order": "5", "action": "tag", "parseBy": "pattern", "payload": {"pattern": "(#ProgressiveVerbal && #VerbalNoun)", "termUnTag": "#ProgressiveVerbal"}}
+  "Untag disambiguated ProgressiveVerbals": {"order": "5", "action": "tag", "parseBy": "pattern", "payload": {"pattern": "(#ProgressiveVerbal && #VerbalNoun)", "term": "(#ProgressiveVerbal && #VerbalNoun)", "untag": "#ProgressiveVerbal"}}
 }
