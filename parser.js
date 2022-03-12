@@ -1,35 +1,48 @@
-import disambiguationTerms from './disambiguationTerms.js';
+import filterTerms from './disambiguationTerms.js';
 import disambiguate from './disambiguate.js';
+import tagger from './tagger.js';
+import sequence from './sequence.js';
 
-export default function parser(document, parseMethod, parseData) {
-  let filteredDisambiguationTerms = [];
+export default function parser(document) {
 
-  function parseByTermList(chunk) {
+  function parseByTermList(chunk, instruction) {
+     const {list} = instruction.payload;
+     const termList = filterTerms(list);
      chunk.terms().forEach((entry) => {
-       console.log(entry.text());
 
-       filteredDisambiguationTerms.forEach((term) => {
-          let disambiguatedPos = 'inconclusive';
+       termList.forEach((term) => {
           if (entry.text() === term.word) {
-            console.log(term);
-            disambiguatedPos = disambiguate(chunk, term);
-            console.log(term.word + ' has been disambiguated to: ' + disambiguatedPos);
+            disambiguate(chunk, term);
           }
        });
      });
   }
 
-  function parseByPattern(chunk) {
-    disambiguate(chunk, parseData);
+  function parseByPattern(chunk, instruction) {
+    const {action, payload} = instruction;
+    const {pattern} = payload;
+
+    switch (action) {
+      case 'disambiguate':
+        disambiguate(chunk, {'word': pattern, 'POSes': payload.POSes});
+        break;
+      case 'tag':
+        tagger(chunk, payload);
+        break;
+      default:
+        break;
+    }
   }
 
   // Process by Disambiguation Term File first, then ...
   // Process the document by sentences and then by non-list commas
-    if (parseMethod === 'termList') {
-      filteredDisambiguationTerms = disambiguationTerms.filter(term => (term.list === parseData.list));
-    }
-    
-    const sentences = document.sentences();
+
+  const sentences = document.sentences();
+
+  sequence.forEach((instruction) =>  {
+    console.log(instruction);
+    const {parseBy} = instruction;
+
     sentences.forEach((sentence) => {
       let chunks = sentence;
       if (sentence.has('#Comma')) {
@@ -43,11 +56,12 @@ export default function parser(document, parseMethod, parseData) {
 
      chunks.forEach((chunk) => {
        console.log(chunk.debug());
-       if (parseMethod === 'termList') {
-         parseByTermList(chunk);
-       } else if (parseMethod === 'pattern') {
-         parseByPattern(chunk);
+       if (parseBy === 'termList') {
+         parseByTermList(chunk, instruction);
+       } else if (parseBy === 'pattern') {
+         parseByPattern(chunk, instruction);
        }
      });
    });
+ });
 }
