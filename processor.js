@@ -28,7 +28,7 @@ export default function process(doc, payload) {
 }
 
 function tagDashGroups(doc) {
-  if (document.has('@hasDash')) {
+  if (doc.has('@hasDash')) {
     const sentences = doc.sentences();
     sentences.forEach((sentence) => {
       const dashedWords = sentence.match('@hasDash');
