@@ -1,10 +1,10 @@
 {
-  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
+  "present participle": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
+  "present participle": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
+  "present participle": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
 
-  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Determiner #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Possessive #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Noun %word% (#Determiner|#Preposition)", "parse": "intra-phrase"},
-  "present participle": {"pos": "present-participle", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
+  "present participle": {"pos": "presentParticiple", "type": "positive", "pattern": "#Determiner #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
+  "present participle": {"pos": "presentParticiple", "type": "positive", "pattern": "#Possessive #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
+  "present participle": {"pos": "presentParticiple", "type": "positive", "pattern": "#Noun %word% (#Determiner|#Preposition)", "parse": "intra-phrase"},
+  "present participle": {"pos": "presentParticiple", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
 }

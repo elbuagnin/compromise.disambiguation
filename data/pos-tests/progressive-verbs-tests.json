@@ -1,16 +1,16 @@
 {
-  "present-progressive negative 1": {"pos": "present-progressive", "type": "negative", "pattern": "#Pronoun %word%", "parse": "intra-phrase"},
-  "present-progressive negative 2": {"pos": "present-progressive", "type": "negative", "pattern": "#Possessive %word%", "parse": "intra-phrase"},
-  "present-progressive negative 3": {"pos": "present-progressive", "type": "negative", "pattern": "#Noun %word%", "parse": "intra-phrase"},
-  "present-progressive negative 3": {"pos": "present-progressive", "type": "negative", "pattern": "#Preposition %word%", "parse": "intra-phrase"},
-  "present-progressive negative 3": {"pos": "present-progressive", "type": "negative", "pattern": "%word% #Verb", "parse": "intra-phrase"},
+  "presentProgressive negative 1": {"pos": "presentProgressive", "type": "negative", "pattern": "#Pronoun %word%", "parse": "intra-phrase"},
+  "presentProgressive negative 2": {"pos": "presentProgressive", "type": "negative", "pattern": "#Possessive %word%", "parse": "intra-phrase"},
+  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "#Noun %word%", "parse": "intra-phrase"},
+  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "#Preposition %word%", "parse": "intra-phrase"},
+  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "%word% #Verb", "parse": "intra-phrase"},
 
-  "present-progressive positive 1": {"pos": "present-progressive", "type": "positive", "pattern": "(was|were) #Negative? #Adverb?+ %word%", "parse": "intra-phrase"},
-  "present-progressive positive 2": {"pos": "present-progressive", "type": "positive", "pattern": "had #Negative? been  #Adverb?+ %word%", "parse": "intra-phrase"},
-  "present-progressive positive 3": {"pos": "present-progressive", "type": "positive", "pattern": "(am|is|are) #Negative? #Adverb?+ %word%", "parse": "intra-phrase"},
-  "present-progressive positive 4": {"pos": "present-progressive", "type": "positive", "pattern": "(has|have) #Negative? been  #Adverb?+ %word%", "parse": "intra-phrase"},
-  "present-progressive positive 5": {"pos": "present-progressive", "type": "positive", "pattern": "will #Negative? be #Adverb?+ %word%", "parse": "intra-phrase"},
-  "present-progressive positive 6": {"pos": "present-progressive", "type": "positive", "pattern": "will #Negative? have #Adverb?+ been %word%", "parse": "intra-phrase"},
-  "present-progressive positive 7": {"pos": "present-progressive", "type": "positive", "pattern": "will #Negative? have been #Adverb?+ %word%", "parse": "intra-phrase"},
-  "present-progressive positive 8": {"pos": "present-progressive", "type": "positive", "pattern": "will have #Negative? been #Adverb?+ %word%", "parse": "intra-phrase"}
+  "presentProgressive positive 1": {"pos": "presentProgressive", "type": "positive", "pattern": "(was|were) #Negative? #Adverb?+ %word%", "parse": "intra-phrase"},
+  "presentProgressive positive 2": {"pos": "presentProgressive", "type": "positive", "pattern": "had #Negative? been  #Adverb?+ %word%", "parse": "intra-phrase"},
+  "presentProgressive positive 3": {"pos": "presentProgressive", "type": "positive", "pattern": "(am|is|are) #Negative? #Adverb?+ %word%", "parse": "intra-phrase"},
+  "presentProgressive positive 4": {"pos": "presentProgressive", "type": "positive", "pattern": "(has|have) #Negative? been  #Adverb?+ %word%", "parse": "intra-phrase"},
+  "presentProgressive positive 5": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? be #Adverb?+ %word%", "parse": "intra-phrase"},
+  "presentProgressive positive 6": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? have #Adverb?+ been %word%", "parse": "intra-phrase"},
+  "presentProgressive positive 7": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? have been #Adverb?+ %word%", "parse": "intra-phrase"},
+  "presentProgressive positive 8": {"pos": "presentProgressive", "type": "positive", "pattern": "will have #Negative? been #Adverb?+ %word%", "parse": "intra-phrase"}
 }

@@ -1,15 +1,15 @@
 {
-  "verbal-noun negative 1": {"pos": "verbal-noun", "type": "negative", "pattern": "#Adverb %word%", "parse": "intra-phrase"},
-  "verbal-noun negative 2": {"pos": "verbal-noun", "type": "negative", "pattern": "%word% #Adverb", "parse": "intra-phrase"},
-  "verbal-noun negative 3": {"pos": "verbal-noun", "type": "negative", "pattern": "%word% #Noun", "parse": "intra-phrase"},
-  "verbal-noun negative 3": {"pos": "verbal-noun", "type": "negative", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
-  "verbal-noun negative 3": {"pos": "verbal-noun", "type": "negative", "pattern": "%word% #Possessive", "parse": "intra-phrase"},
+  "verbalNoun negative 1": {"pos": "verbalNoun", "type": "negative", "pattern": "#Adverb %word%", "parse": "intra-phrase"},
+  "verbalNoun negative 2": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Adverb", "parse": "intra-phrase"},
+  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Noun", "parse": "intra-phrase"},
+  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
+  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Possessive", "parse": "intra-phrase"},
 
-  "verbal-noun probable 1": {"pos": "verbal-noun", "type": "probable", "pattern": "#Verb %word%", "parse": "intra-phrase"},
-  "verbal-noun probable 2": {"pos": "verbal-noun", "type": "probable", "pattern": "%word% #Verb", "parse": "intra-phrase"},
+  "verbalNoun probable 1": {"pos": "verbalNoun", "type": "probable", "pattern": "#Verb %word%", "parse": "intra-phrase"},
+  "verbalNoun probable 2": {"pos": "verbalNoun", "type": "probable", "pattern": "%word% #Verb", "parse": "intra-phrase"},
 
-  "verbal-noun positive 1": {"pos": "verbal-noun", "type": "positive", "pattern": "#Determiner %word%", "parse": "intra-phrase"},
-  "verbal-noun positive 2": {"pos": "verbal-noun", "type": "positive", "pattern": "#Possessive %word%", "parse": "intra-phrase"},
-  "verbal-noun positive 3": {"pos": "verbal-noun", "type": "positive", "pattern": "#Adjective %word%", "parse": "intra-phrase"},
-  "verbal-noun positive 4": {"pos": "verbal-noun", "type": "positive", "pattern": "%word% #Preposition", "parse": "intra-phrase"}
+  "verbalNoun positive 1": {"pos": "verbalNoun", "type": "positive", "pattern": "#Determiner %word%", "parse": "intra-phrase"},
+  "verbalNoun positive 2": {"pos": "verbalNoun", "type": "positive", "pattern": "#Possessive %word%", "parse": "intra-phrase"},
+  "verbalNoun positive 3": {"pos": "verbalNoun", "type": "positive", "pattern": "#Adjective %word%", "parse": "intra-phrase"},
+  "verbalNoun positive 4": {"pos": "verbalNoun", "type": "positive", "pattern": "%word% #Preposition", "parse": "intra-phrase"}
 }
