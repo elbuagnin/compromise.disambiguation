@@ -1,9 +1,24 @@
+import sequence from './sequence.js';
 import filterTerms from './disambiguationTerms.js';
 import disambiguate from './disambiguate.js';
 import tagger from './tagger.js';
-import sequence from './sequence.js';
+import process from './processor.js';
 
 export default function parser(document) {
+  function parseDocument(document, instruction) {
+    const {action, payload} = instruction;
+    switch (action) {
+      case 'disambiguate':
+        disambiguate(document, {'word': payload.pattern, 'POSes': payload.POSes});
+        break;
+      case 'process':
+        process(payload);
+        break;
+      case 'tag':
+        tagger(document, payload);
+        break;
+   }
+  }
 
   function parseByTermList(chunk, instruction) {
      const {list} = instruction.payload;
@@ -20,11 +35,10 @@ export default function parser(document) {
 
   function parseByPattern(chunk, instruction) {
     const {action, payload} = instruction;
-    const {pattern} = payload;
 
     switch (action) {
       case 'disambiguate':
-        disambiguate(chunk, {'word': pattern, 'POSes': payload.POSes});
+        disambiguate(chunk, {'word': payload.pattern, 'POSes': payload.POSes});
         break;
       case 'tag':
         tagger(chunk, payload);
@@ -55,12 +69,21 @@ export default function parser(document) {
       }
 
      chunks.forEach((chunk) => {
-       console.log(chunk.debug());
-       if (parseBy === 'termList') {
-         parseByTermList(chunk, instruction);
-       } else if (parseBy === 'pattern') {
-         parseByPattern(chunk, instruction);
+       switch (parseBy) {
+          case 'termList':
+            parseByTermList(chunk, instruction);
+            break;
+          case 'pattern':
+            parseByPattern(chunk, instruction);
+            break;
+          case 'document':
+            parseDocument(document, instruction);
+            break;
+          default:
+            break;
        }
+
+
      });
    });
  });
