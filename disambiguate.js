@@ -171,10 +171,10 @@ if (foundPOS !== false) {
   console.log('Updating POS');
 
   if (!(docWord.has(foundPOS))) {
-     console.log(word + ' changed to ' + foundPOS);
+     console.log(docWord.text() + ' changed to ' + foundPOS);
      docWord.tag(foundPOS);
   } else {
-     console.log(word + ' already is correct POS');
+     console.log(docWord.text() + ' already is correct POS');
   }
 }
 
