@@ -12,7 +12,7 @@ export default function parser(document) {
         disambiguate(document, {'word': payload.pattern, 'POSes': payload.POSes});
         break;
       case 'process':
-        process(payload);
+        process(document, payload);
         break;
       case 'tag':
         tagger(document, payload);
