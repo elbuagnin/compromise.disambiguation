@@ -1,8 +1,8 @@
 import initialize from './initialize.js';
 import preParser from './pre-parser.js';
-//import parser from './parser.js';
+import parser from './parser.js';
 import postParser from './post-parser.js';
-import sequencer from './sequencer.js';
+//import sequencer from './sequencer.js';
 
 export default function disambiguation(Doc, world) { // eslint-disable-line
   Doc.prototype.disambiguation = function () {  // eslint-disable-line
@@ -17,8 +17,8 @@ export default function disambiguation(Doc, world) { // eslint-disable-line
 
     initialize(document);
     preParser(document);
-    //parser(document);
-    sequencer(document);
+    parser(document);
+    //sequencer(document);
     postParser(document);
 
 
