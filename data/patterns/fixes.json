@@ -1,0 +1,9 @@
+{
+  "Mistagged Gerunds": {"batchOrder": "1", "order": "3", "term": ".", "pattern": "(#Auxiliary && #Verb && /ing$/)", "tag": "#ProgressiveVerbal"},
+
+  "Unset #Gerunds": {"batchOrder": "2", "term": "#Gerund", "pattern": "#Gerund", "untag": ["#Gerund", "#Noun"], "tag": "#ProgressiveVerbal"},
+
+  "Activity Is Verbal": {"batchOrder": "2", "term": "#Activity", "pattern": "(#Activity && /ing$/)", "tag": "#ProgressiveVerbal", "untag": ["#Activity", "#Noun"]},
+
+  "#Auxiliary #Adverb": {"batchOrder": "2", "term": "#Adverb", "pattern": "(#Auxiliary && #Adverb)", "untag": "#Auxiliary"}
+}
