@@ -35,10 +35,14 @@ export default function parser(document) {
 
   function parseByPattern(chunk, instruction) {
     const {action, payload} = instruction;
+    let matches = [];
 
     switch (action) {
       case 'disambiguate':
-        disambiguate(chunk, {'word': payload.pattern, 'POSes': payload.POSes});
+        matches = chunk.match(payload.pattern);
+        matches.forEach(match => {
+           disambiguate(chunk, {'word': match.text(), 'POSes': payload.POSes});
+        })
         break;
       case 'tag':
         tagger(chunk, payload);
@@ -53,6 +57,7 @@ export default function parser(document) {
 
   const sentences = document.sentences();
 
+  sequence.sort((a, b) => a.order - b.order);
   sequence.forEach((instruction) =>  {
     console.log(instruction);
     const {parseBy} = instruction;
