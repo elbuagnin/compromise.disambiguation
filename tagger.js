@@ -1,8 +1,8 @@
-export default function tagger(chunk, payload) {
+export default function tagger(doc, payload) {
   const { pattern, term, tag, untag } = payload;
 
-  if (chunk.has(pattern)) {
-    const matchedTerm = chunk.match(pattern).match(term);
+  if (doc.has(pattern)) {
+    const matchedTerm = doc.match(pattern).match(term);
     console.log('Tagger matched: ' + matchedTerm.text());
 
     if (untag) {
