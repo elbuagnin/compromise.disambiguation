@@ -4,54 +4,65 @@ import tagger from './tagger.js';
 import process from './processor.js';
 import filterTerms from './disambiguationTerms.js';
 
-export function byDocument(document, instruction) {
-  const {action, payload} = instruction;
-  switch (action) {
-    case 'disambiguate':
-      disambiguate(document, {'word': payload.pattern, 'POSes': payload.POSes});
-      break;
-    case 'process':
-      process(document, payload);
-      break;
-    case 'tag':
-      tagger(document, payload);
-      break;
- }
+export default function parse(doc, instruction) {
+   const {action, parseBy} = instruction;
+
+   if (action === 'process') {
+     process(doc, instruction);
+   } else {
+
+    switch (parseBy) {
+      case 'termList':
+         byTermList(doc, instruction);
+         break;
+      case 'pattern':
+         byPattern(doc, instruction);
+         break;
+      case 'patternFile':
+         byPatternFile(doc, instruction);
+         break;
+      case 'byPatternDirectory':
+        byPatternDirectory(doc, instruction);
+        break;
+      default:
+         break;
+    }
+  }
 }
 
-export function byTermList(chunk, instruction) {
+function byTermList(doc, instruction) {
    const {list} = instruction.payload;
    const termList = filterTerms(list);
-   chunk.terms().forEach((entry) => {
 
+   doc.terms().forEach((entry) => {
      termList.forEach((term) => {
         if (entry.text() === term.word) {
-          disambiguate(chunk, term);
+          disambiguate(doc, term);
         }
      });
    });
 }
 
-export function byPattern(chunk, instruction) {
+function byPattern(doc, instruction) {
   const {action, payload} = instruction;
   let matches = [];
 
   switch (action) {
     case 'disambiguate':
-      matches = chunk.match(payload.pattern);
+      matches = doc.match(payload.pattern);
       matches.forEach(match => {
-         disambiguate(chunk, {'word': match.text(), 'POSes': payload.POSes});
+         disambiguate(doc, {'word': match.text(), 'POSes': payload.POSes});
       })
       break;
     case 'tag':
-      tagger(chunk, payload);
+      tagger(doc, payload);
       break;
     default:
       break;
   }
 }
 
-export function byPatternFile(chunk, instruction) {
+function byPatternFile(doc, instruction) {
    const {file} = instruction.payload;
    const filepath = './data/patterns/' + file + '.json';
    const returnType = 'array';
@@ -60,6 +71,19 @@ export function byPatternFile(chunk, instruction) {
 
    rules.forEach((rule) => {
       const passedInstruction = {'action': 'tag', 'payload': rule};
-      byPattern(chunk, passedInstruction);
+      byPattern(doc, passedInstruction);
    });
+}
+
+function byPatternDirectory(doc, instruction) {
+  const {directory} = instruction.payload;
+  const filepath = './data/' + directory;
+  const list = true;
+  const rules = mfs.loadJSONDir(filepath, list);
+  rules.sort((a, b) => a.batch - b.batch || a.order - b.order);
+
+  rules.forEach((rule) => {
+     const passedInstruction = {'action': 'tag', 'payload': rule};
+     byPattern(doc, passedInstruction);
+  });
 }
