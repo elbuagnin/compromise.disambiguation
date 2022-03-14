@@ -12,12 +12,14 @@ export default function sequencer(document) {
 
     if (scope === 'document') {
       parse(document, instruction);
+
    } else {
 
        sentences.forEach((sentence) => {
 
          if (scope === 'sentence') {
            parse(sentence, instruction);
+
          } else {
 
            // Scope = 'phrase' assumed
@@ -32,6 +34,7 @@ export default function sequencer(document) {
            }
 
           chunks.forEach((chunk) => {
+            console.log(chunk.text());
             parse(chunk, instruction);
           });
          }
