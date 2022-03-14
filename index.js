@@ -1,5 +1,5 @@
 import initialize from './initialize.js';
-import parser from './parser.js';
+import sequencer from './sequencer.js';
 
 export default function disambiguation(Doc, world) { // eslint-disable-line
   Doc.prototype.disambiguation = function () {  // eslint-disable-line
@@ -13,7 +13,7 @@ export default function disambiguation(Doc, world) { // eslint-disable-line
     console.log(document.debug());
 
     initialize(document);
-    parser(document);
+    sequencer(document);
 
 
     console.log('############################################################');
