@@ -1,0 +1,5 @@
+{
+  "to #Verb": {"order": "1", "term": "to #Verb", "pattern": "to #Verb", "tag": "#Infinitive", "untag": ["#Verb", "#Conjunction"]},
+
+  "to #Infinitive": {"order": "1", "term": "to #Infinitive", "pattern": "to #Verb", "tag": "#Infinitive", "untag": ["#Verb", "#Conjunction"]}
+}
