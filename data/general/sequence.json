@@ -1,13 +1,14 @@
 {
-  "Expand Contractions": {"order": "1", "action": "process", "parseBy": "document", "payload": {"process": "expandContractions"}},
-  "Tag Hyphentated Terms": {"order": "2", "action": "process", "parseBy": "document", "payload": {"process": "tagHyphenatedTerms"}},
-  "Tag Dash Groups": {"order": "3", "action": "process", "parseBy": "document", "payload": {"process": "tagDashGroups"}},
-  "Tag Parentheses Groups": {"order": "4", "action": "process", "parseBy": "document", "payload": {"process": "tagParentheses"}},
-  "Tag Quotations": {"order": "5", "action": "process", "parseBy": "document", "payload": {"process": "tagQuotations"}},
-  "Tag Punctuation": {"order": "6", "action": "process", "parseBy": "document", "payload": {"process": "tagPunctuation"}},
-  "Tag Progressive Verbs & Verbals": {"order": "7", "action": "process", "parseBy": "document", "payload": {"process": "ingVerbals"}},
-  "Disambiguate Progressive Verbals": {"order": "8", "action": "disambiguate", "parseBy": "pattern", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbalNoun", "presentProgressive", "presentParticiple", "gerund"]}},
-  "Untag disambiguated ProgressiveVerbals": {"order": "9", "action": "tag", "parseBy": "pattern", "payload": {"pattern": "(#ProgressiveVerbal && #VerbalNoun)", "term": "(#ProgressiveVerbal && #VerbalNoun)", "untag": "#ProgressiveVerbal"}},
-  "Disambiguate Adverbs & Propositions": {"order": "10", "action": "disambiguate", "parseBy": "termList", "payload": {"list": "adverb-preposition"}},
-  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {"order": "11", "action": "disambiguate", "parseBy": "termList", "payload": {"list": "wordnet"}}
+  "Expand Contractions": {"order": "1", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "expandContractions"}},
+  "POS fixes to Compromise output": {"order": "2", "action": "tag", "parseBy": "patternFile", "scope": "document", "payload": {"file": "fixes"}},
+  "Tag Hyphentated Terms": {"order": "2", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagHyphenatedTerms"}},
+  "Tag Dash Groups": {"order": "3", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagDashGroups"}},
+  "Tag Parentheses Groups": {"order": "4", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagParentheses"}},
+  "Tag Quotations": {"order": "5", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagQuotations"}},
+  "Tag Punctuation": {"order": "6", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagPunctuation"}},
+  "Tag Progressive Verbs & Verbals": {"order": "7", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "ingVerbals"}},
+  "Disambiguate Progressive Verbals": {"order": "8", "action": "disambiguate", "parseBy": "pattern", "scope": "chunk", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbalNoun", "presentProgressive", "presentParticiple", "gerund"]}},
+  "Untag disambiguated ProgressiveVerbals": {"order": "9", "action": "tag", "parseBy": "pattern", "scope": "document", "payload": {"pattern": "(#ProgressiveVerbal && #VerbalNoun)", "term": "(#ProgressiveVerbal && #VerbalNoun)", "untag": "#ProgressiveVerbal"}},
+  "Disambiguate Adverbs & Propositions": {"order": "10", "action": "disambiguate", "parseBy": "termList", "scope": "chunk", "payload": {"list": "adverb-preposition"}},
+  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {"order": "11", "action": "disambiguate", "parseBy": "termList", "scope": "chunk", "payload": {"list": "wordnet"}}
 }
