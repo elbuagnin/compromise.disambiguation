@@ -2,16 +2,36 @@ import sequence from './sequence.js';
 import * as parse from './parser.js';
 
 export default function sequencer(document) {
+  function parseTree(doc, instruction) {
+     const {parseBy} = instruction;
+     
+     switch (parseBy) {
+      case 'document':
+         parse.byDocument(doc, instruction);
+         break;
+      case 'termList':
+         parse.byTermList(doc, instruction);
+         break;
+      case 'pattern':
+         parse.byPattern(doc, instruction);
+         break;
+      case 'patternFile':
+         parse.byPatternFile(doc, instruction);
+         break;
+      default:
+         break;
+    }
+  }
 
   const sentences = document.sentences();
-
   sequence.sort((a, b) => a.order - b.order);
+
   sequence.forEach((instruction) =>  {
     console.log(instruction);
-    const {parseBy} = instruction;
+    const {source} = instruction;
 
-    if (parseBy === 'document') {
-      parse.byDocument(document, instruction);
+    if (source === 'document') {
+      parseTree(document, instruction);
    } else {
 
        sentences.forEach((sentence) => {
@@ -26,19 +46,7 @@ export default function sequencer(document) {
          }
 
         chunks.forEach((chunk) => {
-          switch (parseBy) {
-             case 'termList':
-               parse.byTermList(chunk, instruction);
-               break;
-             case 'pattern':
-               parse.byPattern(chunk, instruction);
-               break;
-             case 'patternFile':
-               parse.byPatternFile(chunk, instruction);
-               break;
-             default:
-               break;
-          }
+          parseTree(chunk, instruction);
         });
       });
    }
