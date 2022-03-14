@@ -1,5 +1,6 @@
-export default function process(doc, payload) {
-   const {process} = payload;
+export default function process(doc, instruction) {
+   const {process} = instruction.payload;
+
    switch (process) {
       case 'tagDashGroups':
         tagDashGroups(doc);
