@@ -1,3 +1,4 @@
+import * as mfs from './lib/filesystem.js';
 import disambiguate from './disambiguate.js';
 import tagger from './tagger.js';
 import process from './processor.js';
@@ -48,4 +49,17 @@ export function byPattern(chunk, instruction) {
     default:
       break;
   }
+}
+
+export function byPatternFile(chunk, instruction) {
+   const {file} = instruction.payload;
+   const filepath = './data/patterns/' + file + '.json';
+   const returnType = 'array';
+   const rules = mfs.loadJSONFile(filepath, returnType);
+   rules.sort((a, b) => a.order - b.order);
+
+   rules.forEach((rule) => {
+      const passedInstruction = {'action': 'tag', 'payload': rule};
+      byPattern(chunk, passedInstruction);
+   });
 }
