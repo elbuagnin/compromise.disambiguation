@@ -7,8 +7,8 @@
   "Tag Quotations": {"order": "6", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagQuotations"}},
   "Tag Punctuation": {"order": "7", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagPunctuation"}},
   "Tag Progressive Verbs & Verbals": {"order": "8", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "ingVerbals"}},
-  "Disambiguate Progressive Verbals": {"order": "9", "action": "disambiguate", "parseBy": "pattern", "scope": "chunk", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbalNoun", "presentProgressive", "presentParticiple", "gerund"]}},
+  "Disambiguate Progressive Verbals": {"order": "9", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbalNoun", "presentProgressive", "presentParticiple", "gerund"]}},
   "Untag disambiguated ProgressiveVerbals": {"order": "10", "action": "tag", "parseBy": "pattern", "scope": "document", "payload": {"pattern": "(#ProgressiveVerbal && #VerbalNoun)", "term": "(#ProgressiveVerbal && #VerbalNoun)", "untag": "#ProgressiveVerbal"}},
-  "Disambiguate Adverbs & Propositions": {"order": "11", "action": "disambiguate", "parseBy": "termList", "scope": "chunk", "payload": {"list": "adverb-preposition"}},
-  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {"order": "12", "action": "disambiguate", "parseBy": "termList", "scope": "chunk", "payload": {"list": "wordnet"}}
+  "Disambiguate Adverbs & Propositions": {"order": "11", "action": "disambiguate", "parseBy": "termList", "scope": "phrase", "payload": {"list": "adverb-preposition"}},
+  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {"order": "12", "action": "disambiguate", "parseBy": "termList", "scope": "phrase", "payload": {"list": "wordnet"}}
 }
