@@ -9,6 +9,11 @@
       "notA": ["Infinitive", "PastParticiple", "PresentParticiple", "PerfectParticiple"],
       "color": "blue"
   },
+  "VerbalNoun": {
+      "isA": "Noun",
+      "notA": "",
+      "color": "blue"
+  },
   "PresentParticiple": {
       "isA": "",
       "notA": ["Infinitive", "Gerund", "PastParticiple", "PerfectParticiple"],
