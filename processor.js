@@ -1,6 +1,6 @@
 export default function process(doc, parsingData) {
    const {process} = parsingData;
-   console.log('Process: ' + process);
+   console.log('    Process: ' + process);
    switch (process) {
       case 'tagDashGroups':
         tagDashGroups(doc);

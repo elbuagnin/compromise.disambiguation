@@ -42,7 +42,7 @@ function parseByMethod(doc, instruction, parsingData = false) {
   if (parsingData === false) {
     parsingData = instruction.payload;
   }
-  console.log('parseBy: ' + parseBy);
+  //console.log('  parseBy: ' + parseBy);
   switch (parseBy) {
     case 'pattern':
       parseByPattern(doc, action, parsingData);
@@ -63,7 +63,7 @@ function parseUsingFile(doc, instruction) {
   const {file} = instruction.payload;
 
   const filepath = parsingDataPaths(parseBy) + file + '.json';
-  console.log('Using file: ' + filepath);
+  console.log('  Using file: ' + filepath);
   const returnType = 'array';
   const parsingSets = mfs.loadJSONFile(filepath, returnType);
   parsingSets.sort((a, b) => a.order - b.order);
@@ -78,7 +78,7 @@ function parseUsingDirectory(doc, instruction) {
   const {directory} = instruction.payload;
 
   const dirpath = './data/' + parsingDataPaths(parseBy) + directory;
-  console.log('Using Directory: ' + dirpath)
+  console.log('  Using Directory: ' + dirpath)
   const list = true;
   const parsingSets = mfs.loadJSONDir(dirpath, list);
   parsingSets.sort((a, b) => a.batch - b.batch || a.order - b.order);
@@ -90,7 +90,7 @@ function parseUsingDirectory(doc, instruction) {
 
 function parseByPattern(doc, action, parsingData) {
   let matches = [];
-  console.log('pattern' + parsingData.pattern);
+  console.log('    pattern ' + parsingData.pattern);
   switch (action) {
     case 'disambiguate':
       matches = doc.match(parsingData.pattern);
@@ -107,10 +107,11 @@ function parseByPattern(doc, action, parsingData) {
 }
 
 function parseByTerm(doc, action, parsingData) {
-  console.log('pdata: ' + JSON.stringify(parsingData));
+  //console.log('pdata: ' + JSON.stringify(parsingData));
   const {term} = parsingData;
   doc.terms().forEach((entry) => {
     if (entry.text() === term.word) {
+      console.log('    Found term: ' + term);
       disambiguate(doc, term);
     }
   });
