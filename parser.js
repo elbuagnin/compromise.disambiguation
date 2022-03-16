@@ -21,7 +21,7 @@ function parsingDataPaths(parseBy) {
 
 export default function parse(doc, instruction) {
    const {source} = instruction;
-
+   console.log('Source: ' + source);
    switch (source) {
      case 'payload':
        parseByMethod(doc, instruction);
@@ -42,7 +42,7 @@ function parseByMethod(doc, instruction, parsingData = false) {
   if (parsingData === false) {
     parsingData = instruction.payload;
   }
-
+  console.log('parseBy: ' + parseBy);
   switch (parseBy) {
     case 'pattern':
       parseByPattern(doc, action, parsingData);
@@ -63,6 +63,7 @@ function parseUsingFile(doc, instruction) {
   const {file} = instruction.payload;
 
   const filepath = parsingDataPaths(parseBy) + file + '.json';
+  console.log('Using file: ' + filepath);
   const returnType = 'array';
   const parsingSets = mfs.loadJSONFile(filepath, returnType);
   parsingSets.sort((a, b) => a.order - b.order);
@@ -76,9 +77,10 @@ function parseUsingDirectory(doc, instruction) {
   const {parseBy} = instruction;
   const {directory} = instruction.payload;
 
-  const filepath = './data/' + parsingDataPaths(parseBy) + directory;
+  const dirpath = './data/' + parsingDataPaths(parseBy) + directory;
+  console.log('Using Directory: ' + dirpath)
   const list = true;
-  const parsingSets = mfs.loadJSONDir(filepath, list);
+  const parsingSets = mfs.loadJSONDir(dirpath, list);
   parsingSets.sort((a, b) => a.batch - b.batch || a.order - b.order);
 
   parsingSets.forEach((parsingData) => {
@@ -88,7 +90,7 @@ function parseUsingDirectory(doc, instruction) {
 
 function parseByPattern(doc, action, parsingData) {
   let matches = [];
-
+  console.log('pattern' + parsingData.pattern);
   switch (action) {
     case 'disambiguate':
       matches = doc.match(parsingData.pattern);
@@ -105,6 +107,7 @@ function parseByPattern(doc, action, parsingData) {
 }
 
 function parseByTerm(doc, action, parsingData) {
+  console.log('pdata: ' + JSON.stringify(parsingData));
   const {term} = parsingData;
   doc.terms().forEach((entry) => {
     if (entry.text() === term.word) {
