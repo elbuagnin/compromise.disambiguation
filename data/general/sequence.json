@@ -13,7 +13,7 @@
 
   "Tag Punctuation": {"order": "7", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagPunctuation"}},
 
-  "Disambiguate 'to'": {"order": "8", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "source": "payload", "payload": {"pattern": "to", "POSes": ["Preposition", "Infinitive"]}},
+  "Disambiguate 'to'": {"order": "8", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "source": "payload", "payload": {"pattern": "to", "POSes": ["preposition", "infinitive"]}},
 
   "Tag Infinitives": {"order": "9", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "infinitives"}},
 
