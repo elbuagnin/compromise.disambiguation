@@ -7,9 +7,9 @@
 
   "verbalNoun probable 1": {"pos": "verbalNoun", "type": "probable", "pattern": "#Verb %word%", "parse": "intra-phrase"},
   "verbalNoun probable 2": {"pos": "verbalNoun", "type": "probable", "pattern": "%word% #Verb", "parse": "intra-phrase"},
+  "verbalNoun probable 3": {"pos": "verbalNoun", "type": "probable", "pattern": "%word% #Preposition", "parse": "intra-phrase"},
 
   "verbalNoun positive 1": {"pos": "verbalNoun", "type": "positive", "pattern": "#Determiner %word%", "parse": "intra-phrase"},
   "verbalNoun positive 2": {"pos": "verbalNoun", "type": "positive", "pattern": "#Possessive %word%", "parse": "intra-phrase"},
-  "verbalNoun positive 3": {"pos": "verbalNoun", "type": "positive", "pattern": "#Adjective %word%", "parse": "intra-phrase"},
-  "verbalNoun positive 4": {"pos": "verbalNoun", "type": "positive", "pattern": "%word% #Preposition", "parse": "intra-phrase"}
+  "verbalNoun positive 3": {"pos": "verbalNoun", "type": "positive", "pattern": "#Adjective %word%", "parse": "intra-phrase"}
 }

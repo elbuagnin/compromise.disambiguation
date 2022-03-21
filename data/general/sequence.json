@@ -1,29 +1,29 @@
 {
-  "Expand Contractions": {"order": "1", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "expandContractions"}},
+  "Expand Contractions": {"order": "1", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "expandContractions"}},
 
-  "POS fixes to Compromise output": {"order": "2", "action": "tag", "parseBy": "patternFile", "scope": "document", "payload": {"file": "fixes"}},
+  "POS fixes to Compromise output": {"order": "2", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "fixes"}},
 
-  "Tag Hyphentated Terms": {"order": "3", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagHyphenatedTerms"}},
+  "Tag Hyphentated Terms": {"order": "3", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagHyphenatedTerms"}},
 
-  "Tag Dash Groups": {"order": "4", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagDashGroups"}},
+  "Tag Dash Groups": {"order": "4", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagDashGroups"}},
 
-  "Tag Parentheses Groups": {"order": "5", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagParentheses"}},
+  "Tag Parentheses Groups": {"order": "5", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagParentheses"}},
 
-  "Tag Quotations": {"order": "6", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagQuotations"}},
+  "Tag Quotations": {"order": "6", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagQuotations"}},
 
-  "Tag Punctuation": {"order": "7", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "tagPunctuation"}},
+  "Tag Punctuation": {"order": "7", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagPunctuation"}},
 
-  "Disambiguate 'to'": {"order": "8", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "payload": {"pattern": "to", "POSes": ["Preposition", "Infinitive"]}},
+  "Disambiguate 'to'": {"order": "8", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "source": "payload", "payload": {"pattern": "to", "POSes": ["Preposition", "Infinitive"]}},
 
-  "Tag Infinitives": {"order": "9", "action": "tag", "parseBy": "patternFile", "scope": "document", "payload": {"file": "infinitives"}},
+  "Tag Infinitives": {"order": "9", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "infinitives"}},
 
-  "Tag Progressive Verbs & Verbals": {"order": "10", "action": "process", "parseBy": "document", "scope": "document", "payload": {"process": "ingVerbals"}},
+  "Tag Progressive Verbs & Verbals": {"order": "10", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "ingVerbals"}},
 
-  "Disambiguate Progressive Verbals": {"order": "11", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbalNoun", "presentProgressive", "presentParticiple", "gerund"]}},
+  "Disambiguate Progressive Verbals": {"order": "11", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "source": "payload", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbalNoun", "presentProgressive", "presentParticiple", "gerund"]}},
 
-  "Untag disambiguated ProgressiveVerbals": {"order": "12", "action": "tag", "parseBy": "patternFile", "scope": "document", "payload": {"file": "remove-progressiveVerbals"}},
+  "Untag disambiguated ProgressiveVerbals": {"order": "12", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "remove-progressiveVerbals"}},
 
-  "Disambiguate Adverbs & Propositions": {"order": "13", "action": "disambiguate", "parseBy": "termList", "scope": "phrase", "payload": {"list": "adverb-preposition"}},
+  "Disambiguate Adverbs & Propositions": {"order": "13", "action": "disambiguate", "parseBy": "term", "scope": "phrase", "source": "file", "payload": {"file": "adverb-preposition"}},
 
-  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {"order": "14", "action": "disambiguate", "parseBy": "termList", "scope": "phrase", "payload": {"list": "wordnet"}}
+  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {"order": "14", "action": "disambiguate", "parseBy": "term", "scope": "phrase", "source": "file", "payload": {"file": "wordnet"}}
 }

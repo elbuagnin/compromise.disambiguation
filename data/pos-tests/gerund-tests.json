@@ -3,13 +3,14 @@
   "gerund negative 2": {"pos": "gerund", "type": "negative", "pattern": "#Determiner %word%", "parse": "intra-phrase"},
   "gerund negative 3": {"pos": "gerund", "type": "negative", "pattern": "#Possessive %word% !#Adverb", "parse": "intra-phrase"},
 
-  "past progressive": {"pos": "gerund", "type": "probable", "pattern": "#Adverb %word%", "parse": "intra-phrase"},
-  "past perfect progressive": {"pos": "gerund", "type": "probable", "pattern": "%word% #Adverb", "parse": "intra-phrase"},
-  "present progressive": {"pos": "gerund", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
-  "present perfect progressive": {"pos": "gerund", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
-  "future progressive": {"pos": "gerund", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
+  "gerund probable 1": {"pos": "gerund", "type": "probable", "pattern": "#Adverb %word%", "parse": "intra-phrase"},
+  "gerund probable 2": {"pos": "gerund", "type": "probable", "pattern": "%word% #Adverb", "parse": "intra-phrase"},
+  "gerund probable 3": {"pos": "gerund", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
+  "gerund probable 4": {"pos": "gerund", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
+  "gerund probable 5": {"pos": "gerund", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
+  "gerund probable 6": {"pos": "gerund", "type": "probable", "pattern": "%word% #Preposition", "parse": "intra-phrase"},
 
-  "future perfect progressive 1": {"pos": "gerund", "type": "positive", "pattern": "%word% (#Determiner|#Possessive)? #Noun #Verb", "parse": "intra-phrase"},
-  "future perfect progressive 2": {"pos": "gerund", "type": "positive", "pattern": "#Verb %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"},
-  "future perfect progressive 3": {"pos": "gerund", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
+  "gerund positive 1": {"pos": "gerund", "type": "positive", "pattern": "%word% (#Determiner|#Possessive)? #Noun #Verb", "parse": "intra-phrase"},
+  "gerund positive 2": {"pos": "gerund", "type": "positive", "pattern": "(#Verb && !#Copula) %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"},
+  "gerund positive 3": {"pos": "gerund", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
 }

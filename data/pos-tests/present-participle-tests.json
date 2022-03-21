@@ -1,10 +1,11 @@
 {
-  "present participle": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
-  "present participle": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
-  "present participle": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
+  "present participle probable 1": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
+  "present participle probable 2": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
+  "present participle probable 3": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Noun", "parse": "intra-phrase"},
+  "present participle probable 4": {"pos": "presentParticiple", "type": "probable", "pattern": "%word% #Preposition", "parse": "intra-phrase"},
 
-  "present participle": {"pos": "presentParticiple", "type": "positive", "pattern": "#Determiner #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
-  "present participle": {"pos": "presentParticiple", "type": "positive", "pattern": "#Possessive #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
-  "present participle": {"pos": "presentParticiple", "type": "positive", "pattern": "#Noun %word% (#Determiner|#Preposition)", "parse": "intra-phrase"},
-  "present participle": {"pos": "presentParticiple", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
+  "present participle positive 1": {"pos": "presentParticiple", "type": "positive", "pattern": "#Determiner #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
+  "present participle positive 2": {"pos": "presentParticiple", "type": "positive", "pattern": "#Possessive #Adjective?+ %word% #Noun", "parse": "intra-phrase"},
+  "present participle positive 3": {"pos": "presentParticiple", "type": "positive", "pattern": "#Noun %word% (#Determiner|#Preposition)", "parse": "intra-phrase"},
+  "present participle positive 4": {"pos": "presentParticiple", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "parse": "intra-phrase"}
 }
