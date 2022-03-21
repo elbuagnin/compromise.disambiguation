@@ -1,15 +1,15 @@
 {
-  "verbalNoun negative 1": {"pos": "verbalNoun", "type": "negative", "pattern": "#Adverb %word%", "scope": "intra-phrase"},
-  "verbalNoun negative 2": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Adverb", "scope": "intra-phrase"},
-  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Noun", "scope": "intra-phrase"},
-  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Pronoun", "scope": "intra-phrase"},
-  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Possessive", "scope": "intra-phrase"},
+  "verbalNoun negative 1": {"pos": "verbalNoun", "type": "negative", "pattern": "#Adverb %word%", "scope": "phrase"},
+  "verbalNoun negative 2": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Adverb", "scope": "phrase"},
+  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Noun", "scope": "phrase"},
+  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Pronoun", "scope": "phrase"},
+  "verbalNoun negative 3": {"pos": "verbalNoun", "type": "negative", "pattern": "%word% #Possessive", "scope": "phrase"},
 
-  "verbalNoun probable 1": {"pos": "verbalNoun", "type": "probable", "pattern": "#Verb %word%", "scope": "intra-phrase"},
-  "verbalNoun probable 2": {"pos": "verbalNoun", "type": "probable", "pattern": "%word% #Verb", "scope": "intra-phrase"},
-  "verbalNoun probable 3": {"pos": "verbalNoun", "type": "probable", "pattern": "%word% #Preposition", "scope": "intra-phrase"},
+  "verbalNoun probable 1": {"pos": "verbalNoun", "type": "probable", "pattern": "#Verb %word%", "scope": "phrase"},
+  "verbalNoun probable 2": {"pos": "verbalNoun", "type": "probable", "pattern": "%word% #Verb", "scope": "phrase"},
+  "verbalNoun probable 3": {"pos": "verbalNoun", "type": "probable", "pattern": "%word% #Preposition", "scope": "phrase"},
 
-  "verbalNoun positive 1": {"pos": "verbalNoun", "type": "positive", "pattern": "#Determiner %word%", "scope": "intra-phrase"},
-  "verbalNoun positive 2": {"pos": "verbalNoun", "type": "positive", "pattern": "#Possessive %word%", "scope": "intra-phrase"},
-  "verbalNoun positive 3": {"pos": "verbalNoun", "type": "positive", "pattern": "#Adjective %word%", "scope": "intra-phrase"}
+  "verbalNoun positive 1": {"pos": "verbalNoun", "type": "positive", "pattern": "#Determiner %word%", "scope": "phrase"},
+  "verbalNoun positive 2": {"pos": "verbalNoun", "type": "positive", "pattern": "#Possessive %word%", "scope": "phrase"},
+  "verbalNoun positive 3": {"pos": "verbalNoun", "type": "positive", "pattern": "#Adjective %word%", "scope": "phrase"}
 }
