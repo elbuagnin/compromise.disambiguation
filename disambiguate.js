@@ -1,13 +1,13 @@
 import posNameNormalize from './pos-name-table.js';
 import posTests from './pos-tests.js';
 
-export default function disambiguate(chunk, term) {
+export default function disambiguate(doc, term) {
    function compromiseTagged(pos) {
       return '#' + pos.charAt(0).toUpperCase() + pos.slice(1);
    }
 
    function isPOS(word, pos) {
-      let result = 'inconclusive';
+      let result = 0;
       let negativeTests = [];
       let probableTests = [];
       let positiveTests = [];
@@ -22,35 +22,70 @@ export default function disambiguate(chunk, term) {
 
       negativeTests.forEach((test) => {
          let pattern = test.pattern.replace('%word%', word);
-         if (chunk.has(pattern)) {
-           console.log('    Not ' + pos +': ' + pattern);
-           result = 'eliminated';
+         if (doc.has(pattern)) {
+           console.log('    negative  ' + pos +': ' + pattern);
+           result--;
+           result--;
         }
       });
 
-      if (result !== 'eliminated') {
-         probableTests.forEach((test) => {
-            let pattern = test.pattern.replace('%word%', word);
-            if (chunk.has(pattern)) {
-              console.log('    Probable ' + pos + ': ' + pattern);
-              result = 'probable';
-           }
-         });
+      probableTests.forEach((test) => {
+         let pattern = test.pattern.replace('%word%', word);
+         if (doc.has(pattern)) {
+           console.log('    Probable ' + pos + ': ' + pattern);
+           result++;
+         }
+      });
 
-         positiveTests.forEach((test) => {
-            let pattern = test.pattern.replace('%word%', word);
-            if (chunk.has(pattern)) {
-              console.log('    Confirmed ' + pos + ': ' + pattern);
-              result = 'confirmed';
-           }
-         });
-      }
+      positiveTests.forEach((test) => {
+         let pattern = test.pattern.replace('%word%', word);
+         if (doc.has(pattern)) {
+           console.log('    positive ' + pos + ': ' + pattern);
+           result++;
+           result++;
+        }
+      });
 
       return result;
    }
 
+   function compareResults(results) {
+      const ties = [];
+      const winner = Object.keys(results).reduce((previous, current) => {
+         console.log('Ties for now include: ' + ties);
+         const diff = results[current] - results[previous];
+         console.log(current + ' - ' + previous);
+         console.log(diff);
+         switch (Math.sign(diff)) {
+            case (-1):
+               console.log('previous is bigger');
+               return previous;
+            case (0):
+               ties.push(previous);
+               console.log('it is a tie');
+               return current;
+            case (1):
+               console.log('current is bigger');
+               ties.length = 0;
+               return current;
+            default:
+               break;
+         }
+      })
+
+      if (ties.length > 0) {
+         ties.push(winner);
+         return ties;
+      } else {
+         return [winner];
+      }
+   }
+
+   ///////
+   // Main
+
    const word = term.word;
-   if (!(chunk.has(word))) {
+   if (!(doc.has(word))) {
       return false;
    }
 
@@ -58,8 +93,10 @@ export default function disambiguate(chunk, term) {
 
   const results = {};
   Object.values(POSes).forEach((pos) => {
-    results[pos] = 'untested';
+    results[pos] = 0;
   });
+
+
    console.log('Term: ' + word);
    console.log('Possible POSes:' + JSON.stringify(POSes));
 
@@ -69,115 +106,24 @@ export default function disambiguate(chunk, term) {
      results[pos] = isPOS(word, pos);
    });
 
-   let confirmed = [];
-   let probable = [];
-   let eliminated = [];
-   let docWord = chunk.match(word);
-   let foundPOS = false;
+   console.log(results);
+   const winner = compareResults(results);
+   console.log(winner);
 
-   // Check for a clear winner.
-   Object.keys(results).forEach((pos) => {
-      let result = results[pos];
-      if (result === 'confirmed') {
-         confirmed.push(pos);
-      }
-   });
-
-   if (confirmed.length === 1) {
-      foundPOS = compromiseTagged(confirmed[0]);
+   if (winner.length > 1) {
+      return;
    } else {
-
-      if (confirmed.length > 1) {
-        Object.values(confirmed).forEach((pos) => {
-           let posTag = compromiseTagged(pos);
-           if (docWord.has(posTag)) {
-             foundPOS = posTag;
-           }
-        });
-        if (foundPOS === false) {
-           probable = confirmed;
-        }
+      const disambiguatedPOS = compromiseTagged(winner[0]);
+      const docWord = doc.match(word);
+      if (docWord.has(disambiguatedPOS)) {
+         console.log('Already correct POS');
+         return;
+      } else {
+         console.log('Changing POS on ' + word + ' to ' + disambiguatedPOS);
+         // const oldTags = docWord.out('tags');
+         // docWord.unTag(oldTags);
+         docWord.tag(disambiguatedPOS);
+         return;
       }
-
-      if (foundPOS === false) {
-        Object.keys(results).forEach((pos) => {
-           let result = results[pos];
-            if ( result === 'probable') {
-              probable.push(pos);
-            }
-        });
-
-        if (probable.length === 1) {
-           foundPOS = compromiseTagged(probable[0]);
-        } else if (probable.length > 1) {
-           Object.values(probable).forEach((pos) => {
-              let posTag = compromiseTagged(pos);
-              if (docWord.has(posTag)) {
-                 foundPOS = posTag;
-              }
-           });
-        }
-     }
-
-     if (foundPOS === false) {
-        Object.keys(results).forEach((pos) => {
-           let result = results[pos];
-           if (result === 'eliminated') {
-              eliminated.push(pos);
-           }
-        });
-
-        console.log('checking eliminated');
-        Object.values(eliminated).forEach((pos) => {
-           let posTag = compromiseTagged(pos);
-           if (docWord.has(posTag)) {
-              console.log('fix word pos');
-              foundPOS = 'fixPOS';
-           }
-        });
-     }
-}
-
-if (foundPOS === 'fixPOS') {
-   console.log('fixing bad POS.');
-   let candidates = probable;
-   let remainders = [];
-
-   Object.keys(results).forEach((pos) => {
-     let result = results[pos];
-     if (result === 'inconclusive') {
-        candidates.push(pos);
-     }
-  });
-
-  let docBeforePOS = chunk.match(word).lookBehind('.');
-  let docAfterPOS = chunk.match(word).lookAhead('.');
-
-  Object.values(candidates).forEach((pos) => {
-     let posTag = compromiseTagged(pos);
-     if ((!docBeforePOS.has(posTag)) && (!docAfterPOS.has(posTag))) {
-        remainders.push(posTag);
-     }
-  });
-
-  if (remainders.length === 0) {
-     foundPOS = false;
-  } else {
-     foundPOS = remainders[0];
-  }
-}
-
-if (foundPOS !== false) {
-  console.log('Updating POS');
-
-  if (!(docWord.has(foundPOS))) {
-     console.log(docWord.text() + ' changed to ' + foundPOS);
-     docWord.tag(foundPOS);
-  } else {
-     console.log(docWord.text() + ' already is correct POS');
-  }
-}
-
-console.log(results);
-
+   }
 }
