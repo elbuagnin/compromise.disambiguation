@@ -2,6 +2,6 @@
   "infinitive negative 1": {"pos": "infinitive", "type": "negative", "pattern": "!to (%word% && !to)", "scope": "phrase"},
   "infinitive probable 1": {"pos": "infinitive", "type": "probable", "pattern": "to %word%", "scope": "phrase"},
   "infinitive positive 1": {"pos": "infinitive", "type": "positive", "pattern": "!to (%word% && #Infinitive)", "scope": "phrase"},
-  "infinitive positive 2": {"pos": "infinitive", "type": "positive", "pattern": "(%word% && to) #Infinitive"},
-  "infinitive positive 3": {"pos": "infinitive", "type": "positive", "pattern": "(%word% && to) (#PresentTense && ![#Copula|#Modal|#Auxiliary])"}
+  "infinitive positive 2": {"pos": "infinitive", "type": "positive", "pattern": "(%word% && to) #Infinitive", "scope": "phrase"},
+  "infinitive positive 3": {"pos": "infinitive", "type": "positive", "pattern": "(%word% && to) (#PresentTense && ![#Copula|#Modal|#Auxiliary])", "scope": "phrase"}
 }
