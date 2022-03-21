@@ -7,6 +7,19 @@ export default function disambiguate(doc, term) {
    }
 
    function isPOS(word, pos) {
+
+      function findChunk(scope) {
+         if (scope === 'phrase') {
+            return doc;
+         } else if (scope === 'sentence') {
+            if (doc.parent() === doc) {
+               return doc;
+            } else {
+               return doc.parent();
+            }
+         }
+      }
+
       let result = 0;
       let negativeTests = [];
       let probableTests = [];
@@ -22,7 +35,8 @@ export default function disambiguate(doc, term) {
 
       negativeTests.forEach((test) => {
          let pattern = test.pattern.replace('%word%', word);
-         if (doc.has(pattern)) {
+         let chunk = findChunk(test.scope);
+         if (chunk.has(pattern)) {
            console.log('    negative  ' + pos +': ' + pattern);
            result--;
            result--;
@@ -31,7 +45,8 @@ export default function disambiguate(doc, term) {
 
       probableTests.forEach((test) => {
          let pattern = test.pattern.replace('%word%', word);
-         if (doc.has(pattern)) {
+         let chunk = findChunk(test.scope);
+         if (chunk.has(pattern)) {
            console.log('    Probable ' + pos + ': ' + pattern);
            result++;
          }
@@ -39,7 +54,11 @@ export default function disambiguate(doc, term) {
 
       positiveTests.forEach((test) => {
          let pattern = test.pattern.replace('%word%', word);
-         if (doc.has(pattern)) {
+         let chunk = findChunk(test.scope);
+         if (test.scope === 'sentence') {
+            console.log('#####!!!!! ' + JSON.stringify(chunk) + '!!!!!#####');
+         }
+         if (chunk.has(pattern)) {
            console.log('    positive ' + pos + ': ' + pattern);
            result++;
            result++;
