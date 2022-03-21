@@ -1,16 +1,16 @@
 {
-  "presentProgressive negative 1": {"pos": "presentProgressive", "type": "negative", "pattern": "#Pronoun %word%", "parse": "intra-phrase"},
-  "presentProgressive negative 2": {"pos": "presentProgressive", "type": "negative", "pattern": "#Possessive %word%", "parse": "intra-phrase"},
-  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "#Noun %word%", "parse": "intra-phrase"},
-  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "#Preposition %word%", "parse": "intra-phrase"},
-  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "%word% #Verb", "parse": "intra-phrase"},
+  "presentProgressive negative 1": {"pos": "presentProgressive", "type": "negative", "pattern": "#Pronoun %word%", "scope": "intra-phrase"},
+  "presentProgressive negative 2": {"pos": "presentProgressive", "type": "negative", "pattern": "#Possessive %word%", "scope": "intra-phrase"},
+  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "#Noun %word%", "scope": "intra-phrase"},
+  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "#Preposition %word%", "scope": "intra-phrase"},
+  "presentProgressive negative 3": {"pos": "presentProgressive", "type": "negative", "pattern": "%word% #Verb", "scope": "intra-phrase"},
 
-  "presentProgressive positive 1": {"pos": "presentProgressive", "type": "positive", "pattern": "(was|were) #Negative? #Adverb?+ %word%", "parse": "intra-phrase"},
-  "presentProgressive positive 2": {"pos": "presentProgressive", "type": "positive", "pattern": "had #Negative? been  #Adverb?+ %word%", "parse": "intra-phrase"},
-  "presentProgressive positive 3": {"pos": "presentProgressive", "type": "positive", "pattern": "(am|is|are) #Negative? #Adverb?+ %word%", "parse": "intra-phrase"},
-  "presentProgressive positive 4": {"pos": "presentProgressive", "type": "positive", "pattern": "(has|have) #Negative? been  #Adverb?+ %word%", "parse": "intra-phrase"},
-  "presentProgressive positive 5": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? be #Adverb?+ %word%", "parse": "intra-phrase"},
-  "presentProgressive positive 6": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? have #Adverb?+ been %word%", "parse": "intra-phrase"},
-  "presentProgressive positive 7": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? have been #Adverb?+ %word%", "parse": "intra-phrase"},
-  "presentProgressive positive 8": {"pos": "presentProgressive", "type": "positive", "pattern": "will have #Negative? been #Adverb?+ %word%", "parse": "intra-phrase"}
+  "presentProgressive positive 1": {"pos": "presentProgressive", "type": "positive", "pattern": "(was|were) #Negative? #Adverb?+ %word%", "scope": "intra-phrase"},
+  "presentProgressive positive 2": {"pos": "presentProgressive", "type": "positive", "pattern": "had #Negative? been  #Adverb?+ %word%", "scope": "intra-phrase"},
+  "presentProgressive positive 3": {"pos": "presentProgressive", "type": "positive", "pattern": "(am|is|are) #Negative? #Adverb?+ %word%", "scope": "intra-phrase"},
+  "presentProgressive positive 4": {"pos": "presentProgressive", "type": "positive", "pattern": "(has|have) #Negative? been  #Adverb?+ %word%", "scope": "intra-phrase"},
+  "presentProgressive positive 5": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? be #Adverb?+ %word%", "scope": "intra-phrase"},
+  "presentProgressive positive 6": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? have #Adverb?+ been %word%", "scope": "intra-phrase"},
+  "presentProgressive positive 7": {"pos": "presentProgressive", "type": "positive", "pattern": "will #Negative? have been #Adverb?+ %word%", "scope": "intra-phrase"},
+  "presentProgressive positive 8": {"pos": "presentProgressive", "type": "positive", "pattern": "will have #Negative? been #Adverb?+ %word%", "scope": "intra-phrase"}
 }

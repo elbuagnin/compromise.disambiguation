@@ -1,17 +1,17 @@
 {
-  "verb negative 1": {"pos": "verb", "type": "negative", "pattern": "#Determiner %word%", "parse": "intra-phrase"},
-  "verb negative 2": {"pos": "verb", "type": "negative", "pattern": "#Prepostion %word%", "parse": "intra-phrase"},
-  "verb negative 3": {"pos": "verb", "type": "negative", "pattern": "#Possesive %word%", "parse": "intra-phrase"},
-  "verb negative 4": {"pos": "verb", "type": "negative", "pattern": "#Copula (%word% && /ing$/]", "parse": "intra-phrase"},
+  "verb negative 1": {"pos": "verb", "type": "negative", "pattern": "#Determiner %word%", "scope": "intra-phrase"},
+  "verb negative 2": {"pos": "verb", "type": "negative", "pattern": "#Prepostion %word%", "scope": "intra-phrase"},
+  "verb negative 3": {"pos": "verb", "type": "negative", "pattern": "#Possesive %word%", "scope": "intra-phrase"},
+  "verb negative 4": {"pos": "verb", "type": "negative", "pattern": "#Copula (%word% && /ing$/]", "scope": "intra-phrase"},
 
-  "verb probable 1": {"pos": "verb", "type": "probable", "pattern": "#Noun #Adverb?+ %word%", "parse": "intra-phrase"},
-  "verb probable 2": {"pos": "verb", "type": "probable", "pattern": "#Pronoun #Adverb?+ %word%", "parse": "intra-phrase"},
-  "verb probable 3": {"pos": "verb", "type": "probable", "pattern": "%word% #Determiner", "parse": "intra-phrase"},
-  "verb probable 4": {"pos": "verb", "type": "probable", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
-  "verb probable 5": {"pos": "verb", "type": "probable", "pattern": "%word% #Adverb", "parse": "intra-phrase"},
-  "verb probable 6": {"pos": "verb", "type": "probable", "pattern": "#Adverb %word%", "parse": "intra-phrase"},
+  "verb probable 1": {"pos": "verb", "type": "probable", "pattern": "#Noun #Adverb?+ %word%", "scope": "intra-phrase"},
+  "verb probable 2": {"pos": "verb", "type": "probable", "pattern": "#Pronoun #Adverb?+ %word%", "scope": "intra-phrase"},
+  "verb probable 3": {"pos": "verb", "type": "probable", "pattern": "%word% #Determiner", "scope": "intra-phrase"},
+  "verb probable 4": {"pos": "verb", "type": "probable", "pattern": "%word% #Pronoun", "scope": "intra-phrase"},
+  "verb probable 5": {"pos": "verb", "type": "probable", "pattern": "%word% #Adverb", "scope": "intra-phrase"},
+  "verb probable 6": {"pos": "verb", "type": "probable", "pattern": "#Adverb %word%", "scope": "intra-phrase"},
 
-  "verb positive 2": {"pos": "verb", "type": "positive", "pattern": "#Auxiliary?+ #Negative? #Auxiliary #Adverb? %word%", "parse": "intra-phrase"},
-  "verb positive 3": {"pos": "verb", "type": "positive", "pattern": "#Verb #Conjunction %word%", "parse": "intra-phrase"},
-  "verb positive 4": {"pos": "verb", "type": "positive", "pattern": "%word% #Conjunction #Verb", "parse": "intra-phrase"}
+  "verb positive 2": {"pos": "verb", "type": "positive", "pattern": "#Auxiliary?+ #Negative? #Auxiliary #Adverb? %word%", "scope": "intra-phrase"},
+  "verb positive 3": {"pos": "verb", "type": "positive", "pattern": "#Verb #Conjunction %word%", "scope": "intra-phrase"},
+  "verb positive 4": {"pos": "verb", "type": "positive", "pattern": "%word% #Conjunction #Verb", "scope": "intra-phrase"}
 }

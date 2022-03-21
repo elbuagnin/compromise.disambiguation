@@ -1,17 +1,17 @@
 {
-  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Noun", "parse": "intra-phrase"},
-  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
-  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Preposition", "parse": "intra-phrase"},
-  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Noun", "parse": "intra-phrase"},
-  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "#Adjective %word%", "parse": "intra-phrase"},
-  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "!#Adverb #Conjunction %word%", "parse": "intra-phrase"},
-  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Conjunction #Adverb", "parse": "intra-phrase"},
+  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Noun", "scope": "intra-phrase"},
+  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Pronoun", "scope": "intra-phrase"},
+  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Preposition", "scope": "intra-phrase"},
+  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Noun", "scope": "intra-phrase"},
+  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "#Adjective %word%", "scope": "intra-phrase"},
+  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "!#Adverb #Conjunction %word%", "scope": "intra-phrase"},
+  "adverb negative 1": {"pos": "adverb", "type": "negative", "pattern": "%word% #Conjunction #Adverb", "scope": "intra-phrase"},
 
-  "adverb probable 1": {"pos": "adverb", "type": "probable", "pattern": "%word% #Verb", "parse": "intra-phrase"},
-  "adverb probable 1": {"pos": "adverb", "type": "probable", "pattern": "%word% #Adjective", "parse": "intra-phrase"},
-  "adverb probable 1": {"pos": "adverb", "type": "probable", "pattern": "%word% #Adverb", "parse": "intra-phrase"},
-  "adverb probable 1": {"pos": "adverb", "type": "probable", "pattern": "[#PastTense|#PresentTense|#FuturePerfect|#PerfectTense] %word%", "parse": "intra-phrase"},
+  "adverb probable 1": {"pos": "adverb", "type": "probable", "pattern": "%word% #Verb", "scope": "intra-phrase"},
+  "adverb probable 1": {"pos": "adverb", "type": "probable", "pattern": "%word% #Adjective", "scope": "intra-phrase"},
+  "adverb probable 1": {"pos": "adverb", "type": "probable", "pattern": "%word% #Adverb", "scope": "intra-phrase"},
+  "adverb probable 1": {"pos": "adverb", "type": "probable", "pattern": "[#PastTense|#PresentTense|#FuturePerfect|#PerfectTense] %word%", "scope": "intra-phrase"},
 
-  "adverb positive 1": {"pos": "adverb", "type": "positive", "pattern": "%word% #Conjunction #Adverb", "parse": "intra-phrase"},
-  "adverb positive 1": {"pos": "adverb", "type": "positive", "pattern": "#Adverb #Conjunction %word%", "parse": "intra-phrase"}
+  "adverb positive 1": {"pos": "adverb", "type": "positive", "pattern": "%word% #Conjunction #Adverb", "scope": "intra-phrase"},
+  "adverb positive 1": {"pos": "adverb", "type": "positive", "pattern": "#Adverb #Conjunction %word%", "scope": "intra-phrase"}
 }

@@ -1,18 +1,18 @@
 {
-  "noun negative 1": {"pos": "noun", "type": "negative", "pattern": "#Modal %word%", "parse": "intra-phrase"},
-  "noun negative 2": {"pos": "noun", "type": "negative", "pattern": "#Auxiliary %word%", "parse": "intra-phrase"},
-  "noun negative 3": {"pos": "noun", "type": "negative", "pattern": "#Adverb %word%", "parse": "intra-phrase"},
-  "noun negative 4": {"pos": "noun", "type": "negative", "pattern": "%word% #Pronoun", "parse": "intra-phrase"},
-  "noun negative 5": {"pos": "noun", "type": "negative", "pattern": "%word% #Possessive", "parse": "intra-phrase"},
-  "noun negative 6": {"pos": "noun", "type": "negative", "pattern": "(#Pronoun && !#Possessive) %word%", "parse": "intra-phrase"},
-  "noun negative 7": {"pos": "noun", "type": "negative", "pattern": "!#Noun #Conjunction %word%", "parse": "intra-phrase"},
-  "noun negative 8": {"pos": "noun", "type": "negative", "pattern": "%word% #Conjunction !#Noun", "parse": "intra-phrase"},
+  "noun negative 1": {"pos": "noun", "type": "negative", "pattern": "#Modal %word%", "scope": "intra-phrase"},
+  "noun negative 2": {"pos": "noun", "type": "negative", "pattern": "#Auxiliary %word%", "scope": "intra-phrase"},
+  "noun negative 3": {"pos": "noun", "type": "negative", "pattern": "#Adverb %word%", "scope": "intra-phrase"},
+  "noun negative 4": {"pos": "noun", "type": "negative", "pattern": "%word% #Pronoun", "scope": "intra-phrase"},
+  "noun negative 5": {"pos": "noun", "type": "negative", "pattern": "%word% #Possessive", "scope": "intra-phrase"},
+  "noun negative 6": {"pos": "noun", "type": "negative", "pattern": "(#Pronoun && !#Possessive) %word%", "scope": "intra-phrase"},
+  "noun negative 7": {"pos": "noun", "type": "negative", "pattern": "!#Noun #Conjunction %word%", "scope": "intra-phrase"},
+  "noun negative 8": {"pos": "noun", "type": "negative", "pattern": "%word% #Conjunction !#Noun", "scope": "intra-phrase"},
 
-  "noun probable 1": {"pos": "noun", "type": "probable", "pattern": "%word% #Adverb?+ #Verb", "parse": "intra-phrase"},
-  "noun probable 2": {"pos": "noun", "type": "probable", "pattern": "[#PastTense|#PresentTense|#FuturePerfect|#PerfectTense] %word%", "parse": "intra-phrase"},
+  "noun probable 1": {"pos": "noun", "type": "probable", "pattern": "%word% #Adverb?+ #Verb", "scope": "intra-phrase"},
+  "noun probable 2": {"pos": "noun", "type": "probable", "pattern": "[#PastTense|#PresentTense|#FuturePerfect|#PerfectTense] %word%", "scope": "intra-phrase"},
 
-  "noun positive 1": {"pos": "noun", "type": "positive", "pattern": "%word% #Conjunction #Noun", "parse": "intra-phrase"},
-  "noun positive 2": {"pos": "noun", "type": "positive", "pattern": "#Noun #Conjunction %word%", "parse": "intra-phrase"},
-  "noun positive 2": {"pos": "noun", "type": "positive", "pattern": "#Possessive #Adjective?+ %word%", "parse": "intra-phrase"},
-  "noun positive 3": {"pos": "noun", "type": "positive", "pattern": "#Determiner #Adverb?+ #Adjective?+ %word% #Adverb?+ #Verb", "parse": "intra-phrase"}
+  "noun positive 1": {"pos": "noun", "type": "positive", "pattern": "%word% #Conjunction #Noun", "scope": "intra-phrase"},
+  "noun positive 2": {"pos": "noun", "type": "positive", "pattern": "#Noun #Conjunction %word%", "scope": "intra-phrase"},
+  "noun positive 2": {"pos": "noun", "type": "positive", "pattern": "#Possessive #Adjective?+ %word%", "scope": "intra-phrase"},
+  "noun positive 3": {"pos": "noun", "type": "positive", "pattern": "#Determiner #Adverb?+ #Adjective?+ %word% #Adverb?+ #Verb", "scope": "intra-phrase"}
 }
