@@ -3,3 +3,4 @@ alias reload="nodemon -w ./ -x ./reload.sh"
 alias sample="nodemon -w ./ -x ./sample-reload.sh"
 alias renumber="./renumber.sh $1"
 alias rebatch="./rebatch.sh"
+nvm use --lts
