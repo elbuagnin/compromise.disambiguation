@@ -46,24 +46,13 @@ export default function disambiguate(doc, term) {
     }
 
     let result = 0;
-    let negativeTests = [];
-    let improbableTests = [];
-    let probableTests = [];
-    let positiveTests = [];
+    const testTypes = ["negative", "improbable", "probable", "positive"];
+    const testSet = posTests.filter((test) => test.pos === pos);
 
-    let testSet = posTests.filter((test) => test.pos === pos);
-
-    if (testSet.length > 0) {
-      negativeTests = testSet.filter((test) => test.type === "negative");
-      improbableTests = testSet.filter((test) => test.type === "improbable");
-      probableTests = testSet.filter((test) => test.type === "probable");
-      positiveTests = testSet.filter((test) => test.type === "positive");
-    }
-
-    testing(negativeTests);
-    testing(improbableTests);
-    testing(probableTests);
-    testing(positiveTests);
+    testTypes.forEach((type) => {
+      const tests = testSet.filter((test) => test.type === type);
+      testing(tests);
+    });
 
     return result;
   }
