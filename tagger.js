@@ -3,7 +3,7 @@ export default function tagger(doc, payload) {
 
   if (doc.has(pattern)) {
     const matchedTerm = doc.match(pattern).match(term);
-    console.log('Tagger matched: ' + matchedTerm.text());
+    console.log("Tagger matched: " + matchedTerm.text());
 
     if (untag) {
       matchedTerm.untag(untag);

@@ -75,6 +75,7 @@ function ingVerbals(doc) {
            if (stemmed.text() === word.text()) {
              return false;
            } else {
+             console.log(word.debug());
             return true;
            }
         } else {
