@@ -38,22 +38,13 @@
     "payload": { "file": "progressive-verbals" }
   },
 
-  "Disambiguate Adverbs & Propositions": {
-    "order": "9",
+  "Disambiguate through Term Lists": {
+    "order": "7",
     "action": "disambiguate",
     "parseBy": "term",
     "scope": "phrase",
-    "source": "file",
-    "payload": { "file": "adverb-preposition" }
-  },
-
-  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {
-    "order": "10",
-    "action": "disambiguate",
-    "parseBy": "term",
-    "scope": "phrase",
-    "source": "file",
-    "payload": { "file": "wordnet" }
+    "source": "directory",
+    "payload": { "directory": "term-lists" }
   },
 
   "Clean up": {
