@@ -3,21 +3,21 @@
     "batchOrder": "2",
     "term": "#Cardinal",
     "pattern": "#Cardinal (#Preposition|#Noun)",
-    "tag": "Determiner"
+    "tag": "#Determiner"
   },
 
   "#Cardinal as Pronoun 1": {
     "batchOrder": "2",
     "term": "#Cardinal",
     "pattern": "#Cardinal #Verb",
-    "tag": "Pronoun"
+    "tag": "#Pronoun"
   },
 
   "#Cardinal as Pronoun 2": {
     "batchOrder": "2",
     "term": "#Cardinal",
     "pattern": "#Determiner #Adjective? (#Cardinal && #TextValue)",
-    "tag": "Pronoun"
+    "tag": "#Pronoun"
   },
 
   "#Ordinal #Noun": {
@@ -31,6 +31,6 @@
     "batchOrder": "2",
     "term": "#Date",
     "pattern": "#Verb #Date",
-    "tag": "#av"
+    "tag": "#Adverb"
   }
 }

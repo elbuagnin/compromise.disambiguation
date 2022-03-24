@@ -1,8 +1,0 @@
-{
-  "which": {"batchOrder": "4", "term": "which", "pattern": "which", "tag": "RelativePronoun"},
-  "than what": {"batchOrder": "4", "term": "than what", "pattern": "than what", "tag": ["RelativePronoun", "Restrictive"]},
-  "that": {"batchOrder": "4", "term": "that", "pattern": "that #Verb", "tag": ["RelativePronoun", "Restrictive"]},
-  "who Restrictive": {"batchOrder": "4", "term": "who", "pattern": "who #Adverb? (#Verb && !#Copula) not?", "tag": ["RelativePronoun", "Restrictive"]},
-  "who NonRestrictive": {"batchOrder": "4", "term": "who", "pattern": "who #Copula not?", "tag": ["RelativePronoun", "NonRestrictive"]},
-  "who Restrictive 2": {"batchOrder": "4", "term": "who", "pattern": "who (#Pronoun|#Person) #Verb not?", "tag": ["RelativePronoun", "Restrictive"]}
-}

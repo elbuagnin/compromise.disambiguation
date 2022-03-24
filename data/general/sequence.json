@@ -1,19 +1,99 @@
 {
-  "POS fixes to Compromise output": {"order": "1", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "fixes"}},
+  "POS fixes to Compromise output": {
+    "order": "1",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "fixes" }
+  },
 
-  "Prepare Document": {"order": "2", "action": "process", "parseBy": "process", "scope": "document", "source": "file", "payload": {"file": "prepare"}},
+  "Prepare Document": {
+    "order": "2",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "prepare" }
+  },
 
-  "Disambiguate 'to'": {"order": "8", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "source": "payload", "payload": {"pattern": "to", "POSes": ["preposition", "infinitive"]}},
+  "Compound Terms": {
+    "order": "3",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "directory",
+    "payload": { "directory": "compound-terms" }
+  },
 
-  "Tag Infinitives": {"order": "9", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "infinitives"}},
+  "Disambiguate 'to'": {
+    "order": "8",
+    "action": "disambiguate",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "payload",
+    "payload": { "pattern": "to", "POSes": ["preposition", "infinitive"] }
+  },
 
-  "Tag Progressive Verbs & Verbals": {"order": "10", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "ingVerbals"}},
+  "Tag Infinitives": {
+    "order": "9",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "infinitives" }
+  },
 
-  "Disambiguate Progressive Verbals": {"order": "11", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "source": "payload", "payload": {"pattern": "#ProgressiveVerbal", "POSes": ["verbalNoun", "presentProgressive", "presentParticiple", "gerund"]}},
+  "Tag Progressive Verbs & Verbals": {
+    "order": "10",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "ingVerbals" }
+  },
 
-  "Untag disambiguated ProgressiveVerbals": {"order": "12", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "remove-progressiveVerbals"}},
+  "Disambiguate Progressive Verbals": {
+    "order": "11",
+    "action": "disambiguate",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "payload",
+    "payload": {
+      "pattern": "#ProgressiveVerbal",
+      "POSes": [
+        "verbalNoun",
+        "presentProgressive",
+        "presentParticiple",
+        "gerund"
+      ]
+    }
+  },
 
-  "Disambiguate Adverbs & Propositions": {"order": "13", "action": "disambiguate", "parseBy": "term", "scope": "phrase", "source": "file", "payload": {"file": "adverb-preposition"}},
+  "Untag disambiguated ProgressiveVerbals": {
+    "order": "12",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "remove-progressiveVerbals" }
+  },
 
-  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {"order": "14", "action": "disambiguate", "parseBy": "term", "scope": "phrase", "source": "file", "payload": {"file": "wordnet"}}
+  "Disambiguate Adverbs & Propositions": {
+    "order": "13",
+    "action": "disambiguate",
+    "parseBy": "term",
+    "scope": "phrase",
+    "source": "file",
+    "payload": { "file": "adverb-preposition" }
+  },
+
+  "Disambiguate Nouns, Verbs, Adjectives & Adverbs through Wordnet": {
+    "order": "14",
+    "action": "disambiguate",
+    "parseBy": "term",
+    "scope": "phrase",
+    "source": "file",
+    "payload": { "file": "wordnet" }
+  }
 }

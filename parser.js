@@ -77,7 +77,7 @@ function parseUsingDirectory(doc, instruction) {
   const { parseBy } = instruction;
   const { directory } = instruction.payload;
 
-  const dirpath = "./data/" + parsingDataPaths(parseBy) + directory;
+  const dirpath = parsingDataPaths(parseBy) + directory;
   console.log("  Using Directory: " + dirpath);
   const list = true;
   const parsingSets = mfs.loadJSONDir(dirpath, list);
