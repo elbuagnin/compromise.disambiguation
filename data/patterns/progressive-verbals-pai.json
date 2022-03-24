@@ -1,0 +1,34 @@
+{
+  "after #Participle": {
+    "batchOrder": "3",
+    "order": "1",
+    "term": "after",
+    "pattern": "after #PresentParticiple",
+    "untag": "Preposition",
+    "tag": ["SubordinatingConjunction", "Conjunction"]
+  },
+  "before #Participle": {
+    "batchOrder": "3",
+    "order": "1",
+    "term": "before",
+    "pattern": "before #PresentParticiple",
+    "untag": "Preposition",
+    "tag": ["SubordinatingConjunction", "Conjunction"]
+  },
+  "when #Participle": {
+    "batchOrder": "3",
+    "order": "1",
+    "term": "when",
+    "pattern": "when #PresentParticiple",
+    "untag": "QuestionWord",
+    "tag": ["SubordinatingConjunction", "Conjunction"]
+  },
+  "while #Participle": {
+    "batchOrder": "3",
+    "order": "1",
+    "term": "while",
+    "pattern": "while #PresentParticiple",
+    "untag": "QuestionWord",
+    "tag": ["SubordinatingConjunction", "Conjunction"]
+  }
+}

@@ -1,12 +1,4 @@
 {
-  "after #Participle": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "after",
-    "pattern": "after #ProgressiveVerbal",
-    "untag": "Preposition",
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
   "after Subjective Nominal": {
     "batchOrder": "3",
     "order": "1",
@@ -41,14 +33,6 @@
     "order": "1",
     "term": "as though",
     "pattern": "as though",
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
-  "before #Participle": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "before",
-    "pattern": "before #ProgressiveVerbal",
-    "untag": "Preposition",
     "tag": ["SubordinatingConjunction", "Conjunction"]
   },
   "before #Subjectival": {

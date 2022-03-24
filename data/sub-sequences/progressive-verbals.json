@@ -1,6 +1,6 @@
 {
-  "Tag Progressive Verbs & Verbals": {
-    "order": "6",
+  "Tag words ending in 'ing' that are Progressive Verbs & Verbals": {
+    "order": "1",
     "action": "process",
     "parseBy": "process",
     "scope": "document",
@@ -8,8 +8,8 @@
     "payload": { "process": "ingVerbals" }
   },
 
-  "Disambiguate Progressive Verbals": {
-    "order": "7",
+  "Disambiguate tagged Progressive Verbals": {
+    "order": "2",
     "action": "disambiguate",
     "parseBy": "pattern",
     "scope": "phrase",
@@ -25,8 +25,19 @@
     }
   },
 
+  "Post Assignment Impacts": {
+    "order": "3",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "file",
+    "payload": {
+      "file": "progressive-verbals-pai"
+    }
+  },
+
   "Untag disambiguated ProgressiveVerbals": {
-    "order": "8",
+    "order": "4",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "document",
