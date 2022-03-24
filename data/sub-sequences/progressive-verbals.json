@@ -1,0 +1,36 @@
+{
+  "Tag Progressive Verbs & Verbals": {
+    "order": "6",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "ingVerbals" }
+  },
+
+  "Disambiguate Progressive Verbals": {
+    "order": "7",
+    "action": "disambiguate",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "payload",
+    "payload": {
+      "pattern": "#ProgressiveVerbal",
+      "POSes": [
+        "verbalNoun",
+        "presentProgressive",
+        "presentParticiple",
+        "gerund"
+      ]
+    }
+  },
+
+  "Untag disambiguated ProgressiveVerbals": {
+    "order": "8",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "remove-progressiveVerbals" }
+  }
+}
