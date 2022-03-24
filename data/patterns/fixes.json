@@ -1,9 +1,31 @@
 {
-  "Mistagged Gerunds": {"batchOrder": "1", "order": "3", "term": ".", "pattern": "(#Auxiliary && #Verb && /ing$/)", "tag": "#ProgressiveVerbal"},
+  "Mistagged Gerunds": {
+    "batchOrder": "1",
+    "order": "3",
+    "term": ".",
+    "pattern": "(#Auxiliary && #Verb && /ing$/)",
+    "tag": "#ProgressiveVerbal"
+  },
 
-  "Unset #Gerunds": {"batchOrder": "1", "term": "#Gerund", "pattern": "#Gerund", "untag": ["#Gerund", "#Noun"], "tag": "#ProgressiveVerbal"},
+  "Unset #Gerunds": {
+    "batchOrder": "1",
+    "term": "#Gerund",
+    "pattern": "#Gerund",
+    "untag": "#Gerund"
+  },
 
-  "Activity Is Verbal": {"batchOrder": "1", "term": "#Activity", "pattern": "(#Activity && /ing$/)", "tag": "#ProgressiveVerbal", "untag": ["#Activity", "#Noun"]},
+  "Activity Is Verbal": {
+    "batchOrder": "1",
+    "term": "#Activity",
+    "pattern": "(#Activity && /ing$/)",
+    "tag": "#ProgressiveVerbal",
+    "untag": ["#Activity", "#Noun"]
+  },
 
-  "#Auxiliary #Adverb": {"batchOrder": "1", "term": "#Adverb", "pattern": "(#Auxiliary && #Adverb)", "untag": "#Auxiliary"}
+  "#Auxiliary #Adverb": {
+    "batchOrder": "1",
+    "term": "#Adverb",
+    "pattern": "(#Auxiliary && #Adverb)",
+    "untag": "#Auxiliary"
+  }
 }
