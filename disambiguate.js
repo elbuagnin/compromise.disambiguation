@@ -127,8 +127,10 @@ export default function disambiguate(doc, term) {
       return;
     } else {
       console.log("Changing POS on " + word + " to " + disambiguatedPOS);
-      // const oldTags = docWord.out('tags');
-      // docWord.unTag(oldTags);
+      const oldTags = Object.values(docWord.out("tags")[0])[0];
+
+      console.log("old tags: " + JSON.stringify(oldTags));
+      docWord.unTag(oldTags);
       docWord.tag(disambiguatedPOS);
       return;
     }
