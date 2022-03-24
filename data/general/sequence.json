@@ -95,5 +95,14 @@
     "scope": "phrase",
     "source": "file",
     "payload": { "file": "wordnet" }
+  },
+
+  "Clean up": {
+    "order": "15",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "cleanup" }
   }
 }

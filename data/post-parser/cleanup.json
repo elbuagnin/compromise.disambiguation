@@ -1,5 +1,0 @@
-{
-  "Remove Comma": {"batchOrder": "5", "order": "1", "term": "#Comma", "pattern": "#Comma", "untag": "#Comma"},
-  "Remove Period": {"batchOrder": "5", "order": "2", "term": "#Period", "pattern": "#Period", "untag": "#Period"},
-  "Remove Hyphenated": {"batchOrder": "5", "order": "3", "term": "#Hyphenated", "pattern": "#Hyphenated", "untag": "#Hyphenated"}
-}

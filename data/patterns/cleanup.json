@@ -1,0 +1,13 @@
+{
+  "Remove Comma": { "term": "#Comma", "pattern": "#Comma", "untag": "#Comma" },
+  "Remove Period": {
+    "term": "#Period",
+    "pattern": "#Period",
+    "untag": "#Period"
+  },
+  "Remove Hyphenated": {
+    "term": "#Hyphenated",
+    "pattern": "#Hyphenated",
+    "untag": "#Hyphenated"
+  }
+}
