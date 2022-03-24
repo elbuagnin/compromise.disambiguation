@@ -111,7 +111,7 @@ function parseByTerm(doc, action, parsingData) {
   const { term } = parsingData;
   doc.terms().forEach((entry) => {
     if (entry.text() === term.word) {
-      console.log("    Found term: " + term);
+      console.log("    Found term: " + JSON.stringify(term));
       disambiguate(doc, term);
     }
   });
