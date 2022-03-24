@@ -1,0 +1,19 @@
+{
+  "Disambiguate 'to'": {
+    "order": "1",
+    "action": "disambiguate",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "payload",
+    "payload": { "pattern": "to", "POSes": ["preposition", "infinitive"] }
+  },
+
+  "Tag Infinitives": {
+    "order": "2",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "infinitives" }
+  }
+}

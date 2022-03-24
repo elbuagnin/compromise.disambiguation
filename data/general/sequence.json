@@ -26,23 +26,11 @@
     "payload": { "directory": "compound-terms" }
   },
 
-  "Disambiguate 'to'": {
-    "order": "4",
-    "action": "disambiguate",
-    "parseBy": "pattern",
-    "scope": "phrase",
-    "source": "payload",
-    "payload": { "pattern": "to", "POSes": ["preposition", "infinitive"] }
-  },
-
-  "Tag Infinitives": {
-    "order": "5",
-    "action": "tag",
-    "parseBy": "pattern",
-    "scope": "document",
-    "source": "file",
-    "payload": { "file": "infinitives" }
-  },
+  "Infinitives": {
+	  "order": "4",
+	  "action": "sub-sequence",
+	  "payload": { "file": "infinitives" }
+},
 
   "Progressive Verbs & Verbals": {
     "order": "6",
