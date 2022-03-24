@@ -1,15 +1,36 @@
 {
-  "to #Verb Infinitives": {"batchOrder": "2", "term": "to #Verb", "pattern": "to #Verb", "untag": ["#Conjunction", "#Preposition", "#Verb"], "tag": "Infinitive"},
+  "#Cardinal as Determiner": {
+    "batchOrder": "2",
+    "term": "#Cardinal",
+    "pattern": "#Cardinal (#Preposition|#Noun)",
+    "tag": "Determiner"
+  },
 
-  "to #Infinitive Infinitives": {"batchOrder": "2", "term": "to", "pattern": "to #Infinitive", "untag": ["#Conjunction", "#Preposition", "#Verb"], "tag": "Infinitive"},
+  "#Cardinal as Pronoun 1": {
+    "batchOrder": "2",
+    "term": "#Cardinal",
+    "pattern": "#Cardinal #Verb",
+    "tag": "Pronoun"
+  },
 
-  "#Cardinal as Determiner": {"batchOrder": "2", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
+  "#Cardinal as Pronoun 2": {
+    "batchOrder": "2",
+    "term": "#Cardinal",
+    "pattern": "#Determiner #Adjective? (#Cardinal && #TextValue)",
+    "tag": "Pronoun"
+  },
 
-  "#Cardinal as Pronoun 1": {"batchOrder": "2", "term": "#Cardinal", "pattern": "#Cardinal #Verb", "tag": "Pronoun"},
+  "#Ordinal #Noun": {
+    "batchOrder": "2",
+    "term": "#Ordinal",
+    "pattern": "#Ordinal #Noun",
+    "tag": "#Adjective"
+  },
 
-  "#Cardinal as Pronoun 2": {"batchOrder": "2", "term": "#Cardinal", "pattern": "#Determiner #Adjective? (#Cardinal && #TextValue)", "tag": "Pronoun"},
-
-  "#Ordinal #Noun": {"batchOrder": "2", "term": "#Ordinal", "pattern": "#Ordinal #Noun", "tag": "#Adjective"},
-
-  "#Verb #Date": {"batchOrder": "2", "term": "#Date", "pattern": "#Verb #Date", "tag": "#av"}
+  "#Verb #Date": {
+    "batchOrder": "2",
+    "term": "#Date",
+    "pattern": "#Verb #Date",
+    "tag": "#av"
+  }
 }
