@@ -1,17 +1,7 @@
 {
-  "Expand Contractions": {"order": "1", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "expandContractions"}},
+  "POS fixes to Compromise output": {"order": "1", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "fixes"}},
 
-  "POS fixes to Compromise output": {"order": "2", "action": "tag", "parseBy": "pattern", "scope": "document", "source": "file", "payload": {"file": "fixes"}},
-
-  "Tag Hyphentated Terms": {"order": "3", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagHyphenatedTerms"}},
-
-  "Tag Dash Groups": {"order": "4", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagDashGroups"}},
-
-  "Tag Parentheses Groups": {"order": "5", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagParentheses"}},
-
-  "Tag Quotations": {"order": "6", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagQuotations"}},
-
-  "Tag Punctuation": {"order": "7", "action": "process", "parseBy": "process", "scope": "document", "source": "payload", "payload": {"process": "tagPunctuation"}},
+  "Prepare Document": {"order": "2", "action": "process", "parseBy": "process", "scope": "document", "source": "file", "payload": {"file": "prepare"}},
 
   "Disambiguate 'to'": {"order": "8", "action": "disambiguate", "parseBy": "pattern", "scope": "phrase", "source": "payload", "payload": {"pattern": "to", "POSes": ["preposition", "infinitive"]}},
 

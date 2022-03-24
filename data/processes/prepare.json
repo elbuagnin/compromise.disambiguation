@@ -1,0 +1,8 @@
+{
+  "Expand Contractions": { "order": "1", "process": "expandContractions" },
+  "Tag Hyphenated Terms": { "order": "2", "process": "tagHyphenatedTerms" },
+  "Tag Dash Groups": { "order": "3", "process": "tagDashGroups" },
+  "Tag Parentheses Groups": { "order": "4", "process": "tagParentheses" },
+  "Tag Quotations": { "order": "5", "process": "tagQuotations" },
+  "Tag Punctuation": { "order": "6", "process": "tagPunctuation" }
+}
