@@ -1,15 +1,29 @@
 {
-  "Adjectives": {"fullname": "adjective", "abbreviation": "jj"},
-  "Adverbs": {"fullname": "adverb", "abbreviation": "rb"},
-  "Conjunctions": {"fullname": "conjunction", "abbreviation": "cn"},
-  "Determiners": {"fullname": "determiner", "abbreviation": "dt"},
-  "Gerunds": {"fullname": "gerund", "abbreviation": "gd"},
-  "Infinitives": {"fullname": "infinitive", "abbreviation": "inf"},
-  "Nouns": {"fullname": "noun", "abbreviation": "nn"},
-  "Past Participles": {"fullname": "pastParticiple", "abbreviation": "papt"},
-  "Present Participles": {"fullname": "presentParticiple", "abbreviation": "prpt"},
-  "Prepositions": {"fullname": "preposition", "abbreviation": "prep"},
-  "Verbs": {"fullname": "verb", "abbreviation": "vb"},
-  "Verbal Nouns": {"fullname": "verbalNoun", "abbreviation": "vn"},
-  "Present Progressive Verbs": {"fullname": "presentProgressive", "abbreviation": "prepro"}
+  "Adjectives": { "fullname": "adjective", "abbreviation": "jj" },
+  "Adverbs": { "fullname": "adverb", "abbreviation": "rb" },
+  "Conjunctions": { "fullname": "conjunction", "abbreviation": "cn" },
+  "Coordinating Conjunctions": {
+    "fullname": "coordinatingConjunction",
+    "abbreviation": "co"
+  },
+  "Subordinating Conjunctions": {
+    "fullname": "subordinatingConjunction",
+    "abbreviation": "sub"
+  },
+  "Determiners": { "fullname": "determiner", "abbreviation": "dt" },
+  "Gerunds": { "fullname": "gerund", "abbreviation": "vlg" },
+  "Infinitives": { "fullname": "infinitive", "abbreviation": "vli" },
+  "Nouns": { "fullname": "noun", "abbreviation": "nn" },
+  "Past Participles": { "fullname": "pastParticiple", "abbreviation": "vlpp" },
+  "Present Participles": {
+    "fullname": "presentParticiple",
+    "abbreviation": "vlpr"
+  },
+  "Prepositions": { "fullname": "preposition", "abbreviation": "in" },
+  "Verbs": { "fullname": "verb", "abbreviation": "vv" },
+  "Verbal Nouns": { "fullname": "verbalNoun", "abbreviation": "vlnn" },
+  "Present Progressive Verbs": {
+    "fullname": "presentProgressive",
+    "abbreviation": "vvp"
+  }
 }

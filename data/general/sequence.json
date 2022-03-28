@@ -27,10 +27,10 @@
   },
 
   "Infinitives": {
-	  "order": "4",
-	  "action": "sub-sequence",
-	  "payload": { "file": "infinitives" }
-},
+    "order": "4",
+    "action": "sub-sequence",
+    "payload": { "file": "infinitives" }
+  },
 
   "Progressive Verbs & Verbals": {
     "order": "5",
@@ -38,7 +38,7 @@
     "payload": { "file": "progressive-verbals" }
   },
 
-  "Disambiguate through Term Lists": {
+  "Term Lists": {
     "order": "6",
     "action": "disambiguate",
     "parseBy": "term",

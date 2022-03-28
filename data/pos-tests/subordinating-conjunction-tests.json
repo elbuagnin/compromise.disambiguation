@@ -1,0 +1,27 @@
+{
+  "subordinatingConjunction negative 1": {
+    "pos": "subordinatingConjunction",
+    "type": "negative",
+    "pattern": "#Noun %word% #Adverb?+ #Verb",
+    "scope": "phrase"
+  },
+  "subordinatingConjunction negative 3": {
+    "pos": "subordinatingConjunction",
+    "type": "negative",
+    "pattern": "%word%$",
+    "scope": "phrase"
+  },
+
+  "subordinatingConjunction positive 1": {
+    "pos": "subordinatingConjunction",
+    "type": "positive",
+    "pattern": "^%word% * (#Noun|#Pronoun) * #Verb * #Comma * (#Noun|#Pronoun) * #Verb",
+    "scope": "sentence"
+  },
+  "subordinatingConjunction positive 2": {
+    "pos": "subordinatingConjunction",
+    "type": "positive",
+    "pattern": "(#Noun|#Pronoun) * #Verb * %word% * (#Noun|#Pronoun) * #Verb",
+    "scope": "sentence"
+  }
+}

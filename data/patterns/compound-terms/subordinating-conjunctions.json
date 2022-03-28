@@ -1,12 +1,4 @@
 {
-  "after Subjective Nominal": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "after",
-    "pattern": "after (#Possessive|#Pronoun|#Noun)",
-    "untag": "Preposition",
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
   "as long as": {
     "batchOrder": "3",
     "order": "1",
@@ -33,14 +25,6 @@
     "order": "1",
     "term": "as though",
     "pattern": "as though",
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
-  "before #Subjectival": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "before",
-    "pattern": "before (#Possessive|#Pronoun|#Noun)",
-    "untag": "Preposition",
     "tag": ["SubordinatingConjunction", "Conjunction"]
   },
   "but also": {
@@ -149,22 +133,6 @@
     "pattern": "now when",
     "tag": ["SubordinatingConjunction", "Conjunction"]
   },
-  "on #Verbal": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "on",
-    "pattern": "on #Verbal",
-    "untag": "Preposition",
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
-  "once Nominal": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "once",
-    "pattern": "once (#Possessive|#Pronoun|#Noun)",
-    "untag": "Adverb",
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
   "only if": {
     "batchOrder": "3",
     "order": "1",
@@ -193,22 +161,6 @@
     "pattern": "provided that",
     "tag": ["SubordinatingConjunction", "Conjunction"]
   },
-  "since #nn": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "since",
-    "pattern": "since (#Possessive|#Pronoun|#Noun)",
-    "untag": "Preposition",
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
-  "so Nominal": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "so",
-    "pattern": "so (#Possessive|#Pronoun|#Noun)",
-    "untag": ["Preposition", "Expression"],
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
   "so that": {
     "batchOrder": "3",
     "order": "1",
@@ -223,22 +175,6 @@
     "term": "such as",
     "pattern": "such as",
     "untag": ["Adverb", "Preposition"],
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
-  "that #nn": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "that",
-    "pattern": "that not? (#Possessive|#Pronoun|#Noun|#Determiner #Noun)",
-    "untag": "Determiner",
-    "tag": ["SubordinatingConjunction", "Conjunction"]
-  },
-  "until Nominal": {
-    "batchOrder": "3",
-    "order": "1",
-    "term": "until",
-    "pattern": "until (#Possessive|#Pronoun|#Noun)",
-    "untag": "Preposition",
     "tag": ["SubordinatingConjunction", "Conjunction"]
   },
   "whether or not": {
