@@ -122,7 +122,7 @@ export default function disambiguate(doc, term) {
   } else {
     const disambiguatedPOS = compromiseTagged(winner[0]);
     const docWord = doc.match(word);
-    if (docWord.has(disambiguatedPOS)) {
+    if (docWord.has(disambiguatedPOS) || docWord.has("Resolved")) {
       console.log("Already correct POS");
       return;
     } else {
@@ -132,6 +132,7 @@ export default function disambiguate(doc, term) {
       console.log("old tags: " + JSON.stringify(oldTags));
       docWord.unTag(oldTags);
       docWord.tag(disambiguatedPOS);
+      docWord.tag("resolved");
       return;
     }
   }
