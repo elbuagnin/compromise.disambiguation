@@ -1,10 +1,25 @@
 {
-  "to #Verb": {
+  "#Verb": {
     "order": "1",
-    "term": ["to", "#Verb"],
+    "term": "#Verb",
     "pattern": "to #Adverb? #Verb",
     "tag": "#Infinitive",
-    "untag": ["#Verb", "#Conjunction"],
+    "disambiguate": true
+  },
+
+  "#Infinitive": {
+    "order": "1",
+    "term": "#Infinitive",
+    "pattern": "to #Adverb? #Infinitive",
+    "tag": "#Infinitive",
+    "disambiguate": true
+  },
+
+  "to #Verb": {
+    "order": "1",
+    "term": "to",
+    "pattern": "to #Adverb? #Verb",
+    "tag": "#Infinitive",
     "disambiguate": true
   },
 
@@ -13,7 +28,6 @@
     "term": "to",
     "pattern": "to #Adverb? #Infinitive",
     "tag": "#Infinitive",
-    "untag": ["#Verb", "#Conjunction"],
     "disambiguate": true
   }
 }

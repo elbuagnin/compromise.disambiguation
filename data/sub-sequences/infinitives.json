@@ -15,5 +15,16 @@
     "scope": "document",
     "source": "file",
     "payload": { "file": "infinitives" }
+  },
+
+  "Post Assignment Impacts": {
+    "order": "3",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "file",
+    "payload": {
+      "file": "infinitives-pai"
+    }
   }
 }

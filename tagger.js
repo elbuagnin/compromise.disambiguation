@@ -6,7 +6,7 @@ export default function tagger(doc, payload) {
     console.log("Tagger matched: " + matchedTerm.text());
 
     if (
-      disambiguate !== true ||
+      disambiguate === false ||
       (disambiguate === true && !matchedTerm.has("Resolved"))
     ) {
       if (disambiguate === true) {

@@ -93,48 +93,48 @@ export default function disambiguate(doc, term) {
   // Main
 
   const word = term.word;
-  if (!doc.has(word) || doc.match(word).has("Resolved")) {
-    return;
-  }
+  if (doc.has(word) && !doc.match(word).has("#Resolved")) {
+    console.log(doc.match(word).debug());
+    console.log(doc.match(word).has("#Resolved"));
+    const POSes = term.POSes.map((pos) => posNameNormalize(pos));
 
-  const POSes = term.POSes.map((pos) => posNameNormalize(pos));
+    const results = {};
+    Object.values(POSes).forEach((pos) => {
+      results[pos] = 0;
+    });
 
-  const results = {};
-  Object.values(POSes).forEach((pos) => {
-    results[pos] = 0;
-  });
+    console.log("Term: " + word);
+    console.log("Possible POSes:" + JSON.stringify(POSes));
 
-  console.log("Term: " + word);
-  console.log("Possible POSes:" + JSON.stringify(POSes));
+    Object.values(POSes).forEach((pos) => {
+      console.log("Testing POS: [" + pos + "]");
 
-  Object.values(POSes).forEach((pos) => {
-    console.log("Testing POS: [" + pos + "]");
+      results[pos] = isPOS(word, pos);
+    });
 
-    results[pos] = isPOS(word, pos);
-  });
+    console.log(results);
+    const winner = compareResults(results);
+    console.log(winner);
 
-  console.log(results);
-  const winner = compareResults(results);
-  console.log(winner);
-
-  if (winner.length > 1) {
-    return;
-  } else {
-    const disambiguatedPOS = compromiseTagged(winner[0]);
-    const docWord = doc.match(word);
-    if (docWord.has(disambiguatedPOS)) {
-      console.log("Already correct POS");
-      docWord.tag("resolved");
+    if (winner.length > 1) {
       return;
     } else {
-      console.log("Changing POS on " + word + " to " + disambiguatedPOS);
-      const oldTags = Object.values(docWord.out("tags")[0])[0];
+      const disambiguatedPOS = compromiseTagged(winner[0]);
+      const docWord = doc.match(word);
+      if (docWord.has(disambiguatedPOS)) {
+        console.log("Already correct POS");
+        docWord.tag("resolved");
+        return;
+      } else {
+        console.log("Changing POS on " + word + " to " + disambiguatedPOS);
+        const oldTags = Object.values(docWord.out("tags")[0])[0];
 
-      console.log("old tags: " + JSON.stringify(oldTags));
-      docWord.unTag(oldTags);
-      docWord.tag(disambiguatedPOS);
-      docWord.tag("resolved");
-      return;
+        console.log("old tags: " + JSON.stringify(oldTags));
+        docWord.unTag(oldTags);
+        docWord.tag(disambiguatedPOS);
+        docWord.tag("resolved");
+        return;
+      }
     }
   }
 }
