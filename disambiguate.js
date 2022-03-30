@@ -39,7 +39,7 @@ export default function disambiguate(doc, term) {
         let pattern = test.pattern.replace("%word%", word);
         let chunk = findChunk(test.scope);
         if (chunk.has(pattern)) {
-          console.log("    " + test.type + "  " + pos + ": " + pattern);
+          console.log("\n\n    " + test.type + "  " + pos + ": " + pattern);
           result += score(test.type);
         }
       });
@@ -47,7 +47,14 @@ export default function disambiguate(doc, term) {
 
     let result = 0;
     const testTypes = ["negative", "improbable", "probable", "positive"];
-    const testSet = posTests.filter((test) => test.pos === pos);
+    const grossTestSet = posTests.filter((test) => test.pos === pos);
+
+    const testSet = grossTestSet.map((test) => {
+      if (test.subPos) {
+        test.pos = test.subPos;
+      }
+      return test;
+    });
 
     testTypes.forEach((type) => {
       const tests = testSet.filter((test) => test.type === type);
