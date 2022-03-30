@@ -4,7 +4,8 @@
     "term": ["to", "#Verb"],
     "pattern": "to #Adverb? #Verb",
     "tag": "#Infinitive",
-    "untag": ["#Verb", "#Conjunction"]
+    "untag": ["#Verb", "#Conjunction"],
+    "disambiguate": true
   },
 
   "to #Infinitive": {
@@ -12,6 +13,7 @@
     "term": "to",
     "pattern": "to #Adverb? #Infinitive",
     "tag": "#Infinitive",
-    "untag": ["#Verb", "#Conjunction"]
+    "untag": ["#Verb", "#Conjunction"],
+    "disambiguate": true
   }
 }

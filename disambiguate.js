@@ -93,8 +93,8 @@ export default function disambiguate(doc, term) {
   // Main
 
   const word = term.word;
-  if (!doc.has(word)) {
-    return false;
+  if (!doc.has(word) || doc.match(word).has("Resolved")) {
+    return;
   }
 
   const POSes = term.POSes.map((pos) => posNameNormalize(pos));
@@ -122,8 +122,9 @@ export default function disambiguate(doc, term) {
   } else {
     const disambiguatedPOS = compromiseTagged(winner[0]);
     const docWord = doc.match(word);
-    if (docWord.has(disambiguatedPOS) || docWord.has("Resolved")) {
+    if (docWord.has(disambiguatedPOS)) {
       console.log("Already correct POS");
+      docWord.tag("resolved");
       return;
     } else {
       console.log("Changing POS on " + word + " to " + disambiguatedPOS);
