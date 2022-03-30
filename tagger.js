@@ -10,6 +10,9 @@ export default function tagger(doc, payload) {
       (disambiguate === true && !matchedTerm.has("Resolved"))
     ) {
       if (disambiguate === true) {
+        const oldTags = Object.values(matchedTerm.out("tags")[0])[0];
+        console.log(oldTags);
+        matchedTerm.unTag(oldTags);
         matchedTerm.tag("resolved");
       }
       if (untag) {
