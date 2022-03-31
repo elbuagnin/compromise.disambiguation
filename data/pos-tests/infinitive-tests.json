@@ -1,7 +1,46 @@
 {
-  "infinitive negative 1": {"pos": "infinitive", "type": "negative", "pattern": "!to (%word% && !to)", "scope": "phrase"},
-  "infinitive probable 1": {"pos": "infinitive", "type": "probable", "pattern": "to %word%", "scope": "phrase"},
-  "infinitive positive 1": {"pos": "infinitive", "type": "positive", "pattern": "!to (%word% && #Infinitive)", "scope": "phrase"},
-  "infinitive positive 2": {"pos": "infinitive", "type": "positive", "pattern": "(%word% && to) #Infinitive", "scope": "phrase"},
-  "infinitive positive 3": {"pos": "infinitive", "type": "positive", "pattern": "(%word% && to) (#PresentTense && ![#Copula|#Modal|#Auxiliary])", "scope": "phrase"}
+  "infinitive negative 1": {
+    "pos": "infinitive",
+    "type": "negative",
+    "pattern": "[#Pronoun|#Possessive|#Determiner] %word%",
+    "scope": "phrase"
+  },
+
+  "infinitive improbable 1": {
+    "pos": "infinitive",
+    "type": "improbable",
+    "pattern": "!to (%word% && !to)",
+    "scope": "phrase"
+  },
+  "infinitive probable 1": {
+    "pos": "infinitive",
+    "type": "probable",
+    "pattern": "to %word%",
+    "scope": "phrase"
+  },
+  "infinitive positive 1": {
+    "pos": "infinitive",
+    "type": "positive",
+    "pattern": "!to (%word% && #Infinitive)",
+    "scope": "phrase"
+  },
+  "infinitive positive 2": {
+    "pos": "infinitive",
+    "type": "positive",
+    "pattern": "(%word% && to) #Infinitive",
+    "scope": "phrase"
+  },
+  "infinitive positive 3": {
+    "pos": "infinitive",
+    "type": "positive",
+    "pattern": "(%word% && to) (#PresentTense && ![#Copula|#Modal|#Auxiliary])",
+    "scope": "phrase"
+  },
+
+  "bare infinitive positive 1": {
+    "pos": "infinitive",
+    "type": "positive",
+    "pattern": "(#Verb && ![#Copula|#Modal|#Auxiliary]) [#Pronoun|#Determiner #Adjective?+ #Noun|#Possessive #Adjective?+ #Noun] (%word% && #PresentTense)",
+    "scope": "phrase"
+  }
 }

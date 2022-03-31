@@ -1,0 +1,8 @@
+{
+  "Base Verbs": {
+    "batchOrder": "2",
+    "term": ".",
+    "pattern": "(#PresentTense && ![#Copula|#Auxiliary|#Modal])",
+    "tag": "#BaseVerb"
+  }
+}
