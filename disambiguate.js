@@ -48,13 +48,15 @@ export default function disambiguate(doc, term) {
     let result = 0;
     const testTypes = ["negative", "improbable", "probable", "positive"];
     const grossTestSet = posTests.filter((test) => test.pos === pos);
-
+    console.log(grossTestSet);
     const testSet = grossTestSet.map((test) => {
       if (test.subPos) {
         test.pos = test.subPos;
+        test.subPos = "";
       }
       return test;
     });
+    console.log(testSet);
 
     testTypes.forEach((type) => {
       const tests = testSet.filter((test) => test.type === type);
