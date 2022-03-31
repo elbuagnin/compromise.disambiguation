@@ -1,17 +1,118 @@
 {
-  "verb negative 1": {"pos": "verb", "type": "negative", "pattern": "#Determiner %word%", "scope": "phrase"},
-  "verb negative 2": {"pos": "verb", "type": "negative", "pattern": "#Prepostion %word%", "scope": "phrase"},
-  "verb negative 3": {"pos": "verb", "type": "negative", "pattern": "#Possesive %word%", "scope": "phrase"},
-  "verb negative 4": {"pos": "verb", "type": "negative", "pattern": "#Copula (%word% && /ing$/]", "scope": "phrase"},
+  "verb negative 1": {
+    "pos": "verb",
+    "type": "negative",
+    "pattern": "#Determiner %word%",
+    "scope": "phrase"
+  },
+  "verb negative 2": {
+    "pos": "verb",
+    "type": "negative",
+    "pattern": "#Prepostion %word%",
+    "scope": "phrase"
+  },
+  "verb negative 3": {
+    "pos": "verb",
+    "type": "negative",
+    "pattern": "#Possesive %word%",
+    "scope": "phrase"
+  },
+  "verb negative 4": {
+    "pos": "verb",
+    "type": "negative",
+    "pattern": "#Copula (%word% && /ing$/]",
+    "scope": "phrase"
+  },
 
-  "verb probable 1": {"pos": "verb", "type": "probable", "pattern": "#Noun #Adverb?+ %word%", "scope": "phrase"},
-  "verb probable 2": {"pos": "verb", "type": "probable", "pattern": "#Pronoun #Adverb?+ %word%", "scope": "phrase"},
-  "verb probable 3": {"pos": "verb", "type": "probable", "pattern": "%word% #Determiner", "scope": "phrase"},
-  "verb probable 4": {"pos": "verb", "type": "probable", "pattern": "%word% #Pronoun", "scope": "phrase"},
-  "verb probable 5": {"pos": "verb", "type": "probable", "pattern": "%word% #Adverb", "scope": "phrase"},
-  "verb probable 6": {"pos": "verb", "type": "probable", "pattern": "#Adverb %word%", "scope": "phrase"},
+  "verb probable 1": {
+    "pos": "verb",
+    "type": "probable",
+    "pattern": "#Noun #Adverb?+ %word%",
+    "scope": "phrase"
+  },
+  "verb probable 2": {
+    "pos": "verb",
+    "type": "probable",
+    "pattern": "#Pronoun #Adverb?+ %word%",
+    "scope": "phrase"
+  },
+  "verb probable 3": {
+    "pos": "verb",
+    "type": "probable",
+    "pattern": "%word% #Determiner",
+    "scope": "phrase"
+  },
+  "verb probable 4": {
+    "pos": "verb",
+    "type": "probable",
+    "pattern": "%word% #Pronoun",
+    "scope": "phrase"
+  },
+  "verb probable 5": {
+    "pos": "verb",
+    "type": "probable",
+    "pattern": "%word% #Adverb",
+    "scope": "phrase"
+  },
+  "verb probable 6": {
+    "pos": "verb",
+    "type": "probable",
+    "pattern": "#Adverb %word%",
+    "scope": "phrase"
+  },
 
-  "verb positive 2": {"pos": "verb", "type": "positive", "pattern": "#Auxiliary?+ #Negative? #Auxiliary #Adverb? %word%", "scope": "phrase"},
-  "verb positive 3": {"pos": "verb", "type": "positive", "pattern": "#Verb #Conjunction %word%", "scope": "phrase"},
-  "verb positive 4": {"pos": "verb", "type": "positive", "pattern": "%word% #Conjunction #Verb", "scope": "phrase"}
+  "verb positive 2": {
+    "pos": "verb",
+    "type": "positive",
+    "pattern": "#Auxiliary?+ #Negative? #Auxiliary #Adverb? %word%",
+    "scope": "phrase"
+  },
+  "verb positive 3": {
+    "pos": "verb",
+    "type": "positive",
+    "pattern": "#Verb #Conjunction %word%",
+    "scope": "phrase"
+  },
+  "verb positive 4": {
+    "pos": "verb",
+    "type": "positive",
+    "pattern": "%word% #Conjunction #Verb",
+    "scope": "phrase"
+  },
+
+  "infinitive 1": {
+    "pos": "verb",
+    "subPos": "infinitive",
+    "type": "probable",
+    "pattern": "to %word%",
+    "scope": "phrase"
+  },
+  "infinitive 2": {
+    "pos": "verb",
+    "subPos": "infinitive",
+    "type": "positive",
+    "pattern": "to #Adverb %word%",
+    "scope": "phrase"
+  },
+  "infinitive 3": {
+    "pos": "verb",
+    "subPos": "infinitive",
+    "type": "positive",
+    "pattern": "#BaseVerb #Noun (%word% && #PresentTense)",
+    "scope": "phrase"
+  },
+  "infinitive 4": {
+    "pos": "verb",
+    "subPos": "infinitive",
+    "type": "positive",
+    "pattern": "#BaseVerb #Pronoun (%word% && #PresentTense)",
+    "scope": "phrase"
+  },
+  "infinitive 5": {
+    "pos": "verb",
+    "subPos": "infinitive",
+    "type": "positive",
+    "pattern": "#Verb #Possesive #Noun (%word% && #PresentTense)",
+    "scope": "phrase"
+  }
 }
