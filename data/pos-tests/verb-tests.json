@@ -78,41 +78,5 @@
     "type": "positive",
     "pattern": "%word% #Conjunction #Verb",
     "scope": "phrase"
-  },
-
-  "infinitive 1": {
-    "pos": "verb",
-    "subPos": "infinitive",
-    "type": "probable",
-    "pattern": "to %word%",
-    "scope": "phrase"
-  },
-  "infinitive 2": {
-    "pos": "verb",
-    "subPos": "infinitive",
-    "type": "positive",
-    "pattern": "to #Adverb %word%",
-    "scope": "phrase"
-  },
-  "infinitive 3": {
-    "pos": "verb",
-    "subPos": "infinitive",
-    "type": "positive",
-    "pattern": "#BaseVerb #Noun (%word% && #PresentTense)",
-    "scope": "phrase"
-  },
-  "infinitive 4": {
-    "pos": "verb",
-    "subPos": "infinitive",
-    "type": "positive",
-    "pattern": "#BaseVerb #Pronoun (%word% && #PresentTense)",
-    "scope": "phrase"
-  },
-  "infinitive 5": {
-    "pos": "verb",
-    "subPos": "infinitive",
-    "type": "positive",
-    "pattern": "#Verb #Possesive #Noun (%word% && #PresentTense)",
-    "scope": "phrase"
   }
 }

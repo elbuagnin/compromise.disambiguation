@@ -20,7 +20,10 @@
     "abbreviation": "vlpr"
   },
   "Prepositions": { "fullname": "preposition", "abbreviation": "in" },
-  "Pronouns": { "fullname": "pronoun", "abbreviation": "pn" },
+  "Indefinite Pronouns": {
+    "fullname": "indefinitePronoun",
+    "abbreviation": "pi"
+  },
   "Verbs": { "fullname": "verb", "abbreviation": "vv" },
   "Verbal Nouns": { "fullname": "verbalNoun", "abbreviation": "vlnn" },
   "Present Progressive Verbs": {
