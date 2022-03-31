@@ -1,0 +1,19 @@
+{
+  "Prepare Document Processes": {
+    "order": "1",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "prepare" }
+  },
+
+  "Prepare Document Tagging": {
+    "order": "2",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "directory",
+    "payload": { "directory": "pre-processing" }
+  }
+}

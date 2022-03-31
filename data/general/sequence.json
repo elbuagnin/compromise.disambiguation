@@ -1,20 +1,8 @@
 {
-  "POS fixes to Compromise output": {
+  "Pre-Processing": {
     "order": "1",
-    "action": "tag",
-    "parseBy": "pattern",
-    "scope": "document",
-    "source": "file",
-    "payload": { "file": "fixes" }
-  },
-
-  "Prepare Document": {
-    "order": "2",
-    "action": "process",
-    "parseBy": "process",
-    "scope": "document",
-    "source": "file",
-    "payload": { "file": "prepare" }
+    "action": "sub-sequence",
+    "payload": { "file": "pre-processing" }
   },
 
   "Compound Terms": {
