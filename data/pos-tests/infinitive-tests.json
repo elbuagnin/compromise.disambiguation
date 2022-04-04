@@ -9,7 +9,7 @@
   "infinitive improbable 1": {
     "pos": "infinitive",
     "type": "improbable",
-    "pattern": "!to (%word% && !to)",
+    "pattern": "[!#BaseVerb *|!to] (%word% && !to)",
     "scope": "phrase"
   },
 
