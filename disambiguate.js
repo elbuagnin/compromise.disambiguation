@@ -6,6 +6,30 @@ export default function disambiguate(doc, term) {
     return "#" + pos.charAt(0).toUpperCase() + pos.slice(1);
   }
 
+  function clearOldTags(docWord) {
+    const tagExceptions = [
+      "Period",
+      "Comma",
+      "QuestionMark",
+      "ExclamationPoint",
+      "Semicolon",
+      "OpenParentheses",
+      "CloseParentheses",
+      "OpenQuote",
+      "CloseQuote",
+    ];
+    const oldTags = Object.values(docWord.out("tags")[0])[0];
+    console.log(oldTags);
+    const filteredTags = oldTags.filter((tag) => {
+      console.log(tag);
+      if (tagExceptions.indexOf(tag)) {
+        return tag;
+      }
+    });
+    console.log("After old tag removal: " + filteredTags);
+    docWord.unTag(filteredTags);
+  }
+
   function isPOS(word, pos) {
     function testing(tests) {
       function findChunk(scope) {
@@ -127,10 +151,7 @@ export default function disambiguate(doc, term) {
         return;
       } else {
         console.log("Changing POS on " + word + " to " + disambiguatedPOS);
-        const oldTags = Object.values(docWord.out("tags")[0])[0];
-
-        //console.log("old tags: " + JSON.stringify(oldTags));
-        docWord.unTag(oldTags);
+        clearOldTags(docWord);
         docWord.tag(disambiguatedPOS);
         docWord.tag("resolved");
         console.log(docWord.debug());
