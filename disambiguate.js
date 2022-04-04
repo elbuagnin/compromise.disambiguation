@@ -129,10 +129,11 @@ export default function disambiguate(doc, term) {
         console.log("Changing POS on " + word + " to " + disambiguatedPOS);
         const oldTags = Object.values(docWord.out("tags")[0])[0];
 
-        console.log("old tags: " + JSON.stringify(oldTags));
+        //console.log("old tags: " + JSON.stringify(oldTags));
         docWord.unTag(oldTags);
         docWord.tag(disambiguatedPOS);
         docWord.tag("resolved");
+        console.log(docWord.debug());
         return;
       }
     }
