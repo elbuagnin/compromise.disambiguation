@@ -6,8 +6,8 @@ export default function tagger(doc, payload) {
     console.log("Tagger matched: " + matchedTerm.text());
 
     if (
-      disambiguate === false ||
-      (disambiguate === true && !matchedTerm.has("Resolved"))
+      (disambiguate === true && !matchedTerm.has("Resolved")) ||
+      disambiguate !== true
     ) {
       if (disambiguate === true) {
         const oldTags = Object.values(matchedTerm.out("tags")[0])[0];
@@ -22,7 +22,12 @@ export default function tagger(doc, payload) {
       if (tag) {
         matchedTerm.tag(tag);
         console.log(`Tagger is assigning tag: ${tag}`);
+        console.log(matchedTerm.debug());
       }
+
+      console.log(matchedTerm.debug());
+    } else {
+      console.log("Not processing.");
     }
   }
 }
