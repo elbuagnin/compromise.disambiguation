@@ -59,6 +59,7 @@ export default function process(doc, parsingData) {
   const after = doc.clone();
 
   if (!equivalentDocs(before, after)) {
+    console.log("Processed");
     doc.debug();
   }
 }

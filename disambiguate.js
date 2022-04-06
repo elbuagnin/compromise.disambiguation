@@ -138,6 +138,7 @@ export default function disambiguate(doc, term) {
         clearOldTags(docWord);
         docWord.tag(disambiguatedPOS);
         docWord.tag("resolved");
+        console.log("Disambiguated");
         docWord.debug();
         return;
       }
