@@ -3,6 +3,7 @@ import sequence from "./sequence.js";
 import parse from "./parser.js";
 
 export default function sequencer(document) {
+  console.log("Before");
   document.debug();
   function execute(instruction) {
     const { scope } = instruction;
@@ -57,5 +58,6 @@ export default function sequencer(document) {
       execute(instruction);
     }
   });
+  console.log("After");
   document.debug();
 }
