@@ -1,27 +1,41 @@
 export default function process(doc, parsingData) {
   function equivalentDocs(docA, docB) {
-    let m = 0;
+    let termListLength = 0;
+    if (docA.termList().length === docB.termList().length) {
+      termListLength = docA.termList().length;
 
-    for (let i = 0; i < docA.termList().length; i++) {
-      let n = 0;
-      let tagCount = 0;
-      const docATags = docA.termList()[i].tags;
+      let m = 0;
 
-      Object.keys(docATags).forEach((docATag) => {
-        tagCount++;
+      for (let i = 0; i < termListLength; i++) {
+        let n = 0;
+        let tagCount = 0;
+        const docATags = docA.termList()[i].tags;
+        const docBTags = docB.termList()[i].tags;
 
-        Object.keys(docB.termList()[i].tags).forEach((docBTag) => {
-          if (docATag === docBTag) {
-            n++;
+        if (Object.keys(docATags).length === Object.keys(docBTags).length) {
+          Object.keys(docATags).forEach((docATag) => {
+            tagCount++;
+
+            Object.keys(docBTags).forEach((docBTag) => {
+              if (docATag === docBTag) {
+                n++;
+              }
+            });
+          });
+
+          if (n === tagCount) {
+            m++;
           }
-        });
-      });
-      if (n === tagCount) {
-        m++;
+        } else {
+          return false;
+        }
       }
-    }
-    if (m === docA.termList().length) {
-      return true;
+
+      if (m === termListLength) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
@@ -57,8 +71,7 @@ export default function process(doc, parsingData) {
   }
 
   const after = doc.clone();
-
-  if (!equivalentDocs(before, after)) {
+  if (equivalentDocs(before, after) === false) {
     console.log("Processed");
     doc.debug();
   }
