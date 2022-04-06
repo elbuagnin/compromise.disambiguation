@@ -3,6 +3,7 @@ import sequence from "./sequence.js";
 import parse from "./parser.js";
 
 export default function sequencer(document) {
+  document.debug();
   function execute(instruction) {
     const { scope } = instruction;
 
@@ -25,7 +26,6 @@ export default function sequencer(document) {
           }
 
           chunks.forEach((chunk) => {
-            console.log(chunk.text());
             parse(chunk, instruction);
           });
         }
@@ -35,15 +35,12 @@ export default function sequencer(document) {
 
   function subSequencer(file) {
     const filepath = "./data/sub-sequences/" + file + ".json";
-    console.log("  Using file: " + filepath);
+
     const returnType = "array";
     const subSequence = mfs.loadJSONFile(filepath, returnType);
     subSequence.sort((a, b) => a.order - b.order);
 
     subSequence.forEach((subInstruction) => {
-      console.log(
-        "   Sub-Sequence Instruction: " + JSON.stringify(subInstruction)
-      );
       execute(subInstruction);
     });
   }
@@ -54,11 +51,11 @@ export default function sequencer(document) {
   sequence.sort((a, b) => a.order - b.order);
 
   sequence.forEach((instruction) => {
-    console.log(instruction);
     if (instruction.action === "sub-sequence") {
       subSequencer(instruction.payload.file);
     } else {
       execute(instruction);
     }
   });
+  document.debug();
 }

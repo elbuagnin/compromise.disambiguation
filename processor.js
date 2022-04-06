@@ -1,6 +1,35 @@
 export default function process(doc, parsingData) {
+  function equivalentDocs(docA, docB) {
+    let m = 0;
+
+    for (let i = 0; i < docA.termList().length; i++) {
+      let n = 0;
+      let tagCount = 0;
+      const docATags = docA.termList()[i].tags;
+
+      Object.keys(docATags).forEach((docATag) => {
+        tagCount++;
+
+        Object.keys(docB.termList()[i].tags).forEach((docBTag) => {
+          if (docATag === docBTag) {
+            n++;
+          }
+        });
+      });
+      if (n === tagCount) {
+        m++;
+      }
+    }
+    if (m === docA.termList().length) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   const { process } = parsingData;
-  console.log("    Process: " + process);
+  const before = doc.clone();
+
   switch (process) {
     case "tagDashGroups":
       tagDashGroups(doc);
@@ -25,6 +54,12 @@ export default function process(doc, parsingData) {
       break;
     default:
       break;
+  }
+
+  const after = doc.clone();
+
+  if (!equivalentDocs(before, after)) {
+    doc.debug();
   }
 }
 
@@ -75,7 +110,6 @@ function ingVerbals(doc) {
         if (stemmed.text() === word.text()) {
           return false;
         } else {
-          console.log(word.debug());
           return true;
         }
       } else {
