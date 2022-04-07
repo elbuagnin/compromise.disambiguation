@@ -1,3 +1,5 @@
+import nlp from "compromise";
+
 export default function process(doc, parsingData) {
   function equivalentDocs(docA, docB) {
     let termListLength = 0;
@@ -50,6 +52,9 @@ export default function process(doc, parsingData) {
       break;
     case "expandContractions":
       expandContractions(doc);
+      break;
+    case "compoundNouns":
+      compoundNouns(doc);
       break;
     case "tagHyphenatedTerms":
       tagHyphenatedTerms(doc);
@@ -109,6 +114,30 @@ function expandContractions(doc) {
   doc.contractions().expand();
 }
 
+function compoundNouns(doc) {
+  const backToBackNouns = doc.match(
+    "(#Noun && !#Pronoun) (#Noun && !#Pronoun)"
+  );
+  console.log(backToBackNouns);
+
+  backToBackNouns.forEach((pair) => {
+    let test = true;
+    const first = pair.match("^.").clone();
+    const last = pair.match(".$").clone();
+
+    if (!first.has("#Noun")) {
+      test *= false;
+    }
+    if (!last.has("#Noun")) {
+      test *= false;
+    }
+
+    if (test === true) {
+      pair.tag("resolved");
+    }
+  });
+}
+
 function tagHyphenatedTerms(doc) {
   const hyphenatedTerms = doc.hyphenated();
   hyphenatedTerms.tag(["#Noun", "Singular", "Hyphenated"]);
@@ -116,13 +145,99 @@ function tagHyphenatedTerms(doc) {
 
 function ingVerbals(doc) {
   function isINGVerbal(word) {
+    function stem(text) {
+      function isVowel(character) {
+        const vowels = "aeiou";
+        if (vowels.includes(character)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function vowelPattern(string) {
+        let pattern = "";
+        string.forEach((character) => {
+          if (isVowel(character) === true) {
+            pattern += "v";
+          } else {
+            pattern += "c";
+          }
+        });
+
+        return pattern;
+      }
+
+      text = text.substring(0, text.length - 3);
+      const end = text.length;
+
+      // Double character end
+      if (
+        text.substring(text.length - 1) ===
+        text.substring(text.length - 2, text.length - 1)
+      ) {
+        const doubleEnd = text.substring(-2);
+        console.log(doubleEnd);
+        switch (doubleEnd) {
+          case "ee":
+            break;
+          case "bb" | "gg" | "ll" | "nn" | "pp" | "rr" | "tt":
+            text = text.substring(0, text.length - 1);
+            break;
+          default:
+            break;
+        }
+        return text;
+      }
+
+      // Ends in 'y'
+      if (text.substring(text.length - 1) === "y") {
+        if (!isVowel(text.charAt(end - 2))) {
+          text = text.substring(end - 1) + "ie";
+          return text;
+        }
+      }
+
+      // Ends in 'ck'
+      if (text.substring(end - 2, end - 1) === "ck") {
+        const option1 = text;
+        const option2 = text.substring(0, end - 1);
+
+        if (nlp(option1).has("#Verb")) {
+          return option1;
+        } else if (nlp(option2).has("#Verb")) {
+          return option2;
+        }
+      }
+
+      // Dropped 'e'
+      if (vowelPattern(text.substring(end - 3, end - 1)) === "cvc") {
+        const option1 = text;
+        const option2 = text + "e";
+
+        if (nlp(option1).has("#Verb")) {
+          return option1;
+        } else if (nlp(option2).has("#Verb")) {
+          return option2;
+        }
+      }
+
+      // Default: no adjustments
+      return text;
+    }
+
     if (word.text().substring(word.text().length - 3) === "ing") {
       const testWord = word.clone();
       testWord.tag("#Verb");
       let stemmed = testWord.verbs().toInfinitive();
-      if (stemmed.has("#Verb")) {
+      if (stemmed.has("#Verb") || stemmed.has("#Infinitive")) {
         if (stemmed.text() === word.text()) {
-          return false;
+          const manualStemmed = nlp(stem(word.text()));
+          if (manualStemmed.has("#Verb")) {
+            return true;
+          } else {
+            return false;
+          }
         } else {
           return true;
         }

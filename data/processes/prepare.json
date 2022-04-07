@@ -1,8 +1,9 @@
 {
   "Expand Contractions": { "order": "1", "process": "expandContractions" },
   "Tag Hyphenated Terms": { "order": "2", "process": "tagHyphenatedTerms" },
-  "Tag Dash Groups": { "order": "3", "process": "tagDashGroups" },
-  "Tag Parentheses Groups": { "order": "4", "process": "tagParentheses" },
-  "Tag Quotations": { "order": "5", "process": "tagQuotations" },
-  "Tag Punctuation": { "order": "6", "process": "tagPunctuation" }
+  "Tag Compound Nouns": { "order": "3", "process": "compoundNouns" },
+  "Tag Dash Groups": { "order": "4", "process": "tagDashGroups" },
+  "Tag Parentheses Groups": { "order": "5", "process": "tagParentheses" },
+  "Tag Quotations": { "order": "6", "process": "tagQuotations" },
+  "Tag Punctuation": { "order": "7", "process": "tagPunctuation" }
 }
