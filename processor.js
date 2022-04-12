@@ -1,4 +1,4 @@
-import nlp from "compromise";
+import * as helpers from "./lib/word-helpers.js";
 
 export default function process(doc, parsingData) {
   function equivalentDocs(docA, docB) {
@@ -101,9 +101,8 @@ function tagDashGroups(doc) {
             }
           }
 
-          segment.firstTerms().tag("BEGIN");
-          segment.lastTerms().tag("END");
-          segment.tag("DashGroup");
+          segment.firstTerms().tag("openingDash");
+          segment.lastTerms().tag("closingDash");
         }
       });
     });
@@ -125,10 +124,10 @@ function compoundNouns(doc) {
     const first = pair.match("^.").clone();
     const last = pair.match(".$").clone();
 
-    if (!first.has("#Noun")) {
+    if (!helpers.hasPOS(first, "nn")) {
       test *= false;
     }
-    if (!last.has("#Noun")) {
+    if (!helpers.hasPOS(last, "nn")) {
       test *= false;
     }
 
@@ -157,43 +156,62 @@ function ingVerbals(doc) {
 
       function vowelPattern(string) {
         let pattern = "";
-        string.forEach((character) => {
+        Object.values(string).forEach((character) => {
           if (isVowel(character) === true) {
             pattern += "v";
           } else {
             pattern += "c";
           }
         });
-
+        console.log(pattern);
         return pattern;
       }
 
       text = text.substring(0, text.length - 3);
       const end = text.length;
+      console.log("raw: " + text);
 
       // Double character end
-      if (
-        text.substring(text.length - 1) ===
-        text.substring(text.length - 2, text.length - 1)
-      ) {
-        const doubleEnd = text.substring(-2);
-        console.log(doubleEnd);
+      if (text.charAt(end - 1) === text.charAt(end - 2)) {
+        const doubleEnd = text.substring(end - 2);
+        const shorted = text.substring(0, end - 1);
+
         switch (doubleEnd) {
           case "ee":
             break;
-          case "bb" | "gg" | "ll" | "nn" | "pp" | "rr" | "tt":
-            text = text.substring(0, text.length - 1);
+          case "bb":
+            text = shorted;
+            break;
+          case "gg":
+            text = shorted;
+            break;
+          case "ll":
+            text = shorted;
+            break;
+          case "nn":
+            text = shorted;
+            break;
+          case "pp":
+            text = shorted;
+            break;
+          case "rr":
+            text = shorted;
+            break;
+          case "tt":
+            text = shorted;
             break;
           default:
             break;
         }
+        console.log(text);
         return text;
       }
 
       // Ends in 'y'
-      if (text.substring(text.length - 1) === "y") {
+      if (text.charAt(end - 1) === "y") {
         if (!isVowel(text.charAt(end - 2))) {
-          text = text.substring(end - 1) + "ie";
+          text = text.substring(0, end - 1) + "ie";
+          console.log(text);
           return text;
         }
       }
@@ -203,44 +221,42 @@ function ingVerbals(doc) {
         const option1 = text;
         const option2 = text.substring(0, end - 1);
 
-        if (nlp(option1).has("#Verb")) {
+        if (helpers.hasPOS(option1, "vv")) {
+          console.log(option1);
           return option1;
-        } else if (nlp(option2).has("#Verb")) {
+        } else if (helpers.hasPOS(option2, "vv")) {
+          console.log(option2);
           return option2;
         }
       }
 
       // Dropped 'e'
-      if (vowelPattern(text.substring(end - 3, end - 1)) === "cvc") {
+      console.log(text.substring(end - 3, end));
+      if (vowelPattern(text.substring(end - 3, end)) === "cvc") {
+        console.log("cvc ending");
         const option1 = text;
         const option2 = text + "e";
 
-        if (nlp(option1).has("#Verb")) {
+        console.log(option1, option2);
+
+        if (helpers.hasPOS(option1, "vv")) {
+          console.log("verb is here: " + option1);
           return option1;
-        } else if (nlp(option2).has("#Verb")) {
+        } else if (helpers.hasPOS(option2, "vv")) {
+          console.log("verb is here: " + option2);
           return option2;
         }
       }
 
       // Default: no adjustments
+      console.log("defaulted: " + text);
       return text;
     }
 
     if (word.text().substring(word.text().length - 3) === "ing") {
-      const testWord = word.clone();
-      testWord.tag("#Verb");
-      let stemmed = testWord.verbs().toInfinitive();
-      if (stemmed.has("#Verb") || stemmed.has("#Infinitive")) {
-        if (stemmed.text() === word.text()) {
-          const manualStemmed = nlp(stem(word.text()));
-          if (manualStemmed.has("#Verb")) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          return true;
-        }
+      let stemmed = stem(word.text());
+      if (helpers.hasPOS(stemmed, "vv")) {
+        return true;
       } else {
         return false;
       }
