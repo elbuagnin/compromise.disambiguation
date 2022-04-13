@@ -124,10 +124,10 @@ function compoundNouns(doc) {
     const first = pair.match("^.").clone();
     const last = pair.match(".$").clone();
 
-    if (!helpers.hasPOS(first, "nn")) {
+    if (!helpers.hasPOS(first.text("reduced"), "nn")) {
       test *= false;
     }
-    if (!helpers.hasPOS(last, "nn")) {
+    if (!helpers.hasPOS(last.text("reduced"), "nn")) {
       test *= false;
     }
 
