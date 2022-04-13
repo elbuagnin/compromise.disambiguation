@@ -117,7 +117,6 @@ function compoundNouns(doc) {
   const backToBackNouns = doc.match(
     "(#Noun && !#Pronoun) (#Noun && !#Pronoun)"
   );
-  console.log(backToBackNouns);
 
   backToBackNouns.forEach((pair) => {
     let test = true;
@@ -163,13 +162,12 @@ function ingVerbals(doc) {
             pattern += "c";
           }
         });
-        console.log(pattern);
+
         return pattern;
       }
 
       text = text.substring(0, text.length - 3);
       const end = text.length;
-      console.log("raw: " + text);
 
       // Double character end
       if (text.charAt(end - 1) === text.charAt(end - 2)) {
@@ -203,7 +201,7 @@ function ingVerbals(doc) {
           default:
             break;
         }
-        console.log(text);
+
         return text;
       }
 
@@ -211,7 +209,7 @@ function ingVerbals(doc) {
       if (text.charAt(end - 1) === "y") {
         if (!isVowel(text.charAt(end - 2))) {
           text = text.substring(0, end - 1) + "ie";
-          console.log(text);
+
           return text;
         }
       }
@@ -222,34 +220,25 @@ function ingVerbals(doc) {
         const option2 = text.substring(0, end - 1);
 
         if (helpers.hasPOS(option1, "vv")) {
-          console.log(option1);
           return option1;
         } else if (helpers.hasPOS(option2, "vv")) {
-          console.log(option2);
           return option2;
         }
       }
 
       // Dropped 'e'
-      console.log(text.substring(end - 3, end));
       if (vowelPattern(text.substring(end - 3, end)) === "cvc") {
-        console.log("cvc ending");
         const option1 = text;
         const option2 = text + "e";
 
-        console.log(option1, option2);
-
         if (helpers.hasPOS(option1, "vv")) {
-          console.log("verb is here: " + option1);
           return option1;
         } else if (helpers.hasPOS(option2, "vv")) {
-          console.log("verb is here: " + option2);
           return option2;
         }
       }
 
       // Default: no adjustments
-      console.log("defaulted: " + text);
       return text;
     }
 
