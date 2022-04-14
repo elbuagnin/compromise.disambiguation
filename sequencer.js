@@ -20,7 +20,7 @@ export default function sequencer(document) {
           if (sentence.has("#Comma")) {
             const commas = sentence.match("#Comma");
             commas.forEach((comma) => {
-              if (comma.ifNo("(#List|#CoordinatingAdjectives)").found) {
+              if (comma.ifNo("(#ListItem|#CoordinatingAdjectives)").found) {
                 chunks = chunks.splitAfter(comma);
               }
             });
