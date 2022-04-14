@@ -24,6 +24,13 @@
     "scope": "phrase"
   },
 
+  "verb negative 5": {
+    "pos": "verb",
+    "type": "negative",
+    "pattern": "#BaseVerb (%word% && #BaseVerb]",
+    "scope": "phrase"
+  },
+
   "verb probable 1": {
     "pos": "verb",
     "type": "probable",
