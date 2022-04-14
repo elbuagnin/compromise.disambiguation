@@ -20,6 +20,13 @@
     "scope": "phrase"
   },
 
+  "infinitive probable 2": {
+    "pos": "infinitive",
+    "type": "probable",
+    "pattern": "#Infinitive #Noun %word% #Preposition",
+    "scope": "phrase"
+  },
+
   "infinitive 2": {
     "pos": "infinitive",
     "type": "positive",
@@ -45,6 +52,13 @@
     "pos": "infinitive",
     "type": "positive",
     "pattern": "#BaseVerb #Possessive #Noun (%word% && #PresentTense)",
+    "scope": "phrase"
+  },
+
+  "infinitive 6": {
+    "pos": "infinitive",
+    "type": "positive",
+    "pattern": "#Infinitive #Noun (%word% && #PresentTense)",
     "scope": "phrase"
   }
 }
