@@ -36,6 +36,7 @@ export default function disambiguate(doc, term) {
       }
 
       tests.forEach((test) => {
+        console.log(test);
         let pattern = test.pattern.replace("%word%", word);
         let chunk = findChunk(test.scope);
         if (chunk.has(pattern)) {
@@ -48,7 +49,6 @@ export default function disambiguate(doc, term) {
     let result = 0;
     const testTypes = ["negative", "improbable", "probable", "positive"];
     const grossTestSet = posTests.filter((test) => test.pos === pos);
-    console.log(grossTestSet);
     const testSet = grossTestSet.map((test) => {
       if (test.subPos) {
         test.pos = test.subPos;
@@ -56,7 +56,6 @@ export default function disambiguate(doc, term) {
       }
       return test;
     });
-    console.log(testSet);
 
     testTypes.forEach((type) => {
       const tests = testSet.filter((test) => test.type === type);
