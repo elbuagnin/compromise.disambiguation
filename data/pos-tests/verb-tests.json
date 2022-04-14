@@ -112,7 +112,7 @@
     "pos": "verb",
     "subPos": "infinitive",
     "type": "positive",
-    "pattern": "#Verb #Possesive #Noun (%word% && #PresentTense)",
+    "pattern": "#Verb #Possesive #Noun %word%",
     "scope": "phrase"
   }
 }
