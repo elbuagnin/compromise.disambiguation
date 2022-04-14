@@ -2,7 +2,7 @@
   "Base Verbs": {
     "batchOrder": "2",
     "term": ".",
-    "pattern": "(#PresentTense && ![#Copula|#Auxiliary|#Modal])",
+    "pattern": "(#Verb && ![#Copula|#Auxiliary|#Modal])",
     "tag": "#BaseVerb"
   }
 }

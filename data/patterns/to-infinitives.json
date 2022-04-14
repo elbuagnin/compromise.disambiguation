@@ -1,0 +1,17 @@
+{
+  "to #Verb": {
+    "order": "1",
+    "term": "to",
+    "pattern": "to #Adverb? (#BaseVerb && #PresentTense)",
+    "tag": "#Infinitive",
+    "disambiguate": true
+  },
+
+  "to #Infinitive": {
+    "order": "1",
+    "term": "to",
+    "pattern": "to #Adverb? #Infinitive",
+    "tag": "#Infinitive",
+    "disambiguate": true
+  }
+}

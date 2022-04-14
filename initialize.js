@@ -9,11 +9,11 @@ export default function initialize(doc) {
   const tags = mfs.loadJSONDir(tagDir, 'tags');
   const words = mfs.loadJSONDir(wordDir, 'words');
 
-  console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
-  console.log('$$ Initialization');
+  
+  
   doc.addCustomTags(tags);
   doc.addCustomWords(words);
 
-  console.log('Doc, post-Initialization');
-  console.log(doc.debug());
+  
+  
 }
