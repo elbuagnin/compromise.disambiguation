@@ -3499,6 +3499,10 @@
     "list": "wordnet",
     "term": { "word": "caitiff", "POSes": ["jj", "nn"] }
   },
+"cake": {
+    "list": "wordnet",
+    "term": { "word": "cake", "POSes": ["nn", "vv", "vli"] }
+  },
   "880": {
     "list": "wordnet",
     "term": { "word": "calcimine", "POSes": ["nn", "vv", "vli"] }
