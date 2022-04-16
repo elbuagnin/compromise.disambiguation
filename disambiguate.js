@@ -10,6 +10,7 @@ export default function disambiguate(doc, term, match) {
     const tagExceptions = [
       "Period",
       "Comma",
+      "ListItem",
       "QuestionMark",
       "ExclamationPoint",
       "Semicolon",
@@ -20,13 +21,14 @@ export default function disambiguate(doc, term, match) {
     ];
 
     const oldTags = Object.values(docWord.out("tags")[0])[0];
+    console.log("---Old Tags: " + oldTags);
 
     const filteredTags = oldTags.filter((tag) => {
-      if (tagExceptions.indexOf(tag)) {
+      if (!tagExceptions.includes(tag)) {
         return tag;
       }
     });
-
+    console.log("---Filtered Tags: " + filteredTags);
     docWord.unTag(filteredTags);
   }
 
