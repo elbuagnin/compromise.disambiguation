@@ -65,7 +65,7 @@ export default function disambiguate(doc, term, match) {
         let chunk = findChunk(test.scope);
         if (chunk.has(pattern)) {
           result += score(test.type);
-          console.log(pattern);
+          console.log('"' + pattern + '" - score: ' + pos + " is " + result);
         }
       });
     }
