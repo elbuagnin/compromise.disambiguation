@@ -21,7 +21,7 @@ function parsingDataPaths(parseBy) {
 
 export default function parse(doc, instruction) {
   const { source } = instruction;
-  
+
   switch (source) {
     case "payload":
       parseByMethod(doc, instruction);
@@ -63,7 +63,7 @@ function parseUsingFile(doc, instruction) {
   const { file } = instruction.payload;
 
   const filepath = parsingDataPaths(parseBy) + file + ".json";
-  
+
   const returnType = "array";
   const parsingSets = mfs.loadJSONFile(filepath, returnType);
   parsingSets.sort((a, b) => a.order - b.order);
@@ -78,7 +78,7 @@ function parseUsingDirectory(doc, instruction) {
   const { directory } = instruction.payload;
 
   const dirpath = parsingDataPaths(parseBy) + directory;
-  
+
   const list = true;
   const parsingSets = mfs.loadJSONDir(dirpath, list);
   parsingSets.sort((a, b) => a.batch - b.batch || a.order - b.order);
@@ -90,7 +90,7 @@ function parseUsingDirectory(doc, instruction) {
 
 function parseByPattern(doc, action, parsingData) {
   let matches = [];
-  
+
   switch (action) {
     case "disambiguate":
       matches = doc.match(parsingData.pattern);
@@ -110,9 +110,10 @@ function parseByTerm(doc, action, parsingData) {
   //
   const { term } = parsingData;
   doc.terms().forEach((entry) => {
-    if (entry.text() === term.word) {
-      
-      disambiguate(doc, term);
+    const root = entry.text("root");
+    if (root === term.word) {
+      console.log(root);
+      disambiguate(doc, term, entry);
     }
   });
 }

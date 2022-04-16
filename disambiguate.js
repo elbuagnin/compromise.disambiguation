@@ -1,7 +1,7 @@
 import posNameNormalize from "./pos-name-table.js";
 import posTests from "./pos-tests.js";
 
-export default function disambiguate(doc, term) {
+export default function disambiguate(doc, term, match) {
   function compromiseTagged(pos) {
     return "#" + pos.charAt(0).toUpperCase() + pos.slice(1);
   }
@@ -18,6 +18,7 @@ export default function disambiguate(doc, term) {
       "OpenQuote",
       "CloseQuote",
     ];
+
     const oldTags = Object.values(docWord.out("tags")[0])[0];
 
     const filteredTags = oldTags.filter((tag) => {
@@ -29,8 +30,8 @@ export default function disambiguate(doc, term) {
     docWord.unTag(filteredTags);
   }
 
-  function isPOS(word, pos) {
-    function testing(tests) {
+  function isPOS(word, pos, match) {
+    function testing(tests, match) {
       function findChunk(scope) {
         if (scope === "phrase") {
           return doc;
@@ -59,10 +60,12 @@ export default function disambiguate(doc, term) {
       }
 
       tests.forEach((test) => {
-        let pattern = test.pattern.replace("%word%", word);
+        let pattern = test.pattern.replace("%word%", match.text());
+
         let chunk = findChunk(test.scope);
         if (chunk.has(pattern)) {
           result += score(test.type);
+          console.log(pattern);
         }
       });
     }
@@ -73,7 +76,7 @@ export default function disambiguate(doc, term) {
 
     testTypes.forEach((type) => {
       const tests = testSet.filter((test) => test.type === type);
-      testing(tests);
+      testing(tests, match);
     });
 
     return result;
@@ -111,7 +114,8 @@ export default function disambiguate(doc, term) {
   // Main
 
   const word = term.word;
-  if (doc.has(word) && !doc.match(word).has("#Resolved")) {
+
+  if (!match.has("#Resolved")) {
     const POSes = term.POSes.map((pos) => posNameNormalize(pos));
 
     const results = {};
@@ -120,26 +124,26 @@ export default function disambiguate(doc, term) {
     });
 
     Object.values(POSes).forEach((pos) => {
-      results[pos] = isPOS(word, pos);
+      results[pos] = isPOS(word, pos, match);
     });
-
+    console.log(JSON.stringify(results));
     const winner = compareResults(results);
 
     if (winner.length > 1) {
       return;
     } else {
       const disambiguatedPOS = compromiseTagged(winner[0]);
-      const docWord = doc.match(word);
-      if (docWord.has(disambiguatedPOS)) {
-        docWord.tag("resolved");
-        docWord.debug();
+
+      if (match.has(disambiguatedPOS)) {
+        match.tag("resolved");
+        match.debug();
         return;
       } else {
-        clearOldTags(docWord);
-        docWord.tag(disambiguatedPOS);
-        docWord.tag("resolved");
+        clearOldTags(match);
+        match.tag(disambiguatedPOS);
+        match.tag("resolved");
         console.log("Disambiguated");
-        docWord.debug();
+        match.debug();
         return;
       }
     }
