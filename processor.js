@@ -267,31 +267,37 @@ function ingVerbals(doc) {
 
 function lists(doc) {
   if (doc.has("#Comma") && doc.has("#CoordinatingConjunction")) {
-    console.log("Looking for lists.");
-    const coordinatingConjunctions = doc.match("#CoordinatingConjunction");
-    coordinatingConjunctions.forEach((conjunction) => {
-      console.log(conjunction);
-      const list = [];
-      const penultimateWord = conjunction.lookBehind(".").last();
-      console.log(penultimateWord);
-      const listPOS = "#" + Object.values(penultimateWord.out("tags")[0])[0][0];
-      console.log("List POS: " + JSON.stringify(listPOS));
-      list.push(conjunction.lookAfter(listPOS).first());
-      let commaWord = conjunction.lookBehind("#Comma").last();
-      while (commaWord.has("#Comma")) {
-        list.push(commaWord);
-        commaWord = commaWord.lookBehind("#Comma").last();
-      }
-      console.log("List: " + JSON.stringify(list));
+    const sentences = doc.sentences();
+    sentences.forEach((sentence) => {
+      if (sentence.has("#Comma") && sentence.has("#CoordinatingConjunction")) {
+        console.log("Looking for lists.");
+        const coordinatingConjunctions = sentence.match(
+          "#CoordinatingConjunction"
+        );
+        coordinatingConjunctions.forEach((conjunction) => {
+          console.log(conjunction);
+          const list = [];
+          const penultimateWord = conjunction.lookBehind(".").last();
+          console.log(penultimateWord);
+          const listPOS =
+            "#" + Object.values(penultimateWord.out("tags")[0])[0][0];
+          console.log("List POS: " + JSON.stringify(listPOS));
+          list.push(conjunction.lookAfter(listPOS).first());
+          let commaWord = conjunction.lookBehind("#Comma").last();
+          while (commaWord.has("#Comma")) {
+            list.push(commaWord);
+            commaWord = commaWord.lookBehind("#Comma").last();
+          }
+          console.log("List: " + JSON.stringify(list));
 
-      if (list.length > 2) {
-        list.forEach((word) => {
-          word.tag("#ListItem");
+          if (list.length > 2) {
+            list.forEach((word) => {
+              word.tag("#ListItem");
+            });
+          }
         });
       }
     });
-  } else {
-    return;
   }
 }
 
