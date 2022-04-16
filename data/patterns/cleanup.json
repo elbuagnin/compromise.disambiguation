@@ -1,5 +1,10 @@
 {
   "Remove Comma": { "term": "#Comma", "pattern": "#Comma", "untag": "#Comma" },
+  "Remove vv": {
+    "term": "#ListItem",
+    "pattern": "#ListItem",
+    "untag": "#ListItem"
+  },
   "Remove Period": {
     "term": "#Period",
     "pattern": "#Period",
