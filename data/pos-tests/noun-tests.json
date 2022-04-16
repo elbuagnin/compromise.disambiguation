@@ -57,7 +57,7 @@
   "noun probable 2": {
     "pos": "noun",
     "type": "probable",
-    "pattern": "[#PastTense|#PresentTense|#FuturePerfect|#PerfectTense] %word%",
+    "pattern": "#BaseVerb %word%",
     "scope": "phrase"
   },
   "noun probable 3": {
@@ -88,13 +88,13 @@
   "noun positive 1": {
     "pos": "noun",
     "type": "positive",
-    "pattern": "%word% #Conjunction #Noun",
+    "pattern": "%word% (#CoordinatingConjunction && !#Comma) #Noun",
     "scope": "phrase"
   },
   "noun positive 2": {
     "pos": "noun",
     "type": "positive",
-    "pattern": "#Noun #Conjunction %word%",
+    "pattern": "#Noun (#CoordinatingConjunction && !#Comma) %word%",
     "scope": "phrase"
   },
   "noun positive 2": {
