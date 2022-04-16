@@ -1,23 +1,11 @@
-import initialize from './initialize.js';
-import sequencer from './sequencer.js';
+import initialize from "./initialize.js";
+import sequencer from "./sequencer.js";
 
-export default function disambiguation(Doc, world) { // eslint-disable-line
-  Doc.prototype.disambiguation = function () {  // eslint-disable-line
-
+export default function disambiguation(Doc, world) {
+  Doc.prototype.disambiguation = function () {
     const document = this;
-    
-    
-    
-    
-
-    
 
     initialize(document);
     sequencer(document);
-
-
-    
-    
-    
   };
 }
