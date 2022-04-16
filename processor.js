@@ -284,7 +284,7 @@ function lists(doc) {
       }
       console.log("List: " + JSON.stringify(list));
 
-      if (list.length > 0) {
+      if (list.length > 2) {
         list.forEach((word) => {
           word.tag("#ListItem");
         });
