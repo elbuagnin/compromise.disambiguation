@@ -4,5 +4,11 @@
     "term": ".",
     "pattern": "(#Verb && ![#Copula|#Auxiliary|#Modal])",
     "tag": "#BaseVerb"
+  },
+  "Phrasal Verbs": {
+    "batchOrder": "2",
+    "term": "#PhrasalVerb",
+    "pattern": "#PhrasalVerb",
+    "tag": "#resolved"
   }
 }
