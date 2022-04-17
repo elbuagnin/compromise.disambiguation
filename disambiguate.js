@@ -37,10 +37,10 @@ export default function disambiguate(doc, term, match) {
         if (scope === "phrase") {
           return doc;
         } else if (scope === "sentence") {
-          if (doc.parent() === doc) {
+          if (doc.all() === doc) {
             return doc;
           } else {
-            return doc.parent();
+            return doc.all();
           }
         }
       }
