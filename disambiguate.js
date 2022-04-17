@@ -21,14 +21,13 @@ export default function disambiguate(doc, term, match) {
     ];
 
     const oldTags = Object.values(docWord.out("tags")[0])[0];
-    console.log("---Old Tags: " + oldTags);
 
     const filteredTags = oldTags.filter((tag) => {
       if (!tagExceptions.includes(tag)) {
         return tag;
       }
     });
-    console.log("---Filtered Tags: " + filteredTags);
+
     docWord.unTag(filteredTags);
   }
 
@@ -62,12 +61,50 @@ export default function disambiguate(doc, term, match) {
       }
 
       tests.forEach((test) => {
-        let pattern = test.pattern.replace("%word%", match.text());
-
         let chunk = findChunk(test.scope);
-        if (chunk.has(pattern)) {
-          result += score(test.type);
-          console.log('"' + pattern + '" - score: ' + pos + " is " + result);
+
+        const frontPattern = test.pattern.substring(
+          0,
+          test.pattern.indexOf("%word%")
+        );
+
+        const backPattern = test.pattern.substring(
+          test.pattern.indexOf("%word%") + 6
+        );
+
+        let patternType = 0;
+
+        if (frontPattern) {
+          patternType += 1;
+        }
+        if (backPattern) {
+          patternType += 2;
+        }
+
+        switch (patternType) {
+          case 1:
+            if (chunk.match(match).before().lastTerms().has(frontPattern)) {
+              result += score(test.type);
+              console.log(test);
+            }
+            break;
+          case 2:
+            if (chunk.match(match).after().firstTerms().has(backPattern)) {
+              result += score(test.type);
+              console.log(test);
+            }
+            break;
+          case 3:
+            if (
+              chunk.match(match).before().lastTerms().has(frontPattern) &&
+              chunk.match(match).after().firstTerms().has(backPattern)
+            ) {
+              result += score(test.type);
+              console.log(test);
+            }
+            break;
+          default:
+            break;
         }
       });
     }
@@ -145,6 +182,7 @@ export default function disambiguate(doc, term, match) {
         match.tag(disambiguatedPOS);
         match.tag("resolved");
         console.log("Disambiguated");
+        console.log("\n" + match.before().lastTerms().text() + ". . .");
         match.debug();
         return;
       }
