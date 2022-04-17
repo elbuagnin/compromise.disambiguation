@@ -1,4 +1,9 @@
 {
+  "Remove BaseVerb": {
+    "term": "#BaseVerb",
+    "pattern": "#BaseVerb",
+    "untag": "#BaseVerb"
+  },
   "Remove Comma": { "term": "#Comma", "pattern": "#Comma", "untag": "#Comma" },
   "Remove vv": {
     "term": "#ListItem",
