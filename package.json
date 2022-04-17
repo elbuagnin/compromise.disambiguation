@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "airbnb": "^0.0.2",
-    "compromise": "^13.11.4",
+    "compromise": "github:spencermountain/compromise",
     "nodemon": "^2.0.15"
   },
   "devDependencies": {

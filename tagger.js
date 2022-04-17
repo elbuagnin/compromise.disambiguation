@@ -14,7 +14,7 @@ export default function tagger(doc, payload) {
         matchedTerm.tag("resolved");
       }
       if (untag) {
-        matchedTerm.untag(untag);
+        matchedTerm.unTag(untag);
       }
       if (tag) {
         matchedTerm.tag(tag);
