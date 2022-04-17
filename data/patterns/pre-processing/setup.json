@@ -2,7 +2,7 @@
   "Base Verbs": {
     "batchOrder": "2",
     "term": ".",
-    "pattern": "(#Verb && ![#Copula|#Auxiliary|#Modal])",
+    "pattern": "(#Verb && ![#Copula|#Auxiliary|#Modal|#PhrasalVerb])",
     "tag": "#BaseVerb"
   },
   "Phrasal Verbs": {
