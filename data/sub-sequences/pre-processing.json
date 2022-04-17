@@ -1,5 +1,5 @@
 {
-  "Prepare Document Processes": {
+  "Initial Document Processing": {
     "order": "1",
     "action": "process",
     "parseBy": "process",
@@ -8,7 +8,7 @@
     "payload": { "file": "prepare" }
   },
 
-  "Prepare Document Tagging": {
+  "Initial Document Pattern Tagging": {
     "order": "2",
     "action": "tag",
     "parseBy": "pattern",
