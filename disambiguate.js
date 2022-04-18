@@ -81,16 +81,37 @@ export default function disambiguate(doc, term, match) {
           patternType += 2;
         }
 
+        let length = 0;
+        let mask = "";
+
         switch (patternType) {
           case 1:
-            if (chunk.match(match).before().lastTerms().has(frontPattern)) {
+            length = frontPattern.split(" ").length - 1;
+            console.log(frontPattern);
+            console.log(length);
+            mask = match.before().last(length);
+            console.log(mask.text());
+            if (chunk.has(mask) && mask.has(frontPattern)) {
               result += score(test.type);
+              console.log("\n+++++++");
+              console.log(match.text());
+              console.log(test.scope + " : " + chunk.text());
+              console.log(match.before().lastTerms().text());
               console.log(test);
             }
             break;
           case 2:
-            if (chunk.match(match).after().firstTerms().has(backPattern)) {
+            length = backPattern.split(" ").length - 1;
+            console.log(backPattern);
+            console.log(length);
+            mask = match.after().first(length);
+            console.log(mask.text());
+            if (chunk.has(mask) && mask.has(backPattern)) {
               result += score(test.type);
+              console.log("\n+++++++");
+              console.log(match.text());
+              console.log(test.scope + " : " + chunk.text());
+              console.log(match.after().firstTerms().text());
               console.log(test);
             }
             break;
@@ -100,6 +121,11 @@ export default function disambiguate(doc, term, match) {
               chunk.match(match).after().firstTerms().has(backPattern)
             ) {
               result += score(test.type);
+              console.log("\n+++++++");
+              console.log(match.text());
+              console.log(test.scope + " : " + chunk.text());
+              console.log(chunk.match(match).before().lastTerms().text());
+              console.log(chunk.match(match).after().firstTerms().text());
               console.log(test);
             }
             break;
@@ -174,13 +200,13 @@ export default function disambiguate(doc, term, match) {
       const disambiguatedPOS = compromiseTagged(winner[0]);
 
       if (match.has(disambiguatedPOS)) {
-        match.tag("resolved");
+        match.tag("Resolved");
         match.debug();
         return;
       } else {
         clearOldTags(match);
         match.tag(disambiguatedPOS);
-        match.tag("resolved");
+        match.tag("Resolved");
         console.log("Disambiguated");
         console.log("\n" + match.before().lastTerms().text() + ". . .");
         match.debug();

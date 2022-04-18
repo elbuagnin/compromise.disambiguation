@@ -1,0 +1,17 @@
+{
+  "Commas": {
+    "order": "1",
+    "term": ".",
+    "pattern": "#Comma",
+    "tag": "#PhraseBreak",
+    "disambiguate": false
+  },
+
+  "Subordinating Conjunctions": {
+    "order": "2",
+    "term": "^.",
+    "pattern": ". #SubordinatingConjunction+",
+    "tag": "#PhraseBreak",
+    "disambiguate": false
+  }
+}

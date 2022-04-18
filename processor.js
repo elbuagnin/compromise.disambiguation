@@ -134,7 +134,7 @@ function compoundNouns(doc) {
     }
 
     if (test === true) {
-      pair.tag("resolved");
+      pair.tag("Resolved");
     }
   });
 }

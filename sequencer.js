@@ -17,11 +17,13 @@ export default function sequencer(document) {
         } else {
           // Scope = 'phrase' assumed
           let chunks = sentence;
-          if (sentence.has("#Comma")) {
-            const commas = sentence.match("#Comma");
-            commas.forEach((comma) => {
-              if (comma.ifNo("(#ListItem|#CoordinatingAdjectives)").found) {
-                chunks = chunks.splitAfter(comma);
+          if (sentence.has("#PhraseBreak")) {
+            const phraseBreaks = sentence.match("#PhraseBreak");
+            phraseBreaks.forEach((phraseBreak) => {
+              if (
+                phraseBreak.ifNo("(#ListItem|#CoordinatingAdjectives)").found
+              ) {
+                chunks = chunks.splitAfter(phraseBreak);
               }
             });
           }

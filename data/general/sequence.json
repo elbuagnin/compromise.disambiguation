@@ -14,20 +14,31 @@
     "payload": { "directory": "compound-terms" }
   },
 
-  "Infinitives": {
+  "Phrase Breaks": {
     "order": "4",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": {
+      "file": "phrase-breaks"
+    }
+  },
+
+  "Infinitives": {
+    "order": "5",
     "action": "sub-sequence",
     "payload": { "file": "infinitives" }
   },
 
   "Progressive Verbs & Verbals": {
-    "order": "5",
+    "order": "6",
     "action": "sub-sequence",
     "payload": { "file": "progressive-verbals" }
   },
 
   "Term Lists": {
-    "order": "6",
+    "order": "7",
     "action": "disambiguate",
     "parseBy": "term",
     "scope": "phrase",
@@ -36,7 +47,7 @@
   },
 
   "Clean up": {
-    "order": "7",
+    "order": "8",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "document",

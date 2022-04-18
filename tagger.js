@@ -5,13 +5,13 @@ export default function tagger(doc, payload) {
     const matchedTerm = doc.match(pattern).match(term);
 
     if (
-      (disambiguate === true && !matchedTerm.has("Resolved")) ||
+      (disambiguate === true && !matchedTerm.has("#Resolved")) ||
       disambiguate !== true
     ) {
       if (disambiguate === true) {
         const oldTags = Object.values(matchedTerm.out("tags")[0])[0];
         matchedTerm.unTag(oldTags);
-        matchedTerm.tag("resolved");
+        matchedTerm.tag("Resolved");
       }
       if (untag) {
         matchedTerm.unTag(untag);

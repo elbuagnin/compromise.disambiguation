@@ -2,7 +2,6 @@ import * as mfs from "./lib/filesystem.js";
 import disambiguate from "./disambiguate.js";
 import tagger from "./tagger.js";
 import process from "./processor.js";
-//import filterTerms from './disambiguationTerms.js';
 
 function parsingDataPaths(parseBy) {
   const baseDir = "./data/";
@@ -112,7 +111,6 @@ function parseByTerm(doc, action, parsingData) {
   doc.terms().forEach((entry) => {
     const root = entry.text("root");
     if (root === term.word) {
-      console.log(root);
       disambiguate(doc, term, entry);
     }
   });
