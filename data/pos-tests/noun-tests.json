@@ -48,6 +48,12 @@
     "scope": "phrase"
   },
 
+  "noun probable 0": {
+    "pos": "noun",
+    "type": "probable",
+    "pattern": "#Determiner %word%",
+    "scope": "phrase"
+  },
   "noun probable 1": {
     "pos": "noun",
     "type": "probable",
