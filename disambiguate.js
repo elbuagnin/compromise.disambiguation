@@ -60,15 +60,24 @@ export default function disambiguate(doc, term, match) {
         }
       }
 
+      function wordsInPattern(pattern) {
+        let count = 0;
+
+        const segments = pattern.split(" ");
+
+        count = segments.length;
+        return count;
+      }
+
       tests.forEach((test) => {
         let chunk = findChunk(test.scope);
 
-        const frontPattern = test.pattern.substring(
+        let frontPattern = test.pattern.substring(
           0,
           test.pattern.indexOf("%word%")
         );
 
-        const backPattern = test.pattern.substring(
+        let backPattern = test.pattern.substring(
           test.pattern.indexOf("%word%") + 6
         );
 
@@ -82,52 +91,43 @@ export default function disambiguate(doc, term, match) {
         }
 
         let length = 0;
-        let mask = "";
+        let selection = "";
 
         switch (patternType) {
           case 1:
-            length = frontPattern.split(" ").length - 1;
-            console.log(frontPattern);
-            console.log(length);
-            mask = match.before().last(length);
-            console.log(mask.text());
-            if (chunk.has(mask) && mask.has(frontPattern)) {
+            length = wordsInPattern(frontPattern);
+            selection = chunk.match(match).previous(length);
+
+            if (selection.match(frontPattern).found) {
               result += score(test.type);
               console.log("\n+++++++");
-              console.log(match.text());
-              console.log(test.scope + " : " + chunk.text());
-              console.log(match.before().lastTerms().text());
-              console.log(test);
+              console.log("Word: " + match.text());
+              console.log("Before Selection: " + selection.text());
+              console.log("Before Pattern: " + frontPattern);
             }
             break;
           case 2:
-            length = backPattern.split(" ").length - 1;
-            console.log(backPattern);
-            console.log(length);
-            mask = match.after().first(length);
-            console.log(mask.text());
-            if (chunk.has(mask) && mask.has(backPattern)) {
+            length = wordsInPattern(backPattern);
+            selection = chunk.match(match).next(length);
+
+            if (selection.match(backPattern).found) {
               result += score(test.type);
               console.log("\n+++++++");
-              console.log(match.text());
-              console.log(test.scope + " : " + chunk.text());
-              console.log(match.after().firstTerms().text());
-              console.log(test);
+              console.log("Word: " + match.text());
+              console.log("After Selection: " + selection.text());
+              console.log("After Pattern: " + backPattern);
             }
             break;
           case 3:
-            if (
-              chunk.match(match).before().lastTerms().has(frontPattern) &&
-              chunk.match(match).after().firstTerms().has(backPattern)
-            ) {
-              result += score(test.type);
-              console.log("\n+++++++");
-              console.log(match.text());
-              console.log(test.scope + " : " + chunk.text());
-              console.log(chunk.match(match).before().lastTerms().text());
-              console.log(chunk.match(match).after().firstTerms().text());
-              console.log(test);
-            }
+            length = wordsInPattern(frontPattern);
+            selection = chunk.match(match).previous(length);
+            console.log("1: " + selection.text());
+            selection = selection.union(match);
+            console.log("2: " + selection.text());
+            length = wordsInPattern(backPattern);
+            selection = selection.union(chunk.match(match).next(length));
+            console.log("3: " + selection.text());
+
             break;
           default:
             break;
