@@ -63,9 +63,14 @@ export default function disambiguate(doc, term, match) {
       function wordsInPattern(pattern) {
         let count = 0;
 
-        const segments = pattern.split(" ");
-
-        count = segments.length;
+        count -= pattern.split(/\(.+&&.+\)/).length - 1;
+        count += pattern.split(/[\w|-|_]+/).length - 1;
+        count += pattern.split(/\s\d+\s/).length - 1;
+        if (count < 0) {
+          count = 0;
+        }
+        console.log("Pattern: " + pattern);
+        console.log(count);
         return count;
       }
 
@@ -96,7 +101,7 @@ export default function disambiguate(doc, term, match) {
         switch (patternType) {
           case 1:
             length = wordsInPattern(frontPattern);
-            selection = chunk.match(match).previous(length);
+            selection = chunk.match(chunk.match(match).previous(length));
 
             if (selection.match(frontPattern).found) {
               result += score(test.type);
@@ -108,7 +113,7 @@ export default function disambiguate(doc, term, match) {
             break;
           case 2:
             length = wordsInPattern(backPattern);
-            selection = chunk.match(match).next(length);
+            selection = chunk.match(chunk.match(match).next(length));
 
             if (selection.match(backPattern).found) {
               result += score(test.type);
@@ -120,13 +125,15 @@ export default function disambiguate(doc, term, match) {
             break;
           case 3:
             length = wordsInPattern(frontPattern);
-            selection = chunk.match(match).previous(length);
-            console.log("1: " + selection.text());
+            selection = chunk.match(chunk.match(match).previous(length));
+            // console.log("1: " + selection.text());
             selection = selection.union(match);
-            console.log("2: " + selection.text());
+            // console.log("2: " + selection.text());
             length = wordsInPattern(backPattern);
-            selection = selection.union(chunk.match(match).next(length));
-            console.log("3: " + selection.text());
+            selection = selection.union(
+              chunk.match(chunk.match(match).next(length))
+            );
+            // console.log("3: " + selection.text());
 
             break;
           default:
@@ -179,7 +186,7 @@ export default function disambiguate(doc, term, match) {
   // Main
 
   const word = term.word;
-
+  console.log(match);
   if (!match.has("#Resolved")) {
     const POSes = term.POSes.map((pos) => posNameNormalize(pos));
 
