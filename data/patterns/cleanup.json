@@ -19,5 +19,15 @@
     "term": "#Hyphenated",
     "pattern": "#Hyphenated",
     "untag": "#Hyphenated"
+  },
+  "Remove PhraseBreak": {
+    "term": "#PhraseBreak",
+    "pattern": "#PhraseBreak",
+    "untag": "#PhraseBreak"
+  },
+  "Remove Resolved": {
+    "term": "#Resolved",
+    "pattern": "#Resolved",
+    "untag": "#Resolved"
   }
 }

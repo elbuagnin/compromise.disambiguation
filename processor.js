@@ -80,8 +80,8 @@ export default function process(doc, parsingData) {
 
   const after = doc.clone();
   if (equivalentDocs(before, after) === false) {
-    console.log("Processed");
-    doc.debug();
+    // console\.log.*
+
   }
 }
 
@@ -270,25 +270,25 @@ function lists(doc) {
     const sentences = doc.sentences();
     sentences.forEach((sentence) => {
       if (sentence.has("#Comma") && sentence.has("#CoordinatingConjunction")) {
-        console.log("Looking for lists.");
+        // console\.log.*
         const coordinatingConjunctions = sentence.match(
           "#CoordinatingConjunction"
         );
         coordinatingConjunctions.forEach((conjunction) => {
-          console.log(conjunction);
+          // console\.log.*
           const list = [];
           const penultimateWord = conjunction.lookBehind(".").last();
-          console.log(penultimateWord);
+          // console\.log.*
           const listPOS =
             "#" + Object.values(penultimateWord.out("tags")[0])[0][0];
-          console.log("List POS: " + JSON.stringify(listPOS));
+          // console\.log.*
           list.push(conjunction.lookAfter(listPOS).first());
           let commaWord = conjunction.lookBehind("#Comma").last();
           while (commaWord.has("#Comma")) {
             list.push(commaWord);
             commaWord = commaWord.lookBehind("#Comma").last();
           }
-          console.log("List: " + JSON.stringify(list));
+          // console\.log.*
 
           if (list.length > 2) {
             list.forEach((word) => {

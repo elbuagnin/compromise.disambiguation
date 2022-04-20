@@ -19,10 +19,10 @@ export default function tagger(doc, payload) {
       if (tag) {
         matchedTerm.tag(tag);
       }
-      console.log("Tagged");
-      matchedTerm.debug();
+      // console\.log.*
+
     } else {
-      console.log("Tagger not processing.");
+      // console\.log.*
     }
   }
 }

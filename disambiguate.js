@@ -104,10 +104,10 @@ export default function disambiguate(doc, term, match) {
 
             if (selection.match(frontPattern).found) {
               result += score(test.type);
-              console.log("\n+++++++");
-              console.log("Word: " + match.text());
-              console.log("Before Selection: " + selection.text());
-              console.log("Before Pattern: " + frontPattern);
+              // console\.log.*
+              // console\.log.*
+              // console\.log.*
+              // console\.log.*
             }
             break;
           case 2:
@@ -116,23 +116,23 @@ export default function disambiguate(doc, term, match) {
 
             if (selection.match(backPattern).found) {
               result += score(test.type);
-              console.log("\n+++++++");
-              console.log("Word: " + match.text());
-              console.log("After Selection: " + selection.text());
-              console.log("After Pattern: " + backPattern);
+              // console\.log.*
+              // console\.log.*
+              // console\.log.*
+              // console\.log.*
             }
             break;
           case 3:
             length = wordsInPattern(frontPattern);
             selection = chunk.match(chunk.match(match).previous(length));
-            // console.log("1: " + selection.text());
+            // // console\.log.*
             selection = selection.union(match);
-            // console.log("2: " + selection.text());
+            // // console\.log.*
             length = wordsInPattern(backPattern);
             selection = selection.union(
               chunk.match(chunk.match(match).next(length))
             );
-            // console.log("3: " + selection.text());
+            // // console\.log.*
 
             break;
           default:
@@ -185,7 +185,7 @@ export default function disambiguate(doc, term, match) {
   // Main
 
   const word = term.word;
-  console.log(match);
+  // console\.log.*
   if (!match.has("#Resolved")) {
     const POSes = term.POSes.map((pos) => posNameNormalize(pos));
 
@@ -197,7 +197,7 @@ export default function disambiguate(doc, term, match) {
     Object.values(POSes).forEach((pos) => {
       results[pos] = isPOS(word, pos, match);
     });
-    console.log(JSON.stringify(results));
+    // console\.log.*
     const winner = compareResults(results);
 
     if (winner.length > 1) {
@@ -207,15 +207,15 @@ export default function disambiguate(doc, term, match) {
 
       if (match.has(disambiguatedPOS)) {
         match.tag("Resolved");
-        match.debug();
+
         return;
       } else {
         clearOldTags(match);
         match.tag(disambiguatedPOS);
         match.tag("Resolved");
-        console.log("Disambiguated");
-        console.log("\n" + match.before().lastTerms().text() + ". . .");
-        match.debug();
+        // console\.log.*
+        // console\.log.*
+
         return;
       }
     }
