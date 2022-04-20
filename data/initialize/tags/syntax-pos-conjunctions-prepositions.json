@@ -1,32 +1,36 @@
 {
   "Conjunction": {
-      "isA": "",
-      "notA": "Preposition"
+    "isA": "",
+    "notA": "Preposition"
   },
   "CoordinatingConjunction": {
-      "isA": "Conjunction",
-      "notA": ["SubordinatingConjunction", "CorrelativeConjunction", "Determiner"]
+    "isA": "Conjunction",
+    "notA": ["SubordinatingConjunction", "CorrelativeConjunction", "Determiner"]
   },
   "SubordinatingConjunction": {
-      "isA": "Conjunction",
-      "notA": ["CoordinatingConjunction", "CorrelativeConjunction", "Determiner"]
+    "isA": "Conjunction",
+    "notA": ["CoordinatingConjunction", "CorrelativeConjunction", "Determiner"]
   },
   "CorrelativeConjunction": {
-      "isA": "Conjunction",
-      "notA": ["CoordinatingConjunction", "SubordinatingConjunction", "Determiner"]
+    "isA": "Conjunction",
+    "notA": [
+      "CoordinatingConjunction",
+      "SubordinatingConjunction",
+      "Determiner"
+    ]
   },
   "CompoundConjunction": {
-      "isA": "CoordinatingConjunction",
-      "notA": ""
+    "isA": "CoordinatingConjunction",
+    "notA": ""
   },
   "RelativePronoun": {
-    "isA": "SubordinatingConjunction",
-    "notA": ["Preposition", "Determiner"],
-    "color": ""
+    "isA": "Pronoun",
+    "notA": ["Preposition", "Determiner", "Conjunction"],
+    "color": "Blue"
   },
   "Preposition": {
-      "isA": "",
-      "notA": "Conjunction"
+    "isA": "",
+    "notA": "Conjunction"
   },
   "Where": {
     "isA": "",
