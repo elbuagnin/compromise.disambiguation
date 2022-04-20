@@ -69,8 +69,7 @@ export default function disambiguate(doc, term, match) {
         if (count < 0) {
           count = 0;
         }
-        console.log("Pattern: " + pattern);
-        console.log(count);
+
         return count;
       }
 
