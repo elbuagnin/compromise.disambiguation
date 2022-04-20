@@ -13,5 +13,13 @@
     "pattern": ". #SubordinatingConjunction+",
     "tag": "#PhraseBreak",
     "disambiguate": false
+  },
+
+  "Relative Pronouns": {
+    "order": "2",
+    "term": "^.",
+    "pattern": ". #RelativePronoun+",
+    "tag": "#PhraseBreak",
+    "disambiguate": false
   }
 }
