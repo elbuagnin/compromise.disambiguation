@@ -94,7 +94,7 @@ function parseByPattern(doc, action, parsingData) {
     case "disambiguate":
       matches = doc.match(parsingData.pattern);
       matches.forEach((match) => {
-        disambiguate(doc, { word: match, POSes: parsingData.POSes });
+        disambiguate(doc, { word: match, POSes: parsingData.POSes }, match);
       });
       break;
     case "tag":
