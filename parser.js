@@ -4,7 +4,7 @@ import tagger from "./tagger.js";
 import process from "./processor.js";
 
 function parsingDataPaths(parseBy) {
-  const baseDir = "./data/";
+  const baseDir = "/data/";
 
   switch (parseBy) {
     case "pattern":

@@ -37,7 +37,7 @@ export default function sequencer(document) {
   }
 
   function subSequencer(file) {
-    const filepath = "./data/sub-sequences/" + file + ".json";
+    const filepath = "/data/sub-sequences/" + file + ".json";
 
     const returnType = "array";
     const subSequence = mfs.loadJSONFile(filepath, returnType);
@@ -61,5 +61,4 @@ export default function sequencer(document) {
     }
   });
   // console\.log.*
-
 }
