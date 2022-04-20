@@ -7,8 +7,8 @@ export function addCustomTags(tagData) {
     obj[k] = tag;
   });
 
-  nlp.extend((_Doc, world) => {
-    world.addTags(obj);
+  nlp.plugin({
+    tags: obj,
   });
 }
 
@@ -19,8 +19,8 @@ export function addCustomWords(wordData) {
     obj[k] = word;
   });
 
-  nlp.extend((_Doc, world) => {
-    world.addWords(obj);
+  nlp.plugin({
+    words: obj,
   });
 }
 
