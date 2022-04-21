@@ -1,6 +1,6 @@
 # compromise.disambiguation
 
-## In development
+## Very close to Beta
 
 The purpose of Compromise Disambiguation is to analyze words that can be multiple
 parts of speech and attempt to determine by context what part of speech they are
