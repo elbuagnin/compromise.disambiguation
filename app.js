@@ -11,7 +11,7 @@ function test() {
 
     nlp.plugin(diss.disambiguationPlugin);
     const doc = nlp(data);
-    doc.disambiguate().text();
+    doc.disambiguate().debug();
   });
 }
 
