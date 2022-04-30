@@ -20,7 +20,7 @@
   "dependencies": {
     "airbnb": "^0.0.2",
     "compromise": "github:spencermountain/compromise",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.16"
   },
   "devDependencies": {
     "eslint": "^8.11.0",
