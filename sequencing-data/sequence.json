@@ -1,8 +1,17 @@
 {
-  "Pre-Processing": {
+  "Initial Document Processing": {
     "order": "1",
     "action": "sub-sequence",
     "payload": { "file": "pre-processing" }
+  },
+
+  "Initial Document Pattern Tagging": {
+    "order": "2",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "directory",
+    "payload": { "directory": "pre-processing" }
   },
 
   "Compound Terms": {

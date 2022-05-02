@@ -5,7 +5,7 @@
     "parseBy": "process",
     "scope": "document",
     "source": "payload",
-    "payload": { "process": "ingVerbals" }
+    "payload": { "process": "ing-verbals" }
   },
 
   "Disambiguate tagged Progressive Verbals": {

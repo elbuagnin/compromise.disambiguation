@@ -1,19 +1,10 @@
 {
-  "Initial Document Processing": {
+  "Expand Contractions": {
     "order": "1",
     "action": "process",
     "parseBy": "process",
     "scope": "document",
-    "source": "file",
-    "payload": { "file": "prepare" }
-  },
-
-  "Initial Document Pattern Tagging": {
-    "order": "2",
-    "action": "tag",
-    "parseBy": "pattern",
-    "scope": "document",
-    "source": "directory",
-    "payload": { "directory": "pre-processing" }
+    "source": "payload",
+    "payload": { "process": "expand-contractions" }
   }
 }
