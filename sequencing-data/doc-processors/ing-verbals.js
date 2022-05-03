@@ -1,4 +1,4 @@
-import {helpers} from "compromise.pianoplayer";
+import {hasPOS} from "./../../lib/word-helpers.js";
 
 export default function processor(doc) {
   function isINGVerbal(word) {
