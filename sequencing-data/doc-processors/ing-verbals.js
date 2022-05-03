@@ -1,3 +1,5 @@
+import {helpers} from "compromise.pianoplayer";
+
 export default function processor(doc) {
   function isINGVerbal(word) {
     function stem(text) {
