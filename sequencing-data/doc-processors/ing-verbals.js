@@ -78,9 +78,9 @@ export default function processor(doc) {
         const option1 = text;
         const option2 = text.substring(0, end - 1);
 
-        if (helpers.hasPOS(option1, "vv")) {
+        if (hasPOS(option1, "vv")) {
           return option1;
-        } else if (helpers.hasPOS(option2, "vv")) {
+        } else if (hasPOS(option2, "vv")) {
           return option2;
         }
       }
@@ -90,9 +90,9 @@ export default function processor(doc) {
         const option1 = text;
         const option2 = text + "e";
 
-        if (helpers.hasPOS(option1, "vv")) {
+        if (hasPOS(option1, "vv")) {
           return option1;
-        } else if (helpers.hasPOS(option2, "vv")) {
+        } else if (hasPOS(option2, "vv")) {
           return option2;
         }
       }
@@ -103,7 +103,7 @@ export default function processor(doc) {
 
     if (word.text().substring(word.text().length - 3) === "ing") {
       let stemmed = stem(word.text());
-      if (helpers.hasPOS(stemmed, "vv")) {
+      if (hasPOS(stemmed, "vv")) {
         return true;
       } else {
         return false;
