@@ -10,7 +10,10 @@ function test() {
     }
     nlp.plugin(pianoplayer);
     const doc = nlp(data);
-    doc.sequence().debug();
+    doc.sequence();
+    console.log('Final:');
+    doc.debug();
+    console.log('Finished');
   });
 }
 
