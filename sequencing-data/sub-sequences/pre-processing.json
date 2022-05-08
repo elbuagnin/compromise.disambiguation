@@ -1,0 +1,73 @@
+{
+  "Expand Contractions": {
+    "order": "1",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "expand-contractions" }
+  },
+
+  "Hyphenated Terms": {
+    "order": "2",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "hyphenated-terms" }
+  },
+
+  "Compound Nouns": {
+    "order": "3",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "compound-nouns" }
+  },
+
+  "Dash Groups": {
+    "order": "4",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "dash-groups" }
+  },
+
+  "Parentheses": {
+    "order": "5",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "parentheses" }
+  },
+
+  "Quotations": {
+    "order": "6",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "quotations" }
+  },
+
+  "Punctuation": {
+    "order": "7",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "punctuation" }
+  },
+
+  "Lists": {
+    "order": "8",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "lists" }
+  }
+}

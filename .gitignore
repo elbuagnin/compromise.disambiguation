@@ -1,4 +1,8 @@
 *.sh
 .bash_local_aliases
+.eslintrc.json
+.getignore
 /node_modules
+/test-texts
+nodemon.json
 sample.txt
