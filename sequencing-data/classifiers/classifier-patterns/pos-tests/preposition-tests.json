@@ -1,8 +1,0 @@
-{
-  "preposition negative 1": {"pos": "preposition", "type": "negative", "pattern": "%word% #Verb", "scope": "phrase"},
-  "preposition negative 2": {"pos": "preposition", "type": "negative", "pattern": "%word% #Adverb", "scope": "phrase"},
-  "preposition negative 3": {"pos": "preposition", "type": "negative", "pattern": "%word% #Conjunction", "scope": "phrase"},
-
-  "preposition probable 1": {"pos": "preposition", "type": "probable", "pattern": "%word% #Determiner? #Adjective?+ #Noun", "scope": "phrase"},
-  "preposition probable 2": {"pos": "preposition", "type": "probable", "pattern": "%word% #Possessive? #Adjective?+ #Noun", "scope": "phrase"}
-}

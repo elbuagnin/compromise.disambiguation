@@ -1,62 +1,62 @@
 {
   "infinitive negative 1": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "negative",
     "pattern": "[#Pronoun|#Possessive|#Determiner] %word%",
     "scope": "phrase"
   },
 
   "infinitive improbable 1": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "improbable",
     "pattern": "[!#BaseVerb *|!to] (%word% && !to)",
     "scope": "phrase"
   },
 
   "infinitive probable 1": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "probable",
     "pattern": "to %word%",
     "scope": "phrase"
   },
 
   "infinitive probable 2": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "probable",
     "pattern": "#Infinitive #Noun %word% #Preposition",
     "scope": "phrase"
   },
 
   "infinitive 2": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "positive",
     "pattern": "to #Adverb %word%",
     "scope": "phrase"
   },
 
   "infinitive 3": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "positive",
     "pattern": "#BaseVerb #Noun (%word% && #PresentTense)",
     "scope": "phrase"
   },
 
   "infinitive 4": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "positive",
     "pattern": "#BaseVerb #Pronoun (%word% && #PresentTense)",
     "scope": "phrase"
   },
 
   "infinitive 5": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "positive",
     "pattern": "#BaseVerb #Possessive #Noun (%word% && #PresentTense)",
     "scope": "phrase"
   },
 
   "infinitive 6": {
-    "pos": "infinitive",
+    "classification": "infinitive",
     "type": "positive",
     "pattern": "#Infinitive #Noun (%word% && #PresentTense)",
     "scope": "phrase"

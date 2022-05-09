@@ -1,0 +1,30 @@
+{
+  "after": {
+    "list": "subordinating-conjunctions",
+    "term": { "word": "after", "classifications": ["sub", "in"] }
+  },
+  "before": {
+    "list": "subordinating-conjunctions",
+    "term": { "word": "before", "classifications": ["sub", "in"] }
+  },
+  "once": {
+    "list": "subordinating-conjunctions",
+    "term": { "word": "once", "classifications": ["jj", "sub", "nn", "rb"] }
+  },
+  "since": {
+    "list": "subordinating-conjunctions",
+    "term": { "word": "since", "classifications": ["sub", "in", "rb"] }
+  },
+  "so": {
+    "list": "subordinating-conjunctions",
+    "term": { "word": "so", "classifications": ["sub", "pn", "rb"] }
+  },
+  "that": {
+    "list": "subordinating-conjunctions",
+    "term": { "word": "that", "classifications": ["sub", "jj", "pn", "rb"] }
+  },
+  "until": {
+    "list": "subordinating-conjunctions",
+    "term": { "word": "until", "classifications": ["sub", "in"] }
+  }
+}

@@ -10,13 +10,13 @@
 
   "Disambiguate tagged Progressive Verbals": {
     "order": "2",
-    "action": "disambiguate",
+    "action": "discern",
     "parseBy": "pattern",
     "scope": "phrase",
     "source": "payload",
     "payload": {
       "pattern": "#ProgressiveVerbal",
-      "POSes": [
+      "classifications": [
         "verbalNoun",
         "presentProgressive",
         "presentParticiple",
