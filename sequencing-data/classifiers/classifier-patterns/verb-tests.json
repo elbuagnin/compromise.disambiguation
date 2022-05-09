@@ -1,87 +1,87 @@
 {
   "verb negative 1": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "negative",
     "pattern": "#Determiner %word%",
     "scope": "phrase"
   },
   "verb negative 2": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "negative",
     "pattern": "#Prepostion %word%",
     "scope": "phrase"
   },
   "verb negative 3": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "negative",
     "pattern": "#Possesive %word%",
     "scope": "phrase"
   },
   "verb negative 4": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "negative",
     "pattern": "#Copula (%word% && /ing$/]",
     "scope": "phrase"
   },
 
   "verb negative 5": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "negative",
     "pattern": "#BaseVerb (%word% && #BaseVerb]",
     "scope": "phrase"
   },
 
   "verb probable 1": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "probable",
     "pattern": "#Noun #Adverb?+ %word%",
     "scope": "phrase"
   },
   "verb probable 2": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "probable",
     "pattern": "#Pronoun #Adverb?+ %word%",
     "scope": "phrase"
   },
   "verb probable 3": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "probable",
     "pattern": "%word% #Determiner",
     "scope": "phrase"
   },
   "verb probable 4": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "probable",
     "pattern": "%word% #Pronoun",
     "scope": "phrase"
   },
   "verb probable 5": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "probable",
     "pattern": "%word% #Adverb",
     "scope": "phrase"
   },
   "verb probable 6": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "probable",
     "pattern": "#Adverb %word%",
     "scope": "phrase"
   },
 
   "verb positive 2": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "positive",
     "pattern": "#Auxiliary?+ #Negative? #Auxiliary #Adverb? %word%",
     "scope": "phrase"
   },
   "verb positive 3": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "positive",
     "pattern": "#Verb #Conjunction %word%",
     "scope": "phrase"
   },
   "verb positive 4": {
-    "pos": "verb",
+    "classification": "verb",
     "type": "positive",
     "pattern": "%word% #Conjunction #Verb",
     "scope": "phrase"

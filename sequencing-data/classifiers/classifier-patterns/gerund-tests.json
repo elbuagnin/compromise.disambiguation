@@ -1,16 +1,16 @@
 {
-  "gerund negative 1": {"pos": "gerund", "type": "negative", "pattern": "#Adjective %word%", "scope": "phrase"},
-  "gerund negative 2": {"pos": "gerund", "type": "negative", "pattern": "#Determiner %word%", "scope": "phrase"},
-  "gerund negative 3": {"pos": "gerund", "type": "negative", "pattern": "#Possessive %word% !#Adverb", "scope": "phrase"},
+  "gerund negative 1": {"classification": "gerund", "type": "negative", "pattern": "#Adjective %word%", "scope": "phrase"},
+  "gerund negative 2": {"classification": "gerund", "type": "negative", "pattern": "#Determiner %word%", "scope": "phrase"},
+  "gerund negative 3": {"classification": "gerund", "type": "negative", "pattern": "#Possessive %word% !#Adverb", "scope": "phrase"},
 
-  "gerund probable 1": {"pos": "gerund", "type": "probable", "pattern": "#Adverb %word%", "scope": "phrase"},
-  "gerund probable 2": {"pos": "gerund", "type": "probable", "pattern": "%word% #Adverb", "scope": "phrase"},
-  "gerund probable 3": {"pos": "gerund", "type": "probable", "pattern": "%word% #Determiner", "scope": "phrase"},
-  "gerund probable 4": {"pos": "gerund", "type": "probable", "pattern": "%word% #Pronoun", "scope": "phrase"},
-  "gerund probable 5": {"pos": "gerund", "type": "probable", "pattern": "%word% #Noun", "scope": "phrase"},
-  "gerund probable 6": {"pos": "gerund", "type": "probable", "pattern": "%word% #Preposition", "scope": "phrase"},
+  "gerund probable 1": {"classification": "gerund", "type": "probable", "pattern": "#Adverb %word%", "scope": "phrase"},
+  "gerund probable 2": {"classification": "gerund", "type": "probable", "pattern": "%word% #Adverb", "scope": "phrase"},
+  "gerund probable 3": {"classification": "gerund", "type": "probable", "pattern": "%word% #Determiner", "scope": "phrase"},
+  "gerund probable 4": {"classification": "gerund", "type": "probable", "pattern": "%word% #Pronoun", "scope": "phrase"},
+  "gerund probable 5": {"classification": "gerund", "type": "probable", "pattern": "%word% #Noun", "scope": "phrase"},
+  "gerund probable 6": {"classification": "gerund", "type": "probable", "pattern": "%word% #Preposition", "scope": "phrase"},
 
-  "gerund positive 1": {"pos": "gerund", "type": "positive", "pattern": "%word% (#Determiner|#Possessive)? #Noun #Verb", "scope": "phrase"},
-  "gerund positive 2": {"pos": "gerund", "type": "positive", "pattern": "(#Verb && !#Copula) %word% (#Determiner|#Possessive)? #Noun", "scope": "phrase"},
-  "gerund positive 3": {"pos": "gerund", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "scope": "phrase"}
+  "gerund positive 1": {"classification": "gerund", "type": "positive", "pattern": "%word% (#Determiner|#Possessive)? #Noun #Verb", "scope": "phrase"},
+  "gerund positive 2": {"classification": "gerund", "type": "positive", "pattern": "(#Verb && !#Copula) %word% (#Determiner|#Possessive)? #Noun", "scope": "phrase"},
+  "gerund positive 3": {"classification": "gerund", "type": "positive", "pattern": "#Preposition %word% (#Determiner|#Possessive)? #Noun", "scope": "phrase"}
 }

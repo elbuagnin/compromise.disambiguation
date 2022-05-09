@@ -1,116 +1,116 @@
 {
   "noun negative 1": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "negative",
     "pattern": "#Modal %word%",
     "scope": "phrase"
   },
   "noun negative 2": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "negative",
     "pattern": "#Auxiliary %word%",
     "scope": "phrase"
   },
   "noun negative 3": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "negative",
     "pattern": "#Adverb %word%",
     "scope": "phrase"
   },
   "noun negative 4": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "negative",
     "pattern": "%word% #Pronoun",
     "scope": "phrase"
   },
   "noun negative 5": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "negative",
     "pattern": "%word% #Possessive",
     "scope": "phrase"
   },
   "noun negative 6": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "negative",
     "pattern": "(#Pronoun && !#Possessive) %word%",
     "scope": "phrase"
   },
   "noun negative 7": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "negative",
     "pattern": "!#Noun #Conjunction %word%",
     "scope": "phrase"
   },
   "noun negative 8": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "negative",
     "pattern": "%word% #Conjunction !#Noun",
     "scope": "phrase"
   },
 
   "noun probable 0": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "probable",
     "pattern": "#Determiner %word%",
     "scope": "phrase"
   },
   "noun probable 1": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "probable",
     "pattern": "%word% #Adverb?+ #Verb",
     "scope": "phrase"
   },
   "noun probable 2": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "probable",
     "pattern": "#BaseVerb %word%",
     "scope": "phrase"
   },
   "noun probable 3": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "probable",
     "pattern": "(%word% && #ListItem) (#Noun && #ListItem)",
     "scope": "phrase"
   },
   "noun probable 4": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "probable",
     "pattern": "(#Noun && #ListItem) (%word% && #ListItem)",
     "scope": "phrase"
   },
   "noun probable 5": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "probable",
     "pattern": "(%word% && #ListItem) #CoordinatingConjunction (#Noun && #ListItem)",
     "scope": "phrase"
   },
   "noun probable 6": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "probable",
     "pattern": "(#Noun && #ListItem) #CoordinatingConjunction (%word% && #ListItem)",
     "scope": "phrase"
   },
 
   "noun positive 1": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "positive",
     "pattern": "%word% (#CoordinatingConjunction && !#Comma) #Noun",
     "scope": "phrase"
   },
   "noun positive 2": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "positive",
     "pattern": "#Noun (#CoordinatingConjunction && !#Comma) %word%",
     "scope": "phrase"
   },
   "noun positive 2": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "positive",
     "pattern": "#Possessive #Adjective?+ %word%",
     "scope": "phrase"
   },
   "noun positive 3": {
-    "pos": "noun",
+    "classification": "noun",
     "type": "positive",
     "pattern": "#Determiner #Adverb?+ #Adjective?+ %word% #Adverb?+ #Verb",
     "scope": "phrase"

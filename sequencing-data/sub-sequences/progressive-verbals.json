@@ -16,7 +16,7 @@
     "source": "payload",
     "payload": {
       "pattern": "#ProgressiveVerbal",
-      "POSes": [
+      "classifications": [
         "verbalNoun",
         "presentProgressive",
         "presentParticiple",

@@ -1,85 +1,85 @@
 {
   "presentProgressive negative 1": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "negative",
     "pattern": "#Pronoun %word%",
     "scope": "phrase"
   },
   "presentProgressive negative 2": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "negative",
     "pattern": "#Possessive %word%",
     "scope": "phrase"
   },
   "presentProgressive negative 3": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "negative",
     "pattern": "#Noun %word%",
     "scope": "phrase"
   },
   "presentProgressive negative 3": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "negative",
     "pattern": "#Preposition %word%",
     "scope": "phrase"
   },
   "presentProgressive negative 3": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "negative",
     "pattern": "%word% #Verb",
     "scope": "phrase"
   },
 
   "presentProgressive positive 1": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "(was|were) #Negative? #Adverb?+ %word%",
     "scope": "phrase"
   },
   "presentProgressive positive 2": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "had #Negative? been  #Adverb?+ %word%",
     "scope": "phrase"
   },
   "presentProgressive positive 3": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "(am|is|are) #Negative? #Adverb?+ %word%",
     "scope": "phrase"
   },
   "presentProgressive positive 4": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "(has|have) #Negative? been  #Adverb?+ %word%",
     "scope": "phrase"
   },
   "presentProgressive positive 5": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "will #Negative? be #Adverb?+ %word%",
     "scope": "phrase"
   },
   "presentProgressive positive 6": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "will #Negative? have #Adverb?+ been %word%",
     "scope": "phrase"
   },
   "presentProgressive positive 7": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "will #Negative? have been #Adverb?+ %word%",
     "scope": "phrase"
   },
   "presentProgressive positive 8": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "will have #Negative? been #Adverb?+ %word%",
     "scope": "phrase"
   },
   "presentProgressive positive 9": {
-    "pos": "presentProgressive",
+    "classification": "presentProgressive",
     "type": "positive",
     "pattern": "(was|were) #Negative? #PastTense #Adverb?+ %word%",
     "scope": "phrase"

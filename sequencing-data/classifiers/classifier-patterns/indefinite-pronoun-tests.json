@@ -1,13 +1,13 @@
 {
   "indefinitePronoun negative 1": {
-    "pos": "indefinitePronoun",
+    "classification": "indefinitePronoun",
     "type": "negative",
     "pattern": "[#Determiner|#Pronoun|#Possessive] %word%",
     "scope": "phrase"
   },
 
   "indefinitePronoun probable 1": {
-    "pos": "indefinitePronoun",
+    "classification": "indefinitePronoun",
     "type": "probable",
     "pattern": "%word% #Adverb?+ #Verb",
     "scope": "phrase"
