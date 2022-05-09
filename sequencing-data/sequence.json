@@ -48,11 +48,11 @@
 
   "Term Lists": {
     "order": "7",
-    "action": "disambiguate",
+    "action": "discern",
     "parseBy": "term",
     "scope": "phrase",
     "source": "directory",
-    "payload": { "directory": "term-lists" }
+    "payload": { "directory": "." }
   },
 
   "Clean up": {
