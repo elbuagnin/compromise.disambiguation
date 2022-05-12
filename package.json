@@ -20,7 +20,7 @@
   "dependencies": {
     "airbnb": "^0.0.2",
     "compromise": "github:spencermountain/compromise",
-    "compromise.pianoplayer": "github:elbuagnin/compromise.pianoplayer",
+    "compromise.playerpiano": "github:elbuagnin/compromise.playerpiano",
     "nodemon": "^2.0.16"
   },
   "devDependencies": {
