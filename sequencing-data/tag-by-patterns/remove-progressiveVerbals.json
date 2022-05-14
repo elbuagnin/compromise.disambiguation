@@ -1,9 +1,29 @@
 {
-  "Gerunds": {"order": "1", "term": "#ProgressiveVerbal", "pattern": "(#ProgressiveVerbal && #Gerund)", "untag": "#ProgressiveVerbal"},
+  "Gerunds": {
+    "order": "1",
+    "term": "#ProgressiveVerbal",
+    "pattern": "(#ProgressiveVerbal && #Gerund)",
+    "untag": "#ProgressiveVerbal"
+  },
 
-  "Present Participle": {"order": "2", "term": "#ProgressiveVerbal", "pattern": "(#ProgressiveVerbal && #PresentParticiple)", "untag": "#ProgressiveVerbal"},
+  "Present Participle": {
+    "order": "2",
+    "term": "#ProgressiveVerbal",
+    "pattern": "(#ProgressiveVerbal && #PresentParticiple)",
+    "untag": "#ProgressiveVerbal"
+  },
 
-  "Present Progressive": {"order": "3", "term": "#ProgressiveVerbal", "pattern": "(#ProgressiveVerbal && #PresentProgressive)", "untag": "#ProgressiveVerbal"},
+  "Present Progressive": {
+    "order": "3",
+    "term": "#ProgressiveVerbal",
+    "pattern": "(#ProgressiveVerbal && #PresentProgressive)",
+    "untag": "#ProgressiveVerbal"
+  },
 
-  "Verbal Noun": {"order": "4", "term": "#ProgressiveVerbal", "pattern": "(#ProgressiveVerbal && #VerbalNoun)", "untag": "#ProgressiveVerbal"}
+  "Verbal Noun": {
+    "order": "4",
+    "term": "#ProgressiveVerbal",
+    "pattern": "(#ProgressiveVerbal && #VerbalNoun)",
+    "untag": "#ProgressiveVerbal"
+  }
 }
