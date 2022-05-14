@@ -32,7 +32,7 @@
   "noun negative 6": {
     "classification": "noun",
     "type": "negative",
-    "pattern": "#Pronoun && !#Possessive %word%",
+    "pattern": "(#Pronoun && !#Possessive) %word%",
     "scope": "phrase"
   },
   "noun negative 7": {
