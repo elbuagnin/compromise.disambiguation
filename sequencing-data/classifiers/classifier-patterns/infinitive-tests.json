@@ -9,7 +9,7 @@
   "infinitive improbable 1": {
     "classification": "infinitive",
     "type": "improbable",
-    "pattern": "(!#BaseVerb *|!to) %word% && !to",
+    "pattern": "(!#BaseVerb *|!to) (%word% && !to)",
     "scope": "phrase"
   },
 
@@ -37,28 +37,28 @@
   "infinitive 3": {
     "classification": "infinitive",
     "type": "positive",
-    "pattern": "#BaseVerb #Noun %word% && #PresentTense",
+    "pattern": "#BaseVerb #Noun (%word% && #PresentTense)",
     "scope": "phrase"
   },
 
   "infinitive 4": {
     "classification": "infinitive",
     "type": "positive",
-    "pattern": "#BaseVerb #Pronoun %word% && #PresentTense",
+    "pattern": "#BaseVerb #Pronoun (%word% && #PresentTense)",
     "scope": "phrase"
   },
 
   "infinitive 5": {
     "classification": "infinitive",
     "type": "positive",
-    "pattern": "#BaseVerb #Possessive #Noun %word% && #PresentTense",
+    "pattern": "#BaseVerb #Possessive #Noun (%word% && #PresentTense)",
     "scope": "phrase"
   },
 
   "infinitive 6": {
     "classification": "infinitive",
     "type": "positive",
-    "pattern": "#Infinitive #Noun %word% && #PresentTense",
+    "pattern": "#Infinitive #Noun (%word% && #PresentTense)",
     "scope": "phrase"
   }
 }

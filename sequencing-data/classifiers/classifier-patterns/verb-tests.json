@@ -20,14 +20,14 @@
   "verb negative 4": {
     "classification": "verb",
     "type": "negative",
-    "pattern": "#Copula %word% && /ing$/",
+    "pattern": "#Copula (%word% && /ing$/)",
     "scope": "phrase"
   },
 
   "verb negative 5": {
     "classification": "verb",
     "type": "negative",
-    "pattern": "#BaseVerb %word% && #BaseVerb",
+    "pattern": "#BaseVerb (%word% && #BaseVerb)",
     "scope": "phrase"
   },
 

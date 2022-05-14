@@ -69,38 +69,38 @@
   "noun probable 3": {
     "classification": "noun",
     "type": "probable",
-    "pattern": "%word% && #ListItem #Noun && #ListItem",
+    "pattern": "(%word% && #ListItem) (#Noun && #ListItem)",
     "scope": "phrase"
   },
   "noun probable 4": {
     "classification": "noun",
     "type": "probable",
-    "pattern": "#Noun && #ListItem %word% && #ListItem",
+    "pattern": "(#Noun && #ListItem) (%word% && #ListItem)",
     "scope": "phrase"
   },
   "noun probable 5": {
     "classification": "noun",
     "type": "probable",
-    "pattern": "%word% && #ListItem #CoordinatingConjunction #Noun && #ListItem",
+    "pattern": "(%word% && #ListItem) #CoordinatingConjunction (#Noun && #ListItem)",
     "scope": "phrase"
   },
   "noun probable 6": {
     "classification": "noun",
     "type": "probable",
-    "pattern": "#Noun && #ListItem #CoordinatingConjunction %word% && #ListItem",
+    "pattern": "(#Noun && #ListItem) #CoordinatingConjunction (%word% && #ListItem)",
     "scope": "phrase"
   },
 
   "noun positive 1": {
     "classification": "noun",
     "type": "positive",
-    "pattern": "%word% #CoordinatingConjunction && !#Comma #Noun",
+    "pattern": "%word% (#CoordinatingConjunction && !#Comma) #Noun",
     "scope": "phrase"
   },
   "noun positive 2": {
     "classification": "noun",
     "type": "positive",
-    "pattern": "#Noun #CoordinatingConjunction && !#Comma %word%",
+    "pattern": "#Noun (#CoordinatingConjunction && !#Comma) %word%",
     "scope": "phrase"
   },
   "noun positive 2": {
