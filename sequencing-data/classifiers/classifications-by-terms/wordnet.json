@@ -2150,7 +2150,7 @@
     "list": "wordnet",
     "term": { "word": "bent", "classifications": ["jj", "nn"] }
   },
-  "542": { "list": "wordnet", "term": { "word": "be", "classifications": ["nn", "vv", "vli"] } },
+  "542": { "list": "wordnet", "term": { "word": "be", "classifications": ["nn", "vv", "aux"] } },
   "543": {
     "list": "wordnet",
     "term": { "word": "bereaved", "classifications": ["jj", "nn"] }
@@ -26525,7 +26525,7 @@
   },
   "6635": {
     "list": "wordnet",
-    "term": { "word": "will", "classifications": ["nn", "vv", "vli"] }
+    "term": { "word": "will", "classifications": ["nn", "aux"] }
   },
   "6636": {
     "list": "wordnet",

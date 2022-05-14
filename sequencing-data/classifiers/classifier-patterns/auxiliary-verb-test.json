@@ -1,0 +1,88 @@
+{
+  "auxiliary negative 1": {
+    "classification": "auxiliary",
+    "type": "negative",
+    "pattern": "#Determiner %word%",
+    "scope": "phrase"
+  },
+  "auxiliary negative 2": {
+    "classification": "auxiliary",
+    "type": "negative",
+    "pattern": "#Prepostion %word%",
+    "scope": "phrase"
+  },
+  "auxiliary negative 3": {
+    "classification": "auxiliary",
+    "type": "negative",
+    "pattern": "#Possesive %word%",
+    "scope": "phrase"
+  },
+  "auxiliary negative 4": {
+    "classification": "auxiliary",
+    "type": "negative",
+    "pattern": "#Copula (%word% && /ing$/]",
+    "scope": "phrase"
+  },
+
+  "auxiliary negative 5": {
+    "classification": "auxiliary",
+    "type": "negative",
+    "pattern": "#BaseVerb (%word% && #BaseVerb]",
+    "scope": "phrase"
+  },
+
+  "auxiliary negative 6": {
+    "classification": "auxiliary",
+    "type": "negative",
+    "pattern": "%word% #Determiner",
+    "scope": "phrase"
+  },
+
+  "auxiliary negative 7": {
+    "classification": "auxiliary",
+    "type": "negative",
+    "pattern": "%word% #Pronoun",
+    "scope": "phrase"
+  },
+
+  "auxiliary probable 1": {
+    "classification": "auxiliary",
+    "type": "probable",
+    "pattern": "#Noun #Adverb?+ %word%",
+    "scope": "phrase"
+  },
+  "auxiliary probable 2": {
+    "classification": "auxiliary",
+    "type": "probable",
+    "pattern": "#Pronoun #Adverb?+ %word%",
+    "scope": "phrase"
+  },
+
+  "auxiliary probable 3": {
+    "classification": "auxiliary",
+    "type": "probable",
+    "pattern": "%word% #Adverb",
+    "scope": "phrase"
+  },
+
+  "auxiliary probable 4": {
+    "classification": "auxiliary",
+    "type": "probable",
+    "pattern": "#Adverb %word%",
+    "scope": "phrase"
+  },
+
+  "auxiliary positive 1": {
+    "classification": "auxiliary",
+    "type": "positive",
+    "pattern": "#Auxiliary?+ #Negative? %word% #Adverb? #BaseVerb",
+    "scope": "phrase"
+  },
+
+  "auxiliary positive 2": {
+    "classification": "auxiliary",
+    "type": "positive",
+    "pattern": "%word% #Negative? #Auxiliary?+ #Adverb? #BaseVerb",
+    "scope": "phrase"
+  }
+}

@@ -1,6 +1,7 @@
 {
   "Adjectives": { "fullname": "adjective", "abbreviation": "jj" },
   "Adverbs": { "fullname": "adverb", "abbreviation": "rb" },
+  "Auxiliary Verbs": { "fullname": "auxiliary", "abbreviation": "aux" },
   "Conjunctions": { "fullname": "conjunction", "abbreviation": "cn" },
   "Coordinating Conjunctions": {
     "fullname": "coordinatingConjunction",
