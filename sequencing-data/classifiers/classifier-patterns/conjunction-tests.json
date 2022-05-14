@@ -1,16 +1,76 @@
 {
-  "conjunction negative 1": {"classification": "conjunction", "type": "negative", "pattern": "#Noun %word% #Adverb?+ #Verb", "scope": "phrase"},
-  "conjunction negative 2": {"classification": "conjunction", "type": "negative", "pattern": "%word%$", "scope": "phrase"},
+  "conjunction negative 1": {
+    "classification": "conjunction",
+    "type": "negative",
+    "pattern": "#Noun %word% #Adverb?+ #Verb",
+    "scope": "phrase"
+  },
+  "conjunction negative 2": {
+    "classification": "conjunction",
+    "type": "negative",
+    "pattern": "%word%$",
+    "scope": "phrase"
+  },
 
-  "conjunction probable 1": {"classification": "conjunction", "type": "probable", "pattern": "#Comma %word%", "scope": "phrase"},
+  "conjunction probable 1": {
+    "classification": "conjunction",
+    "type": "probable",
+    "pattern": "#Comma %word%",
+    "scope": "phrase"
+  },
 
-  "conjunction positive 1": {"classification": "conjunction", "type": "positive", "pattern": "#Determiner #Adjective?+ #Singular %word% #Determiner #Adjective?+ #Singular", "scope": "phrase"},
-  "conjunction positive 2": {"classification": "conjunction", "type": "positive", "pattern": "!#Determiner #Adjective?+ #Plural %word% !#Determiner #Adjective?+ #Plural", "scope": "phrase"},
-  "conjunction positive 3": {"classification": "conjunction", "type": "positive", "pattern": "#Verb %word% #Adverb?+ #Verb", "scope": "phrase"},
-  "conjunction positive 4": {"classification": "conjunction", "type": "positive", "pattern": "#Adjective %word% #Adjective", "scope": "phrase"},
-  "conjunction positive 5": {"classification": "conjunction", "type": "positive", "pattern": "#Adverb %word% #Adverb", "scope": "phrase"},
-  "conjunction positive 6": {"classification": "conjunction", "type": "positive", "pattern": "#PresentParticiple %word% #PresentParticiple", "scope": "phrase"},
-  "conjunction positive 7": {"classification": "conjunction", "type": "positive", "pattern": "#PastParticiple %word% #PastParticiple", "scope": "phrase"},
-  "conjunction positive 8": {"classification": "conjunction", "type": "positive", "pattern": "#Gerund %word% #Gerund", "scope": "phrase"},
-  "conjunction positive 8": {"classification": "conjunction", "type": "positive", "pattern": "#Infinitive %word% #Infinitive", "scope": "phrase"}
+  "conjunction positive 1": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "#Determiner #Adjective?+ #Singular %word% #Determiner #Adjective?+ #Singular",
+    "scope": "phrase"
+  },
+  "conjunction positive 2": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "!#Determiner #Adjective?+ #Plural %word% !#Determiner #Adjective?+ #Plural",
+    "scope": "phrase"
+  },
+  "conjunction positive 3": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "#Verb %word% #Adverb?+ #Verb",
+    "scope": "phrase"
+  },
+  "conjunction positive 4": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "#Adjective %word% #Adjective",
+    "scope": "phrase"
+  },
+  "conjunction positive 5": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "#Adverb %word% #Adverb",
+    "scope": "phrase"
+  },
+  "conjunction positive 6": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "#PresentParticiple %word% #PresentParticiple",
+    "scope": "phrase"
+  },
+  "conjunction positive 7": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "#PastParticiple %word% #PastParticiple",
+    "scope": "phrase"
+  },
+  "conjunction positive 8": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "#Gerund %word% #Gerund",
+    "scope": "phrase"
+  },
+  "conjunction positive 8": {
+    "classification": "conjunction",
+    "type": "positive",
+    "pattern": "#Infinitive %word% #Infinitive",
+    "scope": "phrase"
+  }
 }

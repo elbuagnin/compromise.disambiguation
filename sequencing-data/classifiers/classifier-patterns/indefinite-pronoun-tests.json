@@ -2,7 +2,7 @@
   "indefinitePronoun negative 1": {
     "classification": "indefinitePronoun",
     "type": "negative",
-    "pattern": "[#Determiner|#Pronoun|#Possessive] %word%",
+    "pattern": "(#Determiner|#Pronoun|#Possessive) %word%",
     "scope": "phrase"
   },
 

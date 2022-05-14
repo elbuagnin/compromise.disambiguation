@@ -63,7 +63,7 @@
   "adverb probable 1": {
     "classification": "adverb",
     "type": "probable",
-    "pattern": "[#PastTense|#PresentTense|#FuturePerfect|#PerfectTense] %word%",
+    "pattern": "(#PastTense|#PresentTense|#FuturePerfect|#PerfectTense) %word%",
     "scope": "phrase"
   },
 

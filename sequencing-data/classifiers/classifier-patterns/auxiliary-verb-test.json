@@ -20,14 +20,14 @@
   "auxiliary negative 4": {
     "classification": "auxiliary",
     "type": "negative",
-    "pattern": "#Copula (%word% && /ing$/]",
+    "pattern": "#Copula %word%",
     "scope": "phrase"
   },
 
   "auxiliary negative 5": {
     "classification": "auxiliary",
     "type": "negative",
-    "pattern": "#BaseVerb (%word% && #BaseVerb]",
+    "pattern": "#BaseVerb %word%",
     "scope": "phrase"
   },
 

@@ -1,14 +1,63 @@
 {
+  "present participle negative 1": {
+    "classification": "presentParticiple",
+    "type": "negative",
+    "pattern": "#Verb %word%",
+    "scope": "phrase"
+  },
+  "present participle negative 2": {
+    "classification": "presentParticiple",
+    "type": "negative",
+    "pattern": "%word% #Verb",
+    "scope": "phrase"
+  },
+  "present participle negative 3": {
+    "classification": "presentParticiple",
+    "type": "negative",
+    "pattern": "#Preposition %word%",
+    "scope": "phrase"
+  },
 
-  "present participle negative 1": {"classification": "presentParticiple", "type": "negative", "pattern": "#Verb %word%", "scope": "phrase"},
-  "present participle negative 2": {"classification": "presentParticiple", "type": "negative", "pattern": "%word% #Verb", "scope": "phrase"},
-  "present participle negative 3": {"classification": "presentParticiple", "type": "negative", "pattern": "#Preposition %word%", "scope": "phrase"},
-
-  "present participle positive 1": {"classification": "presentParticiple", "type": "positive", "pattern": "%word% #Noun", "scope": "phrase"},
-  "present participle positive 2": {"classification": "presentParticiple", "type": "positive", "pattern": "#Noun %word%", "scope": "phrase"},
-  "present participle positive 3": {"classification": "presentParticiple", "type": "positive", "pattern": "^(%word% && #Comma)", "scope": "sentence"},
-  "present participle positive 4": {"classification": "presentParticiple", "type": "positive", "pattern": "when %word%", "scope": "phrase"},
-  "present participle positive 5": {"classification": "presentParticiple", "type": "positive", "pattern": "while %word%", "scope": "phrase"},
-  "present participle positive 6": {"classification": "presentParticiple", "type": "positive", "pattern": "%word% * #Comma", "scope": "phrase"},
-  "present participle positive 7": {"classification": "presentParticiple", "type": "positive", "pattern": "* #Noun * #Comma * %word% * #Comma * #Verb *", "scope": "sentence"}
+  "present participle positive 1": {
+    "classification": "presentParticiple",
+    "type": "positive",
+    "pattern": "%word% #Noun",
+    "scope": "phrase"
+  },
+  "present participle positive 2": {
+    "classification": "presentParticiple",
+    "type": "positive",
+    "pattern": "#Noun %word%",
+    "scope": "phrase"
+  },
+  "present participle positive 3": {
+    "classification": "presentParticiple",
+    "type": "positive",
+    "pattern": "^(%word% && #Comma)",
+    "scope": "sentence"
+  },
+  "present participle positive 4": {
+    "classification": "presentParticiple",
+    "type": "positive",
+    "pattern": "when %word%",
+    "scope": "phrase"
+  },
+  "present participle positive 5": {
+    "classification": "presentParticiple",
+    "type": "positive",
+    "pattern": "while %word%",
+    "scope": "phrase"
+  },
+  "present participle positive 6": {
+    "classification": "presentParticiple",
+    "type": "positive",
+    "pattern": "%word% * #Comma",
+    "scope": "phrase"
+  },
+  "present participle positive 7": {
+    "classification": "presentParticiple",
+    "type": "positive",
+    "pattern": "* #Noun * #Comma * %word% * #Comma * #Verb *",
+    "scope": "sentence"
+  }
 }

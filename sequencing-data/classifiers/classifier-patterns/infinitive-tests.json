@@ -2,7 +2,7 @@
   "infinitive negative 1": {
     "classification": "infinitive",
     "type": "negative",
-    "pattern": "[#Pronoun|#Possessive|#Determiner] %word%",
+    "pattern": "(#Pronoun|#Possessive|#Determiner) %word%",
     "scope": "phrase"
   },
 
