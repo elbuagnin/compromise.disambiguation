@@ -4,5 +4,6 @@
 .getignore
 /node_modules
 /test-texts
+/example-screenshots
 nodemon.json
 sample.txt
