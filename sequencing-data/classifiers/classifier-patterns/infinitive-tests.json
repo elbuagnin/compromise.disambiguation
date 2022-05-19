@@ -13,7 +13,7 @@
     "scope": "phrase"
   },
 
-  "infinitive probable 1": {
+  "to be": {
     "classification": "infinitive",
     "type": "probable",
     "pattern": "to %word%",
@@ -27,7 +27,7 @@
     "scope": "phrase"
   },
 
-  "infinitive 2": {
+  "to boldly go": {
     "classification": "infinitive",
     "type": "positive",
     "pattern": "to #Adverb %word%",
@@ -59,6 +59,13 @@
     "classification": "infinitive",
     "type": "positive",
     "pattern": "#Infinitive #Noun (%word% && #PresentTense)",
+    "scope": "phrase"
+  },
+
+  "to walk": {
+    "classification": "infinitive",
+    "type": "positive",
+    "pattern": "(#Infinitive && to) (%word% && #BaseVerb)",
     "scope": "phrase"
   }
 }

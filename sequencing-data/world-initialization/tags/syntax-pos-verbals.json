@@ -1,23 +1,36 @@
 {
   "Infinitive": {
-      "isA": "",
-      "notA": ["Noun", "PastParticiple", "PresentParticiple", "PerfectParticiple", "Gerund"],
-      "color": "yellow"
+    "isA": "",
+    "notA": [
+      "Noun",
+      "Preposition",
+      "Conjunction",
+      "PastParticiple",
+      "PresentParticiple",
+      "PerfectParticiple",
+      "Gerund"
+    ],
+    "color": "yellow"
   },
   "Gerund": {
-      "isA": "",
-      "notA": ["Infinitive", "PastParticiple", "PresentParticiple", "PerfectParticiple"],
-      "color": "blue"
+    "isA": "",
+    "notA": [
+      "Infinitive",
+      "PastParticiple",
+      "PresentParticiple",
+      "PerfectParticiple"
+    ],
+    "color": "blue"
   },
   "VerbalNoun": {
-      "isA": "Noun",
-      "notA": "",
-      "color": "blue"
+    "isA": "Noun",
+    "notA": "",
+    "color": "blue"
   },
   "PresentParticiple": {
-      "isA": "",
-      "notA": ["Infinitive", "Gerund", "PastParticiple", "PerfectParticiple"],
-      "color": "magenta"
+    "isA": "",
+    "notA": ["Infinitive", "Gerund", "PastParticiple", "PerfectParticiple"],
+    "color": "magenta"
   },
   "PastParticiple": {
     "isA": "",
