@@ -1,66 +1,66 @@
 {
-  "adjective negative 1": {
+  "babies born": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "#Noun %word%",
     "scope": "phrase"
   },
-  "adjective negative 2": {
+  "ravishing the": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "%word% #Determiner",
     "scope": "phrase"
   },
-  "adjective negative 3": {
+  "comforting his": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "%word% #Pronoun",
     "scope": "phrase"
   },
-  "adjective negative 4": {
+  "tan on": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "%word% #Preposition",
     "scope": "phrase"
   },
-  "adjective negative 5": {
+  "colored his": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "%word% #Possessive",
     "scope": "phrase"
   },
-  "adjective negative 6": {
+  "soft helps": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "%word% #Verb",
     "scope": "phrase"
   },
-  "adjective negative 7": {
+  "rigid surprisingly": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "%word% #Adverb",
     "scope": "phrase"
   },
-  "adjective negative 8": {
+  "cars speeding": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "%word% #PresentParticiple",
     "scope": "phrase"
   },
-  "adjective negative 9": {
+  "laughing and giggling": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "%word% #Conjunction !#Adjective",
     "scope": "phrase"
   },
-  "adjective negative 10": {
+  "boxed and numbered": {
     "classification": "adjective",
     "type": "negative",
     "pattern": "!#Adjective #Conjunction %word%",
     "scope": "phrase"
   },
 
-  "adjective probable 1": {
+  "soft down": {
     "classification": "adjective",
     "type": "probable",
     "pattern": "%word% #Noun",
@@ -73,31 +73,31 @@
     "scope": "phrase"
   },
 
-  "adjective positive 1": {
+  "crazy, happy, fun": {
     "classification": "adjective",
     "type": "positive",
     "pattern": "#Adjective %word% #Adjective",
     "scope": "phrase"
   },
-  "adjective positive 2": {
+  "black, fluffy cats": {
     "classification": "adjective",
     "type": "positive",
     "pattern": "#Adjective %word% #Noun",
     "scope": "phrase"
   },
-  "adjective positive 3": {
+  "strangely large, knobby": {
     "classification": "adjective",
     "type": "positive",
     "pattern": "#Adverb %word% #Adjective",
     "scope": "phrase"
   },
-  "adjective positive 4": {
+  "dark and tan": {
     "classification": "adjective",
     "type": "positive",
     "pattern": "#Adjective #Conjunction %word%",
     "scope": "phrase"
   },
-  "adjective positive 5": {
+  "slick and greasy": {
     "classification": "adjective",
     "type": "positive",
     "pattern": "%word% #Conjunction #Adjective",
