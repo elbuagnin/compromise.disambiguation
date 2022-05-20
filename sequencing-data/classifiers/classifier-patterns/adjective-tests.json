@@ -66,10 +66,10 @@
     "pattern": "%word% #Noun",
     "scope": "phrase"
   },
-  "adjective probable 2": {
+  "people are hip": {
     "classification": "adjective",
-    "type": "probable",
-    "pattern": "#Copula %word%",
+    "type": "positive",
+    "pattern": "#Noun #Copula %word%",
     "scope": "phrase"
   },
 

@@ -18,37 +18,51 @@
     "scope": "phrase"
   },
 
-  "present participle positive 1": {
+  "..., thinking ...": {
     "classification": "presentParticiple",
-    "type": "positive",
+    "type": "probable",
+    "pattern": "#PhraseBreak %word%",
+    "scope": "sentence"
+  },
+
+  "Thinking...|..., thinking ...": {
+    "classification": "presentParticiple",
+    "type": "probable",
+    "pattern": "^%word%",
+    "scope": "phrase"
+  },
+
+  "spotting horses": {
+    "classification": "presentParticiple",
+    "type": "probable",
     "pattern": "%word% #Noun",
     "scope": "phrase"
   },
-  "present participle positive 2": {
+  "cows grazing": {
     "classification": "presentParticiple",
-    "type": "positive",
+    "type": "probable",
     "pattern": "#Noun %word%",
     "scope": "phrase"
   },
-  "present participle positive 3": {
+  "... woman, wondering ...": {
     "classification": "presentParticiple",
     "type": "positive",
-    "pattern": "^(%word% && #Comma)",
+    "pattern": "(#PhraseBreak && #Noun) %word%",
     "scope": "sentence"
   },
-  "present participle positive 4": {
+  "when speaking": {
     "classification": "presentParticiple",
     "type": "positive",
     "pattern": "when %word%",
     "scope": "phrase"
   },
-  "present participle positive 5": {
+  "while swimming": {
     "classification": "presentParticiple",
     "type": "positive",
     "pattern": "while %word%",
     "scope": "phrase"
   },
-  "present participle positive 6": {
+  "driving ... , ...": {
     "classification": "presentParticiple",
     "type": "positive",
     "pattern": "%word% * #Comma",
