@@ -1,10 +1,24 @@
 {
   "Tag 'to' Infinitives": {
-    "order": "2",
+    "order": "1",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "document",
     "source": "file",
     "payload": { "file": "to-infinitives" }
+  },
+
+  "to #BaseVerb": {
+    "order": "2",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "payload",
+    "payload": {
+      "term": "#BaseVerb",
+      "pattern": "(to && #Infinitive) #BaseVerb",
+      "tag": "Infinitive",
+      "disambiguate": true
+    }
   }
 }
