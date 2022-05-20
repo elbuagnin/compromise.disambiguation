@@ -1,17 +1,17 @@
 {
-  "present participle negative 1": {
+  "caught lying": {
     "classification": "presentParticiple",
     "type": "negative",
     "pattern": "#Verb %word%",
     "scope": "phrase"
   },
-  "present participle negative 2": {
+  "studying helped": {
     "classification": "presentParticiple",
     "type": "negative",
     "pattern": "%word% #Verb",
     "scope": "phrase"
   },
-  "present participle negative 3": {
+  "above grovelling": {
     "classification": "presentParticiple",
     "type": "negative",
     "pattern": "#Preposition %word%",
@@ -68,7 +68,7 @@
     "pattern": "%word% * #Comma",
     "scope": "phrase"
   },
-  "present participle positive 7": {
+  "... kid ... , ... playing ... , hurt ...": {
     "classification": "presentParticiple",
     "type": "positive",
     "pattern": "* #Noun * #Comma * %word% * #Comma * #Verb *",
