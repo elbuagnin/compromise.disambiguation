@@ -55,12 +55,9 @@
     "payload": { "directory": "." }
   },
 
-  "Clean up": {
+  "Finish": {
     "order": "8",
-    "action": "tag",
-    "parseBy": "pattern",
-    "scope": "document",
-    "source": "file",
-    "payload": { "file": "cleanup" }
+    "action": "sub-sequence",
+    "payload": { "file": "finish" }
   }
 }

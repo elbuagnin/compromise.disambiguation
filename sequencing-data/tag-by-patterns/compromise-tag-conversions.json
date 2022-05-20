@@ -1,0 +1,13 @@
+{
+  "Infinitive": {
+    "enhancedTag": "#Infinitive",
+    "compromiseTags": ["Infinitive", "Verb", "PresentTense"],
+    "unTag": false
+  },
+
+  "PresentParticiple": {
+    "enhancedTag": "#PresentParticiple",
+    "compromiseTags": ["Gerund", "Verb", "PresentTense"],
+    "unTag": true
+  }
+}
