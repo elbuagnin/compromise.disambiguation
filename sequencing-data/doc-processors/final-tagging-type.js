@@ -14,7 +14,6 @@ export default function processor(doc) {
       const matches = doc.match(enhancedTag);
 
       matches.forEach((match) => {
-        console.log(match);
         match.tag(compromiseTags);
         if (unTag === true) {
           match.unTag(enhancedTag);

@@ -1,4 +1,28 @@
 {
+  "CompoundConjunction": {
+    "enhancedTag": "#CompoundConjunction",
+    "compromiseTags": "Conjunction",
+    "unTag": true
+  },
+
+  "CoordinatingConjunction": {
+    "enhancedTag": "#CoordinatingConjunction",
+    "compromiseTags": "Conjunction",
+    "unTag": true
+  },
+
+  "CorrelativeConjunction": {
+    "enhancedTag": "#CorrelativeConjunction",
+    "compromiseTags": "Conjunction",
+    "unTag": true
+  },
+
+  "IndifinitePronoun": {
+    "enhancedTag": "#IndifinitePronoun",
+    "compromiseTags": "Pronoun",
+    "unTag": true
+  },
+
   "Infinitive": {
     "enhancedTag": "#Infinitive",
     "compromiseTags": ["Infinitive", "Verb", "PresentTense"],
@@ -8,6 +32,30 @@
   "PresentParticiple": {
     "enhancedTag": "#PresentParticiple",
     "compromiseTags": ["Gerund", "Verb", "PresentTense"],
+    "unTag": true
+  },
+
+  "RelativePronoun": {
+    "enhancedTag": "#RelativePronoun",
+    "compromiseTags": "Pronoun",
+    "unTag": false
+  },
+
+  "SubordinatingConjunction": {
+    "enhancedTag": "#SubordinatingConjunction",
+    "compromiseTags": ["Conjunction"],
+    "unTag": true
+  },
+
+  "VerbalNoun": {
+    "enhancedTag": "#VerbalNoun",
+    "compromiseTags": "Noun",
+    "unTag": true
+  },
+
+  "Where": {
+    "enhancedTag": "#Where",
+    "compromiseTags": "",
     "unTag": true
   }
 }
