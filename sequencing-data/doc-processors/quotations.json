@@ -1,0 +1,14 @@
+{
+  "fn": {
+    "name": "lists",
+    "arguments": "doc",
+    "body":
+      "
+        const quotationGroups = doc.quotations();
+        if (quotationGroups.found) {
+          quotationGroups.firstTerms().tag('OpenQuote');
+          quotationGroups.lastTerms().tag('CloseQuote');
+        }
+      "
+  }
+}

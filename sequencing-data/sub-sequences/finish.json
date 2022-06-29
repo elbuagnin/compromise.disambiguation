@@ -10,10 +10,7 @@
 
   "Convert or Keep Tags": {
     "order": "2",
-    "action": "process",
-    "parseBy": "process",
-    "scope": "document",
-    "source": "payload",
+    "action": "process-direct",
     "payload": { "process": "final-tagging-type" }
   }
 }

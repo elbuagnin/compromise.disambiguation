@@ -1,7 +1,7 @@
 import http from "http";
 import { readFile } from "fs";
 import nlp from "compromise";
-import playerpiano from "compromise.playerpiano";
+import disambiguation from "./index.js";
 
 function test() {
   readFile("./sample.txt", "utf8", (err, data) => {
@@ -9,10 +9,10 @@ function test() {
       throw new Error(err);
     }
 
-    nlp.plugin(playerpiano);
+    nlp.plugin(disambiguation);
+
     const doc = nlp(data);
-    const options = "verbose=results";
-    doc.sequence(options);
+    doc.disambiguate();
   });
 }
 

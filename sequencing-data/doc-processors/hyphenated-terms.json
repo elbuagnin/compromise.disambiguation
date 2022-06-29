@@ -1,0 +1,7 @@
+{
+  "fn": {
+    "name": "hyphenatedTerms",
+    "arguments": "doc",
+    "body": "const hyphenatedTerms = doc.hyphenated(); hyphenatedTerms.tag(['#Noun', 'Singular', 'Hyphenated']);"
+  }
+}

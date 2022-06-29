@@ -5,8 +5,14 @@
     "payload": { "file": "pre-processing" }
   },
 
-  "Initial Document Pattern Tagging": {
+  "Compound Nouns": {
     "order": "2",
+    "action": "process-direct",
+    "payload": { "process": "compound-nouns" }
+  },
+
+  "Initial Document Pattern Tagging": {
+    "order": "3",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "document",
@@ -15,7 +21,7 @@
   },
 
   "Compound Terms": {
-    "order": "3",
+    "order": "4",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "document",
@@ -24,7 +30,7 @@
   },
 
   "Phrase Breaks": {
-    "order": "4",
+    "order": "5",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "document",
@@ -35,19 +41,19 @@
   },
 
   "Infinitives": {
-    "order": "5",
+    "order": "6",
     "action": "sub-sequence",
     "payload": { "file": "infinitives" }
   },
 
   "Progressive Verbs & Verbals": {
-    "order": "6",
+    "order": "7",
     "action": "sub-sequence",
     "payload": { "file": "progressive-verbals" }
   },
 
   "Term Lists": {
-    "order": "7",
+    "order": "8",
     "action": "discern",
     "parseBy": "term",
     "scope": "phrase",
@@ -56,7 +62,7 @@
   },
 
   "Finish": {
-    "order": "8",
+    "order": "9",
     "action": "sub-sequence",
     "payload": { "file": "finish" }
   }

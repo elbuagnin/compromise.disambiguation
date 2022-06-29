@@ -1,0 +1,7 @@
+{
+  "fn": {
+    "name": "expandContractions",
+    "arguments": "doc",
+    "body": "doc.contractions().expand();"
+  }
+}

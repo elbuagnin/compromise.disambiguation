@@ -17,15 +17,6 @@
     "payload": { "process": "hyphenated-terms" }
   },
 
-  "Compound Nouns": {
-    "order": "3",
-    "action": "process",
-    "parseBy": "process",
-    "scope": "document",
-    "source": "payload",
-    "payload": { "process": "compound-nouns" }
-  },
-
   "Dash Groups": {
     "order": "4",
     "action": "process",
