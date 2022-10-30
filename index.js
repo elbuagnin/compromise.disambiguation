@@ -10,7 +10,7 @@ const disambiguation = {
         setDisambiguationOptions(arguments);
       }
 
-      const playerPianoOptions = "verbose=instructions";
+      const playerPianoOptions = "verbose=changes";
       setPlayerPianoOptions(playerPianoOptions);
 
       startPlayerPiano(this);

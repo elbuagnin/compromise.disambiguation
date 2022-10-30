@@ -1,7 +1,8 @@
 import { hasPOS } from "./../../lib/word-helpers.js";
 
-export default function processor(doc) {
-    function compoundNouns(doc) {
+export default function compoundNouns(doc) {
+    console.log("in compound nouns");
+    
     const backToBackNouns = doc.match(
       "(#Noun && !#Pronoun) (#Noun && !#Pronoun)"
     );
@@ -11,10 +12,10 @@ export default function processor(doc) {
       const first = pair.match("^.").clone();
       const last = pair.match(".$").clone();
 
-      if (!helpers.hasPOS(first.text("reduced"), "nn")) {
+      if (!hasPOS(first.text("reduced"), "nn")) {
         test *= false;
       }
-      if (!helpers.hasPOS(last.text("reduced"), "nn")) {
+      if (!hasPOS(last.text("reduced"), "nn")) {
         test *= false;
       }
 
@@ -22,5 +23,5 @@ export default function processor(doc) {
         pair.tag("Resolved");
       }
     });
-  }
+  
 }

@@ -1,6 +1,6 @@
 import * as helpers from "./../../lib/word-helpers.js";
 
-export default function processor(doc) {
+export default function ingVerbals(doc) {
   function isINGVerbal(word) {
     function stem(text) {
       function isVowel(character) {

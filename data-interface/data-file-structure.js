@@ -8,10 +8,11 @@ const classifierByTermsPath = path.join(classifiersPath, "classifications-by-ter
 const classifierByClassificationsPath = path.join(classifiersPath, "terms-by-classifications");
 const classifierPatternsPath = path.join(classifiersPath, "classifier-patterns");
 const processorsPath = path.join(baseDataPath, "doc-processors");
+const directProcessesPath = path.join(baseDataPath, "direct-processing");
 const subSequencesPath = path.join(baseDataPath, "sub-sequences");
 const tagPatternsPath = path.join(baseDataPath, "tag-by-patterns");
 const tagsPath = path.join(initializationPath, "tags");
 const wordsPath = path.join(initializationPath, "words");
 
 export { baseDataPath, classifiersPath, initializationPath, classifierKeysPath, classifierByTermsPath, classifierByClassificationsPath, classifierPatternsPath,
-         processorsPath, subSequencesPath, tagPatternsPath, tagsPath, wordsPath }
+         processorsPath, directProcessesPath, subSequencesPath, tagPatternsPath, tagsPath, wordsPath }
