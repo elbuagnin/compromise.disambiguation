@@ -1,11 +1,11 @@
 import { join } from "path";
 import { disambiguateOptions } from "../../startup/disambiguationConfig.js";
 import { loadJSONFile } from "../../lib/filesystem.js";
-import { tagPatterns } from "../../lib/data-file-structure.js";
+import { tagPatternsPath } from "../../data-interface/data-file-structure.js";
 
 export default function finalTaggingType(doc) {
   function convertTagsToCompromise() {
-    const filepath = join(tagPatterns, "compromise-tag-conversions.json");
+    const filepath = join(tagPatternsPath, "compromise-tag-conversions.json");
     const returnType = "array";
     const conversionList = loadJSONFile(filepath, returnType);
 

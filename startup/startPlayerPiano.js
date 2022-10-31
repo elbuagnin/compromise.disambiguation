@@ -2,7 +2,7 @@ import { pianoOptions } from "./playerPianoConfig.js";
 import devLogger from "../lib/dev-logger.js";
 import { surfaceCopy, equivalentDocs } from "../lib/doc-helpers.js";
 import { loadJSONFile } from "../lib/filesystem.js";
-import { sequencePath } from "../lib/data-file-structure.js";
+import { sequencePath } from "../data-interface/data-file-structure.js";
 import initialize from "./initialize.js";
 import sequencer from "../workers/sequencer.js";
 
