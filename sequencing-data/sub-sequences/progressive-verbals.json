@@ -1,8 +1,8 @@
 {
   "Tag words ending in 'ing' that are Progressive Verbs & Verbals": {
     "order": "1",
-    "action": "process-direct",
-    "parseBy": "direct-process",
+    "action": "process",
+    "parseBy": "process",
     "scope": "document",
     "source": "payload",
     "payload": { "process": "ing-verbals" }

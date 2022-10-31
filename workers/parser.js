@@ -4,7 +4,6 @@ import path from "path";
 import discern from "./discern.js";
 import tagger from "./tagger.js";
 import process from "./processor.js";
-import runProcess from "../lib/run-process.js";
 
 function parsingDataPaths(parseBy) {
   switch (parseBy) {
@@ -14,8 +13,6 @@ function parsingDataPaths(parseBy) {
       return classifierByTermsPath;
     case "process":
       return processorsPath;
-    case "direct-process":
-      return directProcessesPath;
     default:
       break;
   }
@@ -54,9 +51,6 @@ function parseByMethod(doc, instruction, parsingData = false) {
       break;
     case "process":
       process(doc, parsingData);
-      break;
-    case "direct-process":
-      runProcess(doc, parsingData);
       break;
     default:
       break;

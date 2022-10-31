@@ -1,29 +1,49 @@
-import devLogger from "../lib/dev-logger.js";
-import * as docHelpers from "../lib/doc-helpers.js";
-import calledProcess from "../data-interface/load-process.js";
+import compoundNouns from "../sequencing-data/doc-processors/compound-nouns.js";
+import ingVerbals from "../sequencing-data/doc-processors/ing-verbals.js";
+import finalTaggingType from "../sequencing-data/doc-processors/final-tagging-type.js";
+import tagDashes from "../sequencing-data/doc-processors/dash-groups.js";
+import expandContractions from "../sequencing-data/doc-processors/expand-contractions.js";
+import tagHyphenated from "../sequencing-data/doc-processors/hyphenated-terms.js";
+import tagLists from "../sequencing-data/doc-processors/lists.js";
+import tagParentheses from "../sequencing-data/doc-processors/parentheses.js";
+import tagPunctuation from "../sequencing-data/doc-processors/punctuation.js";
+import tagQuotes from "../sequencing-data/doc-processors/quotations.js";
 
-// Run custom imported functions from calling module.
-export default function process(doc, parsingData) {
-  const { process } = parsingData;
+export default function runProcess(doc, payload) {
+  const { process } = payload;
 
-  let before = docHelpers.surfaceCopy(doc); // for debugging output
-
-  const fn = calledProcess(process);
-
-  let procFn = new Function(fn.arguments, fn.body);
-  devLogger(
-    "instructions",
-    fn.name,
-    "header",
-    "Running Processor Function: " + fn.name
-  );
-
-  procFn(doc);
-
-  const after = docHelpers.surfaceCopy(doc); // for debugging output
-
-  // Send debugging output if there is a change in the doc.
-  if (docHelpers.equivalentDocs(before, after) === false) {
-    devLogger("changes", doc, "header", "Processed: " + process);
+  switch (process) {
+    case "compound-nouns":
+      compoundNouns(doc);
+      break;
+    case "expandContractions":
+      expandContractions(doc);
+      break;
+    case "final-tagging-type":
+      finalTaggingType(doc);
+      break;
+    case "ing-verbals":
+      ingVerbals(doc);
+      break;
+    case "dash-groups":
+      tagDashes(doc);
+      break;
+    case "hyphenated-terms":
+      tagHyphenated(doc);
+      break;
+    case "lists":
+      tagLists(doc);
+      break;
+    case "parentheses":
+      tagParentheses(doc);
+      break;
+    case "punctuation":
+      tagPunctuation(doc);
+      break;
+    case "quotations":
+      tagQuotes(doc);
+      break;
+    default:
+      break;
   }
 }

@@ -7,7 +7,7 @@
 
   "Compound Nouns": {
     "order": "2",
-    "action": "process-direct",
+    "action": "process",
     "payload": { "process": "compound-nouns" }
   },
 

@@ -1,4 +1,4 @@
-import { hasPOS } from "./../../lib/word-helpers.js";
+import { hasPOS } from "../../lib/word-helpers.js";
 
 export default function compoundNouns(doc) {
     console.log("in compound nouns");

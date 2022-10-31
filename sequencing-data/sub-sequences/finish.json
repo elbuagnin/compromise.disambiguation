@@ -10,7 +10,7 @@
 
   "Convert or Keep Tags": {
     "order": "2",
-    "action": "process-direct",
+    "action": "process",
     "payload": { "process": "final-tagging-type" }
   }
 }
