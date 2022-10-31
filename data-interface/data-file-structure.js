@@ -1,18 +1,42 @@
 import path from "path";
+import fs from "fs";
+import { fileURLToPath } from "url";
 
-const baseDataPath = "sequencing-data";
-const classifiersPath = path.join(baseDataPath, "classifiers");
-const initializationPath = path.join(baseDataPath, "world-initialization");
-const classifierKeysPath = path.join(classifiersPath, "classification-keys");
-const classifierByTermsPath = path.join(classifiersPath, "classifications-by-terms");
-const classifierByClassificationsPath = path.join(classifiersPath, "terms-by-classifications");
-const classifierPatternsPath = path.join(classifiersPath, "classifier-patterns");
-const processorsPath = path.join(baseDataPath, "doc-processors");
-const directProcessesPath = path.join(baseDataPath, "processing");
-const subSequencesPath = path.join(baseDataPath, "sub-sequences");
-const tagPatternsPath = path.join(baseDataPath, "tag-by-patterns");
-const tagsPath = path.join(initializationPath, "tags");
-const wordsPath = path.join(initializationPath, "words");
+// establish path to module & module's data
+const here = fileURLToPath(import.meta.url);
+let modulePath = path.dirname(here);
+modulePath = path.normalize("./", modulePath);
+const dataPath = path.join(modulePath, "sequencing-data/");
 
-export { baseDataPath, classifiersPath, initializationPath, classifierKeysPath, classifierByTermsPath, classifierByClassificationsPath, classifierPatternsPath,
-         processorsPath, directProcessesPath, subSequencesPath, tagPatternsPath, tagsPath, wordsPath }
+// set up sub-paths for export
+const sequencePath = path.join(dataPath, "sequence.json");
+const classifiers = path.join(dataPath, "classifiers");
+const classifierKeys = path.join(classifiers, "classification-keys");
+const classifierByTerms = path.join(classifiers, "classifications-by-terms");
+const classifierByClassifications = path.join(
+  classifiers,
+  "terms-by-classifications"
+);
+const classifierPatterns = path.join(classifiers, "classifier-patterns");
+const processors = path.join(dataPath, "doc-processors");
+const subSequences = path.join(dataPath, "sub-sequences");
+const tagPatterns = path.join(dataPath, "tag-by-patterns");
+const initialization = path.join(dataPath, "world-initialization");
+const tags = path.join(initialization, "tags");
+const words = path.join(initialization, "words");
+
+export {
+  dataPath,
+  sequencePath,
+  classifiers,
+  classifierKeys,
+  classifierByTerms,
+  classifierByClassifications,
+  classifierPatterns,
+  processors,
+  subSequences,
+  tagPatterns,
+  initialization,
+  tags,
+  words,
+};

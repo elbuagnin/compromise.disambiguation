@@ -1,5 +1,5 @@
 import * as mfs from "../lib/filesystem.js";
-import { tagPatternsPath, classifierByTermsPath, processorsPath, directProcessesPath } from "../data-interface/data-file-structure.js";
+import { tagPatternsPath, classifierByTermsPath, processorsPath, directProcessesPath } from "../data-interface/data-file-structure.old.js";
 import path from "path";
 import discern from "./discern.js";
 import tagger from "./tagger.js";
