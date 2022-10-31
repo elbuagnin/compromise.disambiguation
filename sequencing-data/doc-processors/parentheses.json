@@ -2,12 +2,6 @@
   "fn": {
     "name": "parentheses",
     "arguments": "doc",
-    "body": "
-      const parenthesesGroups = doc.parentheses();
-      if (parenthesesGroups.found) {
-      parenthesesGroups.firstTerms().tag('OpenParentheses');
-      parenthesesGroups.lastTerms().tag('CloseParentheses');
-      }
-    "
+    "body": "const parenthesesGroups = doc.parentheses(); if (parenthesesGroups.found) { parenthesesGroups.firstTerms().tag('OpenParentheses'); parenthesesGroups.lastTerms().tag('CloseParentheses'); }"
   }
 }

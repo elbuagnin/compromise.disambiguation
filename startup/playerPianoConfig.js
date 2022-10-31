@@ -1,7 +1,7 @@
-export let disambiguateOptions = { tagType: "compromise" };
+export let pianoOptions = { verbose: "none" };
 
-export function setOptions() {
-  const optionList = arguments[0][0];
+export function setPlayerPianoOptions() {
+  const optionList = arguments[0];
 
   if (typeof optionList === "string") {
     let args = optionList.split(" ");
@@ -27,8 +27,8 @@ export function setOptions() {
 
     options.forEach((option, key) => {
       switch (option) {
-        case "tagType":
-          disambiguateOptions.tagType = settings[key];
+        case "verbose":
+          pianoOptions.verbose = settings[key];
           break;
         default:
           break;
