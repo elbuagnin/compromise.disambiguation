@@ -1,6 +1,7 @@
 import path from "path";
 import { fileURLToPath } from "url";
-const baseDir = fileURLToPath(new URL('../', import.meta.url));
+const here = fileURLToPath(new URL('.', import.meta.url));
+const baseDir = path.join("../", here);
 const baseDataPath = path.join(baseDir, "sequencing-data");
 const classifiersPath = path.join(baseDataPath, "classifiers");
 const initializationPath = path.join(baseDataPath, "world-initialization");
