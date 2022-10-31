@@ -1,6 +1,6 @@
 import path from "path";
 import * as mfs from "../lib/filesystem.js";
-import { subSequencesPath } from "../data-interface/data-file-structure.old.js";
+import { subSequencesPath } from "../data-interface/data-file-structure.js";
 import devLogger from "../lib/dev-logger.js";
 import parse from "./parser.js";
 

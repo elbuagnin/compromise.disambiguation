@@ -1,5 +1,5 @@
 import * as mfs from "../lib/filesystem.js";
-import { classifierKeysPath} from "./data-file-structure.old.js";
+import { classifierKeysPath} from "./data-file-structure.js";
 //import path from "path";
 
 export default function classificationNameNormalize(
