@@ -48,22 +48,17 @@ npm install "github:elbuagnin/compromise.disambiguation"
 
 ### Import & Use
 ```
-import { readFile } from "fs";
 import nlp from "compromise";
 import disambiguation from "compromise.disambiguation";
 
-function test() {
-  readFile("./sample.txt", "utf8", (err, data) => {
-    if (err) {
-      throw new Error(err);
-    }
+nlp.plugin(disambiguation);
 
-    nlp.plugin(disambiguation);
+let data = "We will grant you this wish.";
+const doc = nlp(data);
 
-    const doc = nlp(data);
-    doc.disambiguate();
-  });
-}
+doc.debug(); // Before
 
-test();
+doc.disambiguate();
+
+doc.debug(); // After
 ```
