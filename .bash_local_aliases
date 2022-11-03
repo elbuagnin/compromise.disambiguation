@@ -1,7 +1,0 @@
-alias app="nodemon --inspect --zero-fill-buffers app.js"
-alias reload="nodemon -w ./ -x ./reload.sh"
-alias sample="nodemon -w ./ -x ./sample-reload.sh"
-alias renumber="./renumber.sh $1"
-alias rebatch="./rebatch.sh"
-alias setup="./workspace.sh"
-nvm use --lts

@@ -1,9 +1,14 @@
 # compromise.disambiguation
 
-## Very close to Beta
+## Beta Imminent
+Compromise.disambiguation is a plugin for the Natural Language Processor, Compromise, by SpencerMountain.
 
-The purpose of Compromise Disambiguation is to analyze words that can be multiple
-parts of speech and attempt to determine by context what part of speech they are
+It augments Compromise by improving Part of Speech tagging accuracy.
+
+It also expands on POS tagging to include more POSes, such as participles or direct objects.
+
+Compromise Disambiguation analyzes words that can be multiple
+parts of speech and attempts to determine by context what part of speech they are
 actually serving in the text. It then assigns the corrected POS to the Compromise
 tagging engine.
 
@@ -32,4 +37,28 @@ EXIT DOCUMENT
   │ 'you'      - Noun, Pronoun
   │ 'this'     - Determiner
   │ 'wish'     - Noun, Singular
+```
+
+## Implement
+### Install
+From terminal in your module's folder:
+```
+npm install "github:elbuagnin/compromise.disambiguation"
+```
+
+### Import & Use
+```
+import nlp from "compromise";
+import disambiguation from "compromise.disambiguation";
+
+nlp.plugin(disambiguation);
+
+let data = "We will grant you this wish.";
+const doc = nlp(data);
+
+doc.debug(); // Before
+
+doc.disambiguate();
+
+doc.debug(); // After
 ```
