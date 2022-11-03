@@ -53,6 +53,10 @@ import disambiguation from "compromise.disambiguation";
 
 nlp.plugin(disambiguation);
 
+
+const primeTheEngine = nlp('prime');
+primeTheEngine.disambiguate();
+
 let data = "We will grant you this wish.";
 const doc = nlp(data);
 

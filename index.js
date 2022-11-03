@@ -1,6 +1,5 @@
 import startPlayerPiano from "./startup/startPlayerPiano.js";
 import { setPlayerPianoOptions } from "./startup/playerPianoConfig.js";
-//import processDoc from "./process-doc.js";
 import { setDisambiguationOptions } from "./startup/disambiguationConfig.js";
 
 const disambiguation = {
@@ -14,7 +13,6 @@ const disambiguation = {
       setPlayerPianoOptions(playerPianoOptions);
 
       startPlayerPiano(this);
-      //processDoc(this);
     };
   },
 };

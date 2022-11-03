@@ -16,7 +16,7 @@ export default function startPlayerPiano(doc) {
     }
   }
 
-  initialize(doc);
+  initialize();
   const entryDoc = snapshot(doc, "title", "Entry Document");
   const instructions = loadJSONFile(sequencePath, "array");
   sequencer(doc, instructions);
