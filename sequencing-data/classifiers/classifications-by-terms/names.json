@@ -1,0 +1,34 @@
+{
+  "Bill": {
+    "list": "names",
+    "term": { "word": "bill", "classifications": ["nnps", "nn", "vv"] }
+  },
+  "Baker": {
+    "list": "names",
+    "term": { "word": "baker", "classifications": ["nnps", "nn"] }
+  },
+  "Nick": {
+    "list": "names",
+    "term": { "word": "nick", "classifications": ["jj", "nnps", "nn", "rb"] }
+  },
+  "Crystal": {
+    "list": "names",
+    "term": { "word": "crystal", "classifications": ["nnps", "jj"] }
+  },
+  "Mike": {
+    "list": "names",
+    "term": { "word": "mike", "classifications": ["nnps", "nn", "vv"] }
+  },
+  "Grace": {
+    "list": "names",
+    "term": { "word": "grace", "classifications": ["nnps", "nn", "vv"] }
+  },
+  "Grant": {
+    "list": "names",
+    "term": { "word": "grant", "classifications": ["nnps", "nn", "vv"] }
+  },
+  "Will": {
+    "list": "names",
+    "term": { "word": "will", "classifications": ["nnps", "vv", "nn"] }
+  }
+}

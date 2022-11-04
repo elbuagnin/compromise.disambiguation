@@ -15,6 +15,7 @@
   "Gerunds": { "fullname": "gerund", "abbreviation": "vlg" },
   "Infinitives": { "fullname": "infinitive", "abbreviation": "vli" },
   "Nouns": { "fullname": "noun", "abbreviation": "nn" },
+  "Persons": { "fullname": "person", "abbreviation": "nnps" },
   "Past Participles": { "fullname": "pastParticiple", "abbreviation": "vlpp" },
   "Present Participles": {
     "fullname": "presentParticiple",

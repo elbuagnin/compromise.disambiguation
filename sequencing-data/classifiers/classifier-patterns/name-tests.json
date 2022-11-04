@@ -1,0 +1,124 @@
+{
+  "name negative 1": {
+    "classification": "person",
+    "type": "negative",
+    "pattern": "#Modal %word%",
+    "scope": "phrase"
+  },
+  "name negative 2": {
+    "classification": "person",
+    "type": "negative",
+    "pattern": "#Auxiliary %word%",
+    "scope": "phrase"
+  },
+  "name negative 3": {
+    "classification": "person",
+    "type": "negative",
+    "pattern": "#Adverb %word%",
+    "scope": "phrase"
+  },
+  "name negative 4": {
+    "classification": "person",
+    "type": "negative",
+    "pattern": "%word% #Pronoun",
+    "scope": "phrase"
+  },
+  "name negative 5": {
+    "classification": "person",
+    "type": "negative",
+    "pattern": "%word% #Possessive",
+    "scope": "phrase"
+  },
+  "name negative 7": {
+    "classification": "person",
+    "type": "negative",
+    "pattern": "!#person #Conjunction %word%",
+    "scope": "phrase"
+  },
+  "name negative 8": {
+    "classification": "person",
+    "type": "negative",
+    "pattern": "%word% #Conjunction !#person",
+    "scope": "phrase"
+  },
+
+  "name improbable 1": {
+    "classification": "person",
+    "type": "improbable",
+    "pattern": "(#Pronoun && !#Possessive) %word%",
+    "scope": "phrase"
+  },
+  "name improbable 2": {
+    "classification": "person",
+    "type": "improbable",
+    "pattern": "#Determiner %word%",
+    "scope": "phrase"
+  },
+
+  "name probable 1": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "%word% #Adverb?+ #Verb",
+    "scope": "phrase"
+  },
+  "name probable 2": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "#BaseVerb %word%",
+    "scope": "phrase"
+  },
+  "name probable 3": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "(%word% && #ListItem) (#person && #ListItem)",
+    "scope": "phrase"
+  },
+  "name probable 4": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "(#person && #ListItem) (%word% && #ListItem)",
+    "scope": "phrase"
+  },
+  "name probable 5": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "(%word% && #ListItem) #CoordinatingConjunction (#person && #ListItem)",
+    "scope": "phrase"
+  },
+  "name probable 6": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "(#person && #ListItem) #CoordinatingConjunction (%word% && #ListItem)",
+    "scope": "phrase"
+  },
+  "name probable 7": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "%word% #Person",
+    "scope": "phrase"
+  },
+  "name probable 8": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "#Person %word%",
+    "scope": "phrase"
+  },
+  "name probable 9": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "#FirstName %word%",
+    "scope": "phrase"
+  },
+  "name probable 10": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "%word% #LastName",
+    "scope": "phrase"
+  },
+  "name probable 11": {
+    "classification": "person",
+    "type": "probable",
+    "pattern": "(%word% && @isTitleCase)",
+    "scope": "phrase"
+  }
+}
