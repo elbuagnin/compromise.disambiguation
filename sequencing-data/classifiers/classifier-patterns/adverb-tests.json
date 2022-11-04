@@ -5,37 +5,37 @@
     "pattern": "%word% #Noun",
     "scope": "phrase"
   },
-  "adverb negative 1": {
+  "adverb negative 2": {
     "classification": "adverb",
     "type": "negative",
     "pattern": "%word% #Pronoun",
     "scope": "phrase"
   },
-  "adverb negative 1": {
+  "adverb negative 3": {
     "classification": "adverb",
     "type": "negative",
     "pattern": "%word% #Preposition",
     "scope": "phrase"
   },
-  "adverb negative 1": {
+  "adverb negative 4": {
     "classification": "adverb",
     "type": "negative",
     "pattern": "%word% #Noun",
     "scope": "phrase"
   },
-  "adverb negative 1": {
+  "adverb negative 5": {
     "classification": "adverb",
     "type": "negative",
     "pattern": "#Adjective %word%",
     "scope": "phrase"
   },
-  "adverb negative 1": {
+  "adverb negative 6": {
     "classification": "adverb",
     "type": "negative",
     "pattern": "!#Adverb #Conjunction %word%",
     "scope": "phrase"
   },
-  "adverb negative 1": {
+  "adverb negative 7": {
     "classification": "adverb",
     "type": "negative",
     "pattern": "%word% #Conjunction #Adverb",
@@ -48,19 +48,19 @@
     "pattern": "%word% #Verb",
     "scope": "phrase"
   },
-  "adverb probable 1": {
+  "adverb probable 2": {
     "classification": "adverb",
     "type": "probable",
     "pattern": "%word% #Adjective",
     "scope": "phrase"
   },
-  "adverb probable 1": {
+  "adverb probable 3": {
     "classification": "adverb",
     "type": "probable",
     "pattern": "%word% #Adverb",
     "scope": "phrase"
   },
-  "adverb probable 1": {
+  "adverb probable 4": {
     "classification": "adverb",
     "type": "probable",
     "pattern": "(#PastTense|#PresentTense|#FuturePerfect|#PerfectTense) %word%",
@@ -73,7 +73,7 @@
     "pattern": "%word% #Conjunction #Adverb",
     "scope": "phrase"
   },
-  "adverb positive 1": {
+  "adverb positive 2": {
     "classification": "adverb",
     "type": "positive",
     "pattern": "#Adverb #Conjunction %word%",
