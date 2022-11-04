@@ -53,10 +53,11 @@ import disambiguation from "compromise.disambiguation";
 
 nlp.plugin(disambiguation);
 
-
+// This module requires one initial run through to initialize the custom tags and word tagging.
 const primeTheEngine = nlp('prime');
 primeTheEngine.disambiguate();
 
+// Let's parse our document and display the POS output.
 let data = "We will grant you this wish.";
 const doc = nlp(data);
 
