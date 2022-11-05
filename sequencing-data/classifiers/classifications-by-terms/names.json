@@ -31,6 +31,10 @@
     "list": "names",
     "term": { "word": "pat", "classifications": ["nnps", "nn", "vv"] }
   },
+  "Rob": {
+    "list": "names",
+    "term": { "word": "rob", "classifications": ["nnps", "vv"] }
+  },
   "Will": {
     "list": "names",
     "term": { "word": "will", "classifications": ["nnps", "nn", "vv"] }
