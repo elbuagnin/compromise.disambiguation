@@ -87,7 +87,8 @@ export default function discern(doc, term, match) {
         let chunk = findChunk(test.scope);
         let patternWord = "%word%";
 
-        const regex = /\(\s?%word%\s?&&\s?\/?\^?\!?#?(?:\w|-|_)+\$?\/?\s?\)|\(\s?\/?\^?\!?#?(?:\w|-|_)+\$?\/?\s?&&\s?%word%\s?\)/;
+        const regex =
+          /\(\s?%word%\s?&&\s?\/?\^?\!?#?(?:\w|-|_)+\$?\/?\s?\)|\(\s?\/?\^?\!?#?(?:\w|-|_)+\$?\/?\s?&&\s?%word%\s?\)/;
         if (test.pattern.match(regex)) {
           patternWord = test.pattern.match(regex);
         }
@@ -110,36 +111,42 @@ export default function discern(doc, term, match) {
         let selection = "";
         let wholePattern = "";
 
-        switch (patternType) {
-          case 1:
-            length = wordsInPattern(frontPattern) + 1;
-            extraWords = ".{0," + length + "}";
-            wholePattern = [frontPattern, patternWord].join(" ");
-            selection = chunk.match(match).growLeft(extraWords);
-            selection = selection.intersection(chunk);
-            break;
-          case 2:
-            length = wordsInPattern(backPattern) + 1;
-            extraWords = ".{0," + length + "}";
-            wholePattern = [patternWord, backPattern].join(" ");
-            selection = chunk.match(match).growRight(extraWords);
-            selection = selection.intersection(chunk);
-            break;
-          case 3:
-            length = wordsInPattern(frontPattern) + 1;
-            extraWords = ".{0," + length + "}";
-            selection = chunk.match(match).growLeft(extraWords);
-            length = wordsInPattern(backPattern) + 1;
-            extraWords = "";
-            extraWords = ".{0," + length + "}";
-            selection = selection.growRight(extraWords);
-            selection = selection.intersection(chunk);
-            wholePattern = [frontPattern, patternWord, backPattern].join(" ");
+        if (test.scope === "phrase") {
+          switch (patternType) {
+            case 1:
+              length = wordsInPattern(frontPattern) + 1;
+              extraWords = ".{0," + length + "}";
+              wholePattern = [frontPattern, patternWord].join(" ");
+              selection = chunk.match(match).growLeft(extraWords);
+              selection = selection.intersection(chunk);
+              break;
+            case 2:
+              length = wordsInPattern(backPattern) + 1;
+              extraWords = ".{0," + length + "}";
+              wholePattern = [patternWord, backPattern].join(" ");
+              selection = chunk.match(match).growRight(extraWords);
+              selection = selection.intersection(chunk);
+              break;
+            case 3:
+              length = wordsInPattern(frontPattern) + 1;
+              extraWords = ".{0," + length + "}";
+              selection = chunk.match(match).growLeft(extraWords);
+              length = wordsInPattern(backPattern) + 1;
+              extraWords = "";
+              extraWords = ".{0," + length + "}";
+              selection = selection.growRight(extraWords);
+              selection = selection.intersection(chunk);
+              wholePattern = [frontPattern, patternWord, backPattern].join(" ");
 
-            break;
-          default:
-            break;
+              break;
+            default:
+              break;
+          }
+        } else {
+          wholePattern = test.pattern;
+          selection = chunk;
         }
+
         if (typeof word === "object") {
           word = word.text();
         }
@@ -154,6 +161,7 @@ export default function discern(doc, term, match) {
         devLogger("details", "Single Test", "header");
         const devSubHeader = "Is '" + word + "' a " + classification + "?";
         devLogger("details", devSubHeader, "subheader");
+        devLogger("details", test.scope, "label", "scope")
         devLogger("details", wholePattern, "label", "pattern");
         devLogger("details", chunk, "label", "chunk");
         devLogger("details", selection, "label", "selection");
@@ -243,7 +251,7 @@ export default function discern(doc, term, match) {
       return;
     } else {
       const discernedClassification = compromiseTagFormat(winner[0]);
-      devLogger("changes", "Discerned Classicication", "header");
+      devLogger("changes", "Discerned Classification", "header");
       devLogger("changes", results, "label", "Results");
       devLogger("changes", match, "label", discernedClassification);
 
