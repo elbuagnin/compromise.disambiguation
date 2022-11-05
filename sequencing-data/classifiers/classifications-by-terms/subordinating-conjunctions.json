@@ -26,5 +26,9 @@
   "until": {
     "list": "subordinating-conjunctions",
     "term": { "word": "until", "classifications": ["sub", "in"] }
+  },
+  "when": {
+    "list": "subordinating-conjunctions",
+    "term": { "word": "when", "classifications": ["sub", "nn", "pn"] }
   }
 }

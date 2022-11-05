@@ -21,7 +21,13 @@
   "subordinatingConjunction positive 2": {
     "classification": "subordinatingConjunction",
     "type": "positive",
-    "pattern": "(#Noun|#Pronoun) * #Verb * %word% * (#Noun|#Pronoun) * #Verb",
+    "pattern": "(#Noun|#Pronoun) * #Verb * %word% * (#Noun|#Pronoun) #Verb",
+    "scope": "sentence"
+  },
+  "subordinatingConjunction positive 3": {
+    "classification": "subordinatingConjunction",
+    "type": "positive",
+    "pattern": "*(#Noun|#Pronoun)*#Verb*%word%*(#Noun|#Pronoun)*#Verb*",
     "scope": "sentence"
   }
 }
