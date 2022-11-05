@@ -5,11 +5,30 @@
     "pattern": "#Noun %word% #Adverb?+ #Verb",
     "scope": "phrase"
   },
-  "subordinatingConjunction negative 3": {
+  "subordinatingConjunction negative 2": {
     "classification": "subordinatingConjunction",
     "type": "negative",
     "pattern": "%word%$",
     "scope": "phrase"
+  },
+  "subordinatingConjunction negative 3": {
+    "classification": "subordinatingConjunction",
+    "type": "negative",
+    "pattern": "#Determiner %word%",
+    "scope": "phrase"
+  },
+  "subordinatingConjunction negative 4": {
+    "classification": "subordinatingConjunction",
+    "type": "negative",
+    "pattern": "#Preposition %word%",
+    "scope": "phrase"
+  },
+
+  "subordinatingConjunction probable 1": {
+    "classification": "subordinatingConjunction",
+    "type": "probable",
+    "pattern": "* %word% (#determiner|#pronoun|#noun)",
+    "scope": "sentence"
   },
 
   "subordinatingConjunction positive 1": {
@@ -22,12 +41,6 @@
     "classification": "subordinatingConjunction",
     "type": "positive",
     "pattern": "(#Noun|#Pronoun) * #Verb * %word% * (#Noun|#Pronoun) #Verb",
-    "scope": "sentence"
-  },
-  "subordinatingConjunction positive 3": {
-    "classification": "subordinatingConjunction",
-    "type": "positive",
-    "pattern": "*(#Noun|#Pronoun)*#Verb*%word%*(#Noun|#Pronoun)*#Verb*",
     "scope": "sentence"
   }
 }
