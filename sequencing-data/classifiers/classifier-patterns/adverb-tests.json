@@ -42,6 +42,13 @@
     "scope": "phrase"
   },
 
+  "adverb improbable 1": {
+    "classification": "adverb",
+    "type": "improbable",
+    "pattern": "%word% #Copula",
+    "scope": "phrase"
+  },
+
   "adverb probable 1": {
     "classification": "adverb",
     "type": "probable",
@@ -77,6 +84,12 @@
     "classification": "adverb",
     "type": "positive",
     "pattern": "#Adverb #Conjunction %word%",
+    "scope": "phrase"
+  },
+  "adverb positive 3": {
+    "classification": "adverb",
+    "type": "positive",
+    "pattern": "#Modal %word% #Verb",
     "scope": "phrase"
   }
 }
