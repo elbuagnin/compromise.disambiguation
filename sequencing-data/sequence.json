@@ -46,14 +46,25 @@
     "payload": { "file": "infinitives" }
   },
 
-  "Progressive Verbs & Verbals": {
+  "Particples": {
     "order": "7",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": {
+       "file": "participles" 
+    }
+  },
+
+  "Progressive Verbs & Verbals": {
+    "order": "8",
     "action": "sub-sequence",
     "payload": { "file": "progressive-verbals" }
   },
 
   "Term Lists": {
-    "order": "8",
+    "order": "9",
     "action": "discern",
     "parseBy": "term",
     "scope": "phrase",
@@ -62,7 +73,7 @@
   },
 
   "Finish": {
-    "order": "9",
+    "order": "10",
     "action": "sub-sequence",
     "payload": { "file": "finish" }
   }
