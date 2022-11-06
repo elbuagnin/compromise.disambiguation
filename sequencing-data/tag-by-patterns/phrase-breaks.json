@@ -4,7 +4,7 @@
     "term": ".",
     "pattern": "#Comma",
     "tag": "#PhraseBreak",
-    "disambiguate": false
+    "discern": false
   },
 
   "Subordinating Conjunctions": {
@@ -12,7 +12,7 @@
     "term": "^.",
     "pattern": ". #SubordinatingConjunction+",
     "tag": "#PhraseBreak",
-    "disambiguate": false
+    "discern": false
   },
 
   "Relative Pronouns": {
@@ -20,6 +20,6 @@
     "term": "^.",
     "pattern": ". #RelativePronoun+",
     "tag": "#PhraseBreak",
-    "disambiguate": false
+    "discern": false
   }
 }

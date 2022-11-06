@@ -4,6 +4,6 @@
     "term": "#Infinitive",
     "pattern": "(#Infinitive && #Verb)",
     "untag": "#Verb",
-    "disambiguate": false
+    "discern": false
   }
 }

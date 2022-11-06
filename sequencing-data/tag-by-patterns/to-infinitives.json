@@ -4,7 +4,7 @@
     "term": "to",
     "pattern": "to #Adverb? (#BaseVerb && #PresentTense)",
     "tag": "#Infinitive",
-    "disambiguate": true
+    "discern": true
   },
 
   "to #Infinitive": {
@@ -12,6 +12,6 @@
     "term": "to",
     "pattern": "to #Adverb? #Infinitive",
     "tag": "#Infinitive",
-    "disambiguate": true
+    "discern": true
   }
 }
