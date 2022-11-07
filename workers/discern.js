@@ -172,12 +172,6 @@ export default function discern(doc, term, match) {
     }
 
     const testTypes = ["negative", "improbable", "probable", "positive"];
-    devLogger(
-      "details",
-      classifyByPatternTests(),
-      "label",
-      "Classification Test: "
-    );
     const testSet = classifyByPatternTests().filter(
       (test) => test.classification === classification
     );
