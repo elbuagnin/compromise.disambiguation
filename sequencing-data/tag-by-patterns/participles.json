@@ -12,12 +12,5 @@
     "pattern": "having been [#PastTense|#Participle]",
     "tag": "#PerfectParticiple",
     "discern": true
-  },
-  "having been /ing$/": {
-    "order": "3",
-    "term": "/.+ing$/",
-    "pattern": "having been /.+ing$/",
-    "tag": "#ProgressiveParticiple",
-    "discern": true
   }
 }

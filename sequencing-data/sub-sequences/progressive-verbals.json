@@ -8,8 +8,22 @@
     "payload": { "process": "ing-verbals" }
   },
 
-  "Disambiguate tagged Progressive Verbals": {
+  "having been /ing$/": {
     "order": "2",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "payload",
+    "payload": {
+      "term": "#ProgressiveVerbal",
+      "pattern": "having been #ProgressiveVerbal",
+      "tag": "#PresentParticiple",
+      "discern": true
+    }
+  },
+
+  "Disambiguate tagged Progressive Verbals": {
+    "order": "3",
     "action": "discern",
     "parseBy": "pattern",
     "scope": "phrase",
@@ -26,7 +40,7 @@
   },
 
   "Post Assignment Impacts": {
-    "order": "3",
+    "order": "4",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "phrase",
@@ -37,7 +51,7 @@
   },
 
   "Untag disambiguated ProgressiveVerbals": {
-    "order": "4",
+    "order": "5",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "document",
