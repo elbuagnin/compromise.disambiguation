@@ -17,13 +17,13 @@
     "pattern": "#Noun %word%",
     "scope": "phrase"
   },
-  "presentProgressive negative 3": {
+  "presentProgressive negative 4": {
     "classification": "presentProgressive",
     "type": "negative",
     "pattern": "#Preposition %word%",
     "scope": "phrase"
   },
-  "presentProgressive negative 3": {
+  "presentProgressive negative 5": {
     "classification": "presentProgressive",
     "type": "negative",
     "pattern": "%word% #Verb",
