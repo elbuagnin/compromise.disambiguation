@@ -94,22 +94,22 @@
   "noun positive 1": {
     "classification": "noun",
     "type": "positive",
-    "pattern": "%word% (#CoordinatingConjunction && !#Comma) #Noun",
+    "pattern": "(%word% && !#Person) (#CoordinatingConjunction && !#Comma) #Noun",
     "scope": "phrase"
   },
   "noun positive 2": {
     "classification": "noun",
     "type": "positive",
-    "pattern": "#Noun (#CoordinatingConjunction && !#Comma) %word%",
+    "pattern": "#Noun (#CoordinatingConjunction && !#Comma) (%word% && !#Person)",
     "scope": "phrase"
   },
-  "noun positive 2": {
+  "noun positive 3": {
     "classification": "noun",
     "type": "positive",
     "pattern": "#Possessive #Adjective?+ %word%",
     "scope": "phrase"
   },
-  "noun positive 3": {
+  "noun positive 4": {
     "classification": "noun",
     "type": "positive",
     "pattern": "#Determiner #Adverb?+ #Adjective?+ %word% #Adverb?+ #Verb",

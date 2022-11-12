@@ -2259,10 +2259,6 @@
     "list": "wordnet",
     "term": { "word": "billionth", "classifications": ["jj", "nn"] }
   },
-  "570": {
-    "list": "wordnet",
-    "term": { "word": "bill", "classifications": ["nn", "vv", "vli"] }
-  },
   "571": {
     "list": "wordnet",
     "term": { "word": "billow", "classifications": ["nn", "vv", "vli"] }
@@ -10195,10 +10191,6 @@
     "list": "wordnet",
     "term": { "word": "grandstand", "classifications": ["nn", "vv", "vli"] }
   },
-  "2552": {
-    "list": "wordnet",
-    "term": { "word": "grant", "classifications": ["nn", "vv", "vli"] }
-  },
   "2553": {
     "list": "wordnet",
     "term": { "word": "graphic", "classifications": ["jj", "nn"] }
@@ -15231,10 +15223,6 @@
     "list": "wordnet",
     "term": { "word": "nickname", "classifications": ["nn", "vv", "vli"] }
   },
-  "3811": {
-    "list": "wordnet",
-    "term": { "word": "nick", "classifications": ["nn", "vv", "vli"] }
-  },
   "3812": {
     "list": "wordnet",
     "term": { "word": "nigerian", "classifications": ["jj", "nn"] }
@@ -16430,10 +16418,6 @@
   "4110": {
     "list": "wordnet",
     "term": { "word": "pasty", "classifications": ["jj", "nn"] }
-  },
-  "4111": {
-    "list": "wordnet",
-    "term": { "word": "pat", "classifications": ["jj", "rb", "nn", "vv", "vli"] }
   },
   "4112": {
     "list": "wordnet",
@@ -26522,10 +26506,6 @@
   "6634": {
     "list": "wordnet",
     "term": { "word": "willing", "classifications": ["jj", "nn"] }
-  },
-  "6635": {
-    "list": "wordnet",
-    "term": { "word": "will", "classifications": ["nn", "aux"] }
   },
   "6636": {
     "list": "wordnet",

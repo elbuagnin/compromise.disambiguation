@@ -80,15 +80,15 @@
     "scope": "phrase"
   },
   "name probable 5": {
-    "classification": "person",
+    "classification": "noun",
     "type": "probable",
-    "pattern": "(%word% && #ListItem) #CoordinatingConjunction (#person && #ListItem)",
+    "pattern": "(%word% && #ListItem) #CoordinatingConjunction (#Person && #ListItem)",
     "scope": "phrase"
   },
   "name probable 6": {
-    "classification": "person",
+    "classification": "noun",
     "type": "probable",
-    "pattern": "(#person && #ListItem) #CoordinatingConjunction (%word% && #ListItem)",
+    "pattern": "(#Person && #ListItem) #CoordinatingConjunction (%word% && #ListItem)",
     "scope": "phrase"
   },
   "name probable 7": {
@@ -119,6 +119,18 @@
     "classification": "person",
     "type": "probable",
     "pattern": "(%word% && @isTitleCase)",
+    "scope": "phrase"
+  },
+  "name positive 1": {
+    "classification": "person",
+    "type": "positive",
+    "pattern": "(%word% && #Singular) #CoordinatingConjunction #person",
+    "scope": "phrase"
+  },
+  "name positive 2": {
+    "classification": "person",
+    "type": "positive",
+    "pattern": "#person #CoordinatingConjunction (%word% && #Singular)",
     "scope": "phrase"
   }
 }
