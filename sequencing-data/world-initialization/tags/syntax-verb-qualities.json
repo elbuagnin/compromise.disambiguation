@@ -33,5 +33,10 @@
         "isA": "Verb",
         "notA": "",
         "color": "green"
-      }
+      },
+      "Continuous": {
+      "isA": "",
+      "notA": "Simple",
+      "color": "green"
+  }
 }
