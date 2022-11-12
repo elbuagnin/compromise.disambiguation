@@ -100,7 +100,7 @@
   "name probable 8": {
     "classification": "person",
     "type": "probable",
-    "pattern": "#Person %word%",
+    "pattern": "#Person (%word% && !will)",
     "scope": "phrase"
   },
   "name probable 9": {
