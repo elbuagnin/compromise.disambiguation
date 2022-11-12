@@ -1,24 +1,4 @@
 {
-  "Past": {
-    "isA": "Verb",
-    "notA": ["Present", "Future"],
-    "color": "green"
-  },
-  "Present": {
-    "isA": "Verb",
-    "notA": ["Past", "Future"],
-    "color": "green"
-  },
-  "Future": {
-    "isA": "Verb",
-    "notA": ["Past", "Present"],
-    "color": "green"
-  },
-  "Simple": {
-    "isA": "Verb",
-    "notA": "",
-    "color": "green"
-  },
   "PastSimple": {
     "isA": ["Verb", "Past", "Simple"],
     "notA": [

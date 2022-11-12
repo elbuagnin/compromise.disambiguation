@@ -1,0 +1,37 @@
+{
+    "Past": {
+        "isA": "Verb",
+        "notA": ["Present", "Future"],
+        "color": "green"
+      },
+      "Present": {
+        "isA": "Verb",
+        "notA": ["Past", "Future"],
+        "color": "green"
+      },
+      "Future": {
+        "isA": "Verb",
+        "notA": ["Past", "Present"],
+        "color": "green"
+      },
+      "Simple": {
+        "isA": "Verb",
+        "notA": "",
+        "color": "green"
+      },
+      "Active": {
+        "isA": "Verb",
+        "notA": "Passive",
+        "color": "green"
+      },
+      "Passive": {
+        "isA": "Verb",
+        "notA": "Active",
+        "color": "green"
+      },
+      "Completed": {
+        "isA": "Verb",
+        "notA": "",
+        "color": "green"
+      }
+}
