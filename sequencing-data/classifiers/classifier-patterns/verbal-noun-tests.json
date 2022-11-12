@@ -17,13 +17,13 @@
     "pattern": "%word% #Noun",
     "scope": "phrase"
   },
-  "verbalNoun negative 3": {
+  "verbalNoun negative 4": {
     "classification": "verbalNoun",
     "type": "negative",
     "pattern": "%word% #Pronoun",
     "scope": "phrase"
   },
-  "verbalNoun negative 3": {
+  "verbalNoun negative 5": {
     "classification": "verbalNoun",
     "type": "negative",
     "pattern": "%word% #Possessive",
@@ -43,6 +43,12 @@
     "scope": "phrase"
   },
   "verbalNoun probable 3": {
+    "classification": "verbalNoun",
+    "type": "probable",
+    "pattern": "(%word% && #ProgressiveVerbal) #CoordinatingConjunction #ProgressiveVerbal #Verb",
+    "scope": "phrase"
+  },
+  "verbalNoun probable 4": {
     "classification": "verbalNoun",
     "type": "probable",
     "pattern": "%word% #Preposition",
