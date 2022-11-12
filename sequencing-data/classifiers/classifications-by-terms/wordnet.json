@@ -21513,7 +21513,7 @@
   },
   "5385": {
     "list": "wordnet",
-    "term": { "word": "sleeping", "classifications": ["jj", "nn"] }
+    "term": { "word": "sleeping", "classifications": ["jj", "nn", "vlg", "vlpr", "vlnn", "vvp"] }
   },
   "5386": {
     "list": "wordnet",
