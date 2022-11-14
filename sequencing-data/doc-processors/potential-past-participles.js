@@ -1,8 +1,6 @@
 import * as helpers from "./../../lib/word-helpers.js";
 
 export default function potentialPastParticiples(doc) {
-    console.log("Here in PPP.");
-
     function isEDpp(word) {
         function stem(text) {
           function isVowel(character) {
@@ -29,7 +27,6 @@ export default function potentialPastParticiples(doc) {
     
           text = text.substring(0, text.length - 2);
           const end = text.length;
-          console.log("Text is: " + text);
     
           // Double character end
           if (text.charAt(end - 1) === text.charAt(end - 2)) {
