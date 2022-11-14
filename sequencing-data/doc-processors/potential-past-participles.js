@@ -33,36 +33,36 @@ export default function potentialPastParticiples(doc) {
     
           // Double character end
           if (text.charAt(end - 1) === text.charAt(end - 2)) {
-            const doubleEnd = text.substring(end - 2);
+            //const doubleEnd = text.substring(end - 2);
             const shorted = text.substring(0, end - 1);
-    
-            switch (doubleEnd) {
-              case "ee":
-                break;
-              case "bb":
-                text = shorted;
-                break;
-              case "gg":
-                text = shorted;
-                break;
-              case "ll":
-                text = shorted;
-                break;
-              case "nn":
-                text = shorted;
-                break;
-              case "pp":
-                text = shorted;
-                break;
-              case "rr":
-                text = shorted;
-                break;
-              case "tt":
-                text = shorted;
-                break;
-              default:
-                break;
-            }
+            text = shorted;
+            // switch (doubleEnd) {
+            //   case "ee":
+            //     break;
+            //   case "bb":
+            //     text = shorted;
+            //     break;
+            //   case "gg":
+            //     text = shorted;
+            //     break;
+            //   case "ll":
+            //     text = shorted;
+            //     break;
+            //   case "nn":
+            //     text = shorted;
+            //     break;
+            //   case "pp":
+            //     text = shorted;
+            //     break;
+            //   case "rr":
+            //     text = shorted;
+            //     break;
+            //   case "tt":
+            //     text = shorted;
+            //     break;
+            //   default:
+            //     break;
+            // }
     
             return text;
           }
@@ -73,18 +73,6 @@ export default function potentialPastParticiples(doc) {
               text = text.substring(0, end - 1) + "ie";
     
               return text;
-            }
-          }
-    
-          // Ends in 'ck'
-          if (text.substring(end - 2, end - 1) === "ck") {
-            const option1 = text;
-            const option2 = text.substring(0, end - 1);
-    
-            if (helpers.hasPOS(option1, "vv")) {
-              return option1;
-            } else if (helpers.hasPOS(option2, "vv")) {
-              return option2;
             }
           }
     
