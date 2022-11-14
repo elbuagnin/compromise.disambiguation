@@ -1,5 +1,6 @@
 import compoundNouns from "../sequencing-data/doc-processors/compound-nouns.js";
 import ingVerbals from "../sequencing-data/doc-processors/ing-verbals.js";
+import potentialPastParticiples from "../sequencing-data/doc-processors/potential-past-participles.js";
 import finalTaggingType from "../sequencing-data/doc-processors/final-tagging-type.js";
 import tagDashes from "../sequencing-data/doc-processors/dash-groups.js";
 import expandContractions from "../sequencing-data/doc-processors/expand-contractions.js";
@@ -24,6 +25,9 @@ export default function runProcess(doc, payload) {
       break;
     case "ing-verbals":
       ingVerbals(doc);
+      break;
+    case "potential-past-participles":
+      potentialPastParticiples(doc);
       break;
     case "dash-groups":
       tagDashes(doc);

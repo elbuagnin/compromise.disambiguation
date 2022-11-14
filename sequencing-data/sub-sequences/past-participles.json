@@ -1,0 +1,34 @@
+{
+  "Tag potential past participles": {
+    "order": "1",
+    "action": "process",
+    "parseBy": "process",
+    "scope": "document",
+    "source": "payload",
+    "payload": { "process": "potential-past-participles" }
+  },
+
+  "Disambiguate tagged ppp": {
+    "order": "3",
+    "action": "discern",
+    "parseBy": "pattern",
+    "scope": "phrase",
+    "source": "payload",
+    "payload": {
+      "pattern": "#PotentialPastParticiple",
+      "classifications": [
+        "pastParticiple",
+        "verb"
+      ]
+    }
+  },
+
+  "Untag disambiguated PastParticiples": {
+    "order": "5",
+    "action": "tag",
+    "parseBy": "pattern",
+    "scope": "document",
+    "source": "file",
+    "payload": { "file": "remove-potentialPastParticiples" }
+  }
+}

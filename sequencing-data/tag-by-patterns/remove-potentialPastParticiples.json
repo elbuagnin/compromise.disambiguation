@@ -1,0 +1,15 @@
+{
+  "Past Participle": {
+    "order": "1",
+    "term": "#PotentialPastParticiple",
+    "pattern": "(#PotentialPastParticiple && #PastParticiple)",
+    "untag": "#PotentialPastParticiple"
+  },
+
+  "Verb": {
+    "order": "2",
+    "term": "#PotentialPastParticiple",
+    "pattern": "(#PotentialPastParticiple && #Verb)",
+    "untag": "#PotentialPastParticiple"
+  }
+}
