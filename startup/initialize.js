@@ -7,7 +7,9 @@ export default function initialize() {
   const tags = mfs.loadJSONDir(tagsPath);
   const words = mfs.loadJSONDir(wordsPath);
 
-  extend.addCustomTags(tags);
-  extend.addCustomWords(words);
+  // extend.addCustomTags(tags);
+  // extend.addCustomWords(words);
+  nlp.addWords(words);
+  nlp.addTags(tags);
   nlp.plugin(extend.addDocMethods);
 }
