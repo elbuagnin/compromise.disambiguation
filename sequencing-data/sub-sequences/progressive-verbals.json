@@ -8,17 +8,16 @@
     "payload": { "process": "ing-verbals" }
   },
 
-  "having been /ing$/": {
+  
+  
+  "Perfect Participles": {
     "order": "2",
     "action": "tag",
     "parseBy": "pattern",
     "scope": "phrase",
-    "source": "payload",
+    "source": "file",
     "payload": {
-      "term": "#ProgressiveVerbal",
-      "pattern": "having been #ProgressiveVerbal",
-      "tag": "#PresentParticiple",
-      "discern": true
+      "file": "perfect-participles"
     }
   },
 

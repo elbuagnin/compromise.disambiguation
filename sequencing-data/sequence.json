@@ -46,17 +46,6 @@
     "payload": { "file": "infinitives" }
   },
 
-  "Perfect Participles": {
-    "order": "7",
-    "action": "tag",
-    "parseBy": "pattern",
-    "scope": "document",
-    "source": "file",
-    "payload": {
-       "file": "perfect-participles" 
-    }
-  },
-
   "Past Participles": {
     "order": "8",
     "action": "sub-sequence",
