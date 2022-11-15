@@ -88,13 +88,40 @@ export default function potentialPastParticiples(doc) {
       }
 
       text = text + "e";
-      console.log(text);
       return text;
     }
 
     if (word.text().substring(word.text().length - 2) === "en") {
       let stemmed = stem(word.text());
       if (helpers.hasPOS(stemmed, "vv")) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  function isNTpp(word) {
+    function stem(text) {
+      text = text.substring(0, text.length - 1);
+
+      const option1 = text;
+      const option2 = text + "d";
+
+      if (helpers.hasPOS(option1, "vv")) {
+        return option1;
+      } else if (helpers.hasPOS(option2, "vv")) {
+        return option2;
+      } else {
+        return false;
+      }
+    }
+
+    if (word.text().substring(word.text().length - 2) === "nt") {
+      let stemmed = stem(word.text());
+      if (stemmed != false) {
         return true;
       } else {
         return false;
@@ -114,6 +141,13 @@ export default function potentialPastParticiples(doc) {
   const ENs = doc.match("/en$/");
   ENs.forEach((word) => {
     if (isENpp(word) === true) {
+      word.tag("#PotentialPastParticiple");
+    }
+  });
+
+  const NTs = doc.match("/nt$/");
+  NTs.forEach((word) => {
+    if (isNTpp(word) === true) {
       word.tag("#PotentialPastParticiple");
     }
   });
