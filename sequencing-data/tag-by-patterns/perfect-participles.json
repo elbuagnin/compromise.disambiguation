@@ -1,7 +1,23 @@
 {
-  "having been *ing": {
+  "having been": {
     "order": "1",
     "term": "*",
+    "pattern": "having been",
+    "tag": "#PerfectParticiple",
+    "discern": true
+  },
+
+  "having been #pastTense": {
+    "order": "2",
+    "term": ".$",
+    "pattern": "having been #PastTense",
+    "tag": "#PerfectParticiple",
+    "discern": true
+  },
+
+  "having been /ing$/": {
+    "order": "1",
+    "term": ".$",
     "pattern": "having been /ing$/",
     "tag": "#PerfectParticiple",
     "discern": true
