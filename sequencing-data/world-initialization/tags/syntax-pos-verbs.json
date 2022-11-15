@@ -1,7 +1,7 @@
 {
     "BaseVerb": {
         "isA": "Verb",
-        "notA": "Infinitive",
+        "notA": ["Infinitive", "Auxiliary"],
         "color": "green"
     },
     "Auxiliary": {
