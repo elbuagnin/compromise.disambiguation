@@ -19,7 +19,7 @@
       "Gerund",
       "VerbalNoun"
     ],
-    "color": "yellow"
+    "color": ""
   },
   "Gerund": {
     "isA": "Verbal",
