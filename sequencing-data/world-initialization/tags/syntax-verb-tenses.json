@@ -1,9 +1,6 @@
 {
     "PastSimple": {
-        "isA": [
-            "Past",
-            "Simple"
-        ],
+        "isA": "Verb",
         "notA": [
             "Present",
             "Future",
@@ -24,10 +21,7 @@
         "color": "green"
     },
     "PastPerfect": {
-        "isA": [
-            "Past",
-            "Completed"
-        ],
+        "isA": "Verb",
         "notA": [
             "Present",
             "Future",
@@ -45,11 +39,7 @@
         "color": "green"
     },
     "PastProgressive": {
-        "isA": [
-            "Past",
-            "Continuous",
-            "Active"
-        ],
+        "isA": "Verb",
         "notA": [
             "Present",
             "Future",
@@ -68,12 +58,7 @@
         "color": "green"
     },
     "PastPerfectProgressive": {
-        "isA": [
-            "Past",
-            "Continuous",
-            "Completed",
-            "Active"
-        ],
+        "isA": "Verb",
         "notA": [
             "Present",
             "Future",
@@ -92,10 +77,7 @@
         "color": "green"
     },
     "PresentSimple": {
-        "isA": [
-            "Present",
-            "Simple"
-        ],
+        "isA": "Verb",
         "notA": [
             "Past",
             "Future",
@@ -116,10 +98,7 @@
         "color": "green"
     },
     "PresentPerfect": {
-        "isA": [
-            "Present",
-            "Completed"
-        ],
+        "isA": "Verb",
         "notA": [
             "Past",
             "Future",
@@ -137,11 +116,7 @@
         "color": "green"
     },
     "PresentProgressive": {
-        "isA": [
-            "Present",
-            "Continuous",
-            "Active"
-        ],
+        "isA": "Verb",
         "notA": [
             "Past",
             "Future",
@@ -160,12 +135,7 @@
         "color": "green"
     },
     "PresentPerfectProgressive": {
-        "isA": [
-            "Present",
-            "Continuous",
-            "Completed",
-            "Active"
-        ],
+        "isA": "Verb",
         "notA": [
             "Past",
             "Future",
@@ -184,10 +154,7 @@
         "color": "green"
     },
     "FutureSimple": {
-        "isA": [
-            "Future",
-            "Simple"
-        ],
+        "isA": "Verb",
         "notA": [
             "Past",
             "Present",
@@ -208,10 +175,7 @@
         "color": "green"
     },
     "FuturePerfect": {
-        "isA": [
-            "Future",
-            "Completed"
-        ],
+        "isA": "Verb",
         "notA": [
             "Past",
             "Present",
@@ -229,11 +193,7 @@
         "color": "green"
     },
     "FutureProgressive": {
-        "isA": [
-            "Future",
-            "Continuous",
-            "Active"
-        ],
+        "isA": "Verb",
         "notA": [
             "Past",
             "Present",
@@ -252,12 +212,7 @@
         "color": "green"
     },
     "FuturePerfectProgressive": {
-        "isA": [
-            "Future",
-            "Continuous",
-            "Completed",
-            "Active"
-        ],
+        "isA": "Verb",
         "notA": [
             "Past",
             "Present",
