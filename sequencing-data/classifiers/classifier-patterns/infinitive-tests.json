@@ -16,7 +16,7 @@
   "to be": {
     "classification": "infinitive",
     "type": "probable",
-    "pattern": "to %word%",
+    "pattern": "(to && #Infinitive) %word%",
     "scope": "phrase"
   },
 
@@ -30,7 +30,7 @@
   "to boldly go": {
     "classification": "infinitive",
     "type": "positive",
-    "pattern": "to #Adverb %word%",
+    "pattern": "(to && #Infinitive) #Adverb %word%",
     "scope": "phrase"
   },
 
