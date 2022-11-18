@@ -1,0 +1,48 @@
+{
+  "had landed": {
+    "classification": "pastParticiple",
+    "type": "negative",
+    "pattern": "#Auxiliary %word%",
+    "scope": "phrase"
+  },
+
+  "..., sunk ships ...": {
+    "classification": "pastParticiple",
+    "type": "probable",
+    "pattern": "#PhraseBreak %word%",
+    "scope": "sentence"
+  },
+
+  "Sunk ships...|..., sunk ships ...": {
+    "classification": "pastParticiple",
+    "type": "probable",
+    "pattern": "^%word%",
+    "scope": "phrase"
+  },
+
+  "the calmed horses": {
+    "classification": "pastParticiple",
+    "type": "positive",
+    "pattern": "#Determiner %word% #Noun",
+    "scope": "phrase"
+  },
+
+  "... woman, calmed ...": {
+    "classification": "pastParticiple",
+    "type": "positive",
+    "pattern": "(#PhraseBreak && #Noun) %word%",
+    "scope": "sentence"
+  },
+  "Burnt ... , ...": {
+    "classification": "pastParticiple",
+    "type": "positive",
+    "pattern": "%word% * #Comma",
+    "scope": "phrase"
+  },
+  "... kid ... , ... landed ... , hurt ...": {
+    "classification": "pastParticiple",
+    "type": "positive",
+    "pattern": "* #Noun * #Comma * %word% * #Comma * #Verb *",
+    "scope": "sentence"
+  }
+}
