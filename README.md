@@ -1,6 +1,6 @@
 # compromise.disambiguation
 
-## Beta Imminent
+## Beta 0.9.0
 Compromise.disambiguation is a plugin for the Natural Language Processor, Compromise, by SpencerMountain.
 
 It augments Compromise by improving Part of Speech tagging accuracy.
