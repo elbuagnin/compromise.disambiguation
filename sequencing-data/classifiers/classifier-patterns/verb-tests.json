@@ -23,11 +23,16 @@
     "pattern": "#Copula (%word% && /ing$/)",
     "scope": "phrase"
   },
-
   "verb negative 5": {
     "classification": "verb",
     "type": "negative",
     "pattern": "#BaseVerb (%word% && #BaseVerb)",
+    "scope": "phrase"
+  },
+  "very dry": {
+    "classification": "verb",
+    "type": "negative",
+    "pattern": "very %word%",
     "scope": "phrase"
   },
 

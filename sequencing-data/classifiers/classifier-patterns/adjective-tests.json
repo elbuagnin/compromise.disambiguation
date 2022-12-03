@@ -66,10 +66,17 @@
     "pattern": "%word% #Noun",
     "scope": "phrase"
   },
+  "quite dry": {
+    "classification": "adjective",
+    "type": "probable",
+    "pattern": "#Adverb %word%",
+    "scope": "phrase"
+  },
+
   "people are hip": {
     "classification": "adjective",
     "type": "positive",
-    "pattern": "#Noun #Copula %word%",
+    "pattern": "#Noun #Copula #Adverb? %word%",
     "scope": "phrase"
   },
 
