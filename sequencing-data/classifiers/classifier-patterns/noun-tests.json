@@ -1,5 +1,5 @@
 {
-  "noun negative 1": {
+  "would cover": {
     "classification": "noun",
     "type": "negative",
     "pattern": "#Modal %word%",
@@ -11,44 +11,45 @@
     "pattern": "#Auxiliary %word%",
     "scope": "phrase"
   },
-  "noun negative 3": {
+  "very sound": {
     "classification": "noun",
     "type": "negative",
     "pattern": "#Adverb %word%",
     "scope": "phrase"
   },
-  "noun negative 4": {
-    "classification": "noun",
-    "type": "negative",
-    "pattern": "%word% #Pronoun",
-    "scope": "phrase"
-  },
-  "noun negative 5": {
+  "start their car": {
     "classification": "noun",
     "type": "negative",
     "pattern": "%word% #Possessive",
     "scope": "phrase"
   },
-  "noun negative 6": {
+  "he saw": {
     "classification": "noun",
     "type": "negative",
     "pattern": "(#Pronoun && !#Possessive) %word%",
     "scope": "phrase"
   },
-  "noun negative 7": {
+  "carry and load": {
     "classification": "noun",
     "type": "negative",
     "pattern": "!#Noun #Conjunction %word%",
     "scope": "phrase"
   },
-  "noun negative 8": {
+  "stand and hold": {
     "classification": "noun",
     "type": "negative",
     "pattern": "%word% #Conjunction !#Noun",
     "scope": "phrase"
   },
 
-  "noun probable 0": {
+  "the word he heard": {
+    "classification": "noun",
+    "type": "improbable",
+    "pattern": "%word% #Pronoun",
+    "scope": "phrase"
+  },
+
+  "a sound": {
     "classification": "noun",
     "type": "probable",
     "pattern": "#Determiner %word%",
@@ -103,10 +104,10 @@
     "pattern": "#Noun (#CoordinatingConjunction && !#Comma) (%word% && !#Person)",
     "scope": "phrase"
   },
-  "noun positive 3": {
+  "his power": {
     "classification": "noun",
     "type": "positive",
-    "pattern": "#Possessive #Adjective?+ %word%",
+    "pattern": "#Possessive #Adjective?+ %word% !#Noun?",
     "scope": "phrase"
   },
   "noun positive 4": {
