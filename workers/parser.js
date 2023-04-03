@@ -113,7 +113,8 @@ function parseByTerm(doc, action, parsingData) {
   //
   const { term } = parsingData;
   doc.terms().forEach((entry) => {
-    const root = entry.text("root");
+    const root = entry.compute('root').text('root');
+    
     if (root === term.word) {
       discern(doc, term, entry);
     }
