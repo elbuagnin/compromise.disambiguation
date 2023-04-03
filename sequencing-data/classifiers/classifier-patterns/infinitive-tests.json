@@ -6,6 +6,13 @@
     "scope": "phrase"
   },
 
+  "allow access": {
+    "classification": "infinitive",
+    "type": "negative",
+    "pattern": "#Infinitive (%word% && #Infinitive)",
+    "scope": "phrase"
+  },
+
   "infinitive improbable 1": {
     "classification": "infinitive",
     "type": "improbable",

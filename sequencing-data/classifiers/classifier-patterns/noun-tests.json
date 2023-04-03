@@ -67,6 +67,12 @@
     "pattern": "#BaseVerb %word%",
     "scope": "phrase"
   },
+  "allow access": {
+    "classification": "noun",
+    "type": "probable",
+    "pattern": "(#Infinitive && !to) %word%",
+    "scope": "phrase"
+  },
   "noun probable 3": {
     "classification": "noun",
     "type": "probable",
